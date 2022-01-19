@@ -1,0 +1,128 @@
+
+
+proc update_boundary {} {
+
+  # cell_obj is set as the current bloc design intance
+  set cell_obj [::ipxit::current_inst]
+  set cell_name [::ipxit::current_instname]
+
+  ## Variables needed to handle ip parameters
+  # Number of ports (master and slave)
+  set num [get_property CONFIG.PORTS_NUMBER $cell_obj]
+  # Indicates if the PTE ports should appear in the hirarchical cell
+  set AdditionalPorts [get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj]
+
+  # Delete ports (slave then master)
+  set si_pins [get_bd_intf_ports -quiet -regexp "S_AXIS_\[0-9\]\[0-6]*"]
+  set num_si_pins [llength $si_pins]
+
+  if { $num < $num_si_pins } {
+    for {set i $num} {$i <= $num_si_pins} {incr i} {
+      delete_bd_objs [get_bd_intf_ports -quiet S_AXIS_$i]
+    }
+  }
+
+  set mi_pins [get_bd_intf_ports -quiet -regexp "M_AXIS_\[0-9\]\[0-6]*"]
+  set num_mi_pins [llength $mi_pins]
+
+  if { $num < $num_mi_pins } {
+    for {set i $num} {$i <= $num_mi_pins} {incr i} {
+      delete_bd_objs [get_bd_intf_ports -quiet M_AXIS_$i]
+    }
+  }
+
+  # Delete error pins
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      set i 1
+      while {[get_bd_ports -quiet Packetfetcher_$i\_error_code] == "Packetfetcher_$i\_error_code"} {
+              delete_bd_objs  [get_bd_ports -quiet Packetfetcher_$i\_error_code]
+          }
+          incr i
+  }
+
+  # Create interface pins
+  if {[get_bd_intf_ports -quiet  S_AXIS] == ""} {
+      set s_axi_port [create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS]
+  }
+  if {[get_bd_intf_ports -quiet  S_AXIS_AUX] == ""} {
+      set s_axi_port [create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_AUX]
+  }
+  if {[get_bd_intf_ports -quiet M_AXIS_AUX] == ""} {
+      set m_axi_port [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS_AUX]
+  }
+  if {[get_bd_intf_ports -quiet  M_AXIS] == ""} {
+      set m_axi_port [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS]
+  }
+  if {[get_bd_intf_ports -quiet  M_AXI_MM2S] == ""} {
+      set m_axi_port [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M_AXI_MM2S]
+  }
+  if {[get_bd_intf_ports -quiet  M_AXI_S2MM] == ""} {
+      set m_axi_port [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M_AXI_S2MM]
+  }
+
+  # If the number of pins is higher than 1, create an appropriate number of S_AXIS and M_AXIS pins
+  if { [get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      for {set i 1} {$i<$num} {incr i} {
+          if {[get_bd_intf_ports -quiet  S_AXIS_$i] == "" } {
+              set s_axi_port [create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_$i]
+          }
+          if {[get_bd_intf_ports -quiet  M_AXIS_$i] == "" } {
+              set m_axi_port [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS_$i]
+          }
+      }
+  }
+  # Delete the inputs of the axis_switches on the S00 port ( will get rebuilt later)
+  if {[get_bd_intf_nets -quiet AXI4Stream_PacketFetcher_0_M_AXIS] == "AXI4Stream_PacketFetcher_0_M_AXIS"} {
+     delete_bd_objs [get_bd_intf_nets -quiet AXI4Stream_PacketFetcher_0_M_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_Packetizer_0_M_AXIS] == "AXI4Stream_Packetizer_0_M_AXIS"} {
+     delete_bd_objs [get_bd_intf_nets -quiet AXI4Stream_Packetizer_0_M_AXIS]
+  }
+  # PTE_AUXILIARY_PORTS interface pins
+  if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+    set m_axi_port [create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 PTE_OUTPUT]
+  }
+  if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+    set s_axi_port [create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 PTE_INPUT]
+  }
+
+
+  ###############################  PINS ######################################
+
+  # Create pins
+  if {[get_bd_ports -quiet clk] == ""} {
+      create_bd_port -dir I -type clk clk
+  }
+
+  if {[get_bd_ports -quiet peripherals_aresetn] == ""} {
+      set peripherals_aresetn [ create_bd_port -dir I -type rst peripherals_aresetn ]
+      set_property -dict [ list \
+       CONFIG.POLARITY {ACTIVE_LOW} \
+     ] $peripherals_aresetn
+  }
+
+  if {[get_bd_ports -quiet interconnect_aresetn] == ""} {
+      set interconnect_aresetn [ create_bd_port -dir I -type rst interconnect_aresetn ]
+      set_property -dict [ list \
+       CONFIG.POLARITY {ACTIVE_LOW} \
+     ] $interconnect_aresetn
+  }
+
+  if {[get_bd_ports -quiet Packetfetcher_error_code] == ""} {
+      set Packetfetcher_error_code [ create_bd_port -dir O  Packetfetcher_error_code ]
+  }
+
+  if {[get_bd_ports -quiet Packetizer_packet_error] == ""} {
+      set Packetizer_packet_error [ create_bd_port -dir O  Packetizer_packet_error ]
+  }
+
+  if { [get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      for {set i 1} {$i<$num} {incr i} {
+          if {[get_bd_ports -quiet Packetfetcher_$i\_error_code] == ""} {
+              set Packetfetcher_$i\_error_code [ create_bd_port -dir O  Packetfetcher_$i\_error_code ]
+          }
+     }
+}
+}
+
+update_boundary

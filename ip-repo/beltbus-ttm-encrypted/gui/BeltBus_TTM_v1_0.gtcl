@@ -1,0 +1,3 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_TAIL_TRESHOLD_ENABLEMENT {CUSTOM_TRESHOLD } {expr $CUSTOM_TRESHOLD}
+proc gen_USERPARAMETER_TAIL_TRESHOLD_VALUE {TAIL_FIFO_DEPTH } {expr $TAIL_FIFO_DEPTH - 500}

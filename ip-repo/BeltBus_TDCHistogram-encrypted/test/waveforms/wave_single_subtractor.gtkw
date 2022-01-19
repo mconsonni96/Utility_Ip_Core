@@ -1,0 +1,68 @@
+[*]
+[*] GTKWave Analyzer v3.3.101 (w)1999-2019 BSI
+[*] Thu Feb 13 13:59:48 2020
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer/test/build/waveforms.ghw"
+[dumpfile_mtime] "Thu Feb 13 13:58:49 2020"
+[dumpfile_size] 144701
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer/test/waveforms/wave_single_subtractor.gtkw"
+[timestart] 4281410000
+[size] 1850 1016
+[pos] -1 -1
+*-23.830606 4374570000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.single_subtractor.
+[treeopen] top.single_subtractor.belt_bus_in.
+[sst_width] 233
+[signals_width] 303
+[sst_expanded] 1
+[sst_vpaned_height] 428
+@28
+top.single_subtractor.clk
+top.single_subtractor.reset
+@200
+-
+-BELT_DATA
+@22
+#{top.single_subtractor.belt_bus_in.tchannel[3:0]} top.single_subtractor.belt_bus_in.tchannel[3] top.single_subtractor.belt_bus_in.tchannel[2] top.single_subtractor.belt_bus_in.tchannel[1] top.single_subtractor.belt_bus_in.tchannel[0]
+#{top.single_subtractor.belt_bus_in.tdata[23:0]} top.single_subtractor.belt_bus_in.tdata[23] top.single_subtractor.belt_bus_in.tdata[22] top.single_subtractor.belt_bus_in.tdata[21] top.single_subtractor.belt_bus_in.tdata[20] top.single_subtractor.belt_bus_in.tdata[19] top.single_subtractor.belt_bus_in.tdata[18] top.single_subtractor.belt_bus_in.tdata[17] top.single_subtractor.belt_bus_in.tdata[16] top.single_subtractor.belt_bus_in.tdata[15] top.single_subtractor.belt_bus_in.tdata[14] top.single_subtractor.belt_bus_in.tdata[13] top.single_subtractor.belt_bus_in.tdata[12] top.single_subtractor.belt_bus_in.tdata[11] top.single_subtractor.belt_bus_in.tdata[10] top.single_subtractor.belt_bus_in.tdata[9] top.single_subtractor.belt_bus_in.tdata[8] top.single_subtractor.belt_bus_in.tdata[7] top.single_subtractor.belt_bus_in.tdata[6] top.single_subtractor.belt_bus_in.tdata[5] top.single_subtractor.belt_bus_in.tdata[4] top.single_subtractor.belt_bus_in.tdata[3] top.single_subtractor.belt_bus_in.tdata[2] top.single_subtractor.belt_bus_in.tdata[1] top.single_subtractor.belt_bus_in.tdata[0]
+@29
+top.single_subtractor.belt_a_valid
+@28
+top.single_subtractor.belt_b_valid
+top.single_subtractor.belt_a_overflow
+top.single_subtractor.belt_b_overflow
+@200
+-
+-CONFIGURATION
+@22
+#{top.single_subtractor.ch_a_sel[3:0]} top.single_subtractor.ch_a_sel[3] top.single_subtractor.ch_a_sel[2] top.single_subtractor.ch_a_sel[1] top.single_subtractor.ch_a_sel[0]
+#{top.single_subtractor.ch_b_sel[3:0]} top.single_subtractor.ch_b_sel[3] top.single_subtractor.ch_b_sel[2] top.single_subtractor.ch_b_sel[1] top.single_subtractor.ch_b_sel[0]
+#{top.single_subtractor.window[32:0]} top.single_subtractor.window[32] top.single_subtractor.window[31] top.single_subtractor.window[30] top.single_subtractor.window[29] top.single_subtractor.window[28] top.single_subtractor.window[27] top.single_subtractor.window[26] top.single_subtractor.window[25] top.single_subtractor.window[24] top.single_subtractor.window[23] top.single_subtractor.window[22] top.single_subtractor.window[21] top.single_subtractor.window[20] top.single_subtractor.window[19] top.single_subtractor.window[18] top.single_subtractor.window[17] top.single_subtractor.window[16] top.single_subtractor.window[15] top.single_subtractor.window[14] top.single_subtractor.window[13] top.single_subtractor.window[12] top.single_subtractor.window[11] top.single_subtractor.window[10] top.single_subtractor.window[9] top.single_subtractor.window[8] top.single_subtractor.window[7] top.single_subtractor.window[6] top.single_subtractor.window[5] top.single_subtractor.window[4] top.single_subtractor.window[3] top.single_subtractor.window[2] top.single_subtractor.window[1] top.single_subtractor.window[0]
+#{top.single_subtractor.window_offset[32:0]} top.single_subtractor.window_offset[32] top.single_subtractor.window_offset[31] top.single_subtractor.window_offset[30] top.single_subtractor.window_offset[29] top.single_subtractor.window_offset[28] top.single_subtractor.window_offset[27] top.single_subtractor.window_offset[26] top.single_subtractor.window_offset[25] top.single_subtractor.window_offset[24] top.single_subtractor.window_offset[23] top.single_subtractor.window_offset[22] top.single_subtractor.window_offset[21] top.single_subtractor.window_offset[20] top.single_subtractor.window_offset[19] top.single_subtractor.window_offset[18] top.single_subtractor.window_offset[17] top.single_subtractor.window_offset[16] top.single_subtractor.window_offset[15] top.single_subtractor.window_offset[14] top.single_subtractor.window_offset[13] top.single_subtractor.window_offset[12] top.single_subtractor.window_offset[11] top.single_subtractor.window_offset[10] top.single_subtractor.window_offset[9] top.single_subtractor.window_offset[8] top.single_subtractor.window_offset[7] top.single_subtractor.window_offset[6] top.single_subtractor.window_offset[5] top.single_subtractor.window_offset[4] top.single_subtractor.window_offset[3] top.single_subtractor.window_offset[2] top.single_subtractor.window_offset[1] top.single_subtractor.window_offset[0]
+@200
+-
+-SUB_STAGE
+@22
+#{top.single_subtractor.buff_a_overflow[8:0]} top.single_subtractor.buff_a_overflow[8] top.single_subtractor.buff_a_overflow[7] top.single_subtractor.buff_a_overflow[6] top.single_subtractor.buff_a_overflow[5] top.single_subtractor.buff_a_overflow[4] top.single_subtractor.buff_a_overflow[3] top.single_subtractor.buff_a_overflow[2] top.single_subtractor.buff_a_overflow[1] top.single_subtractor.buff_a_overflow[0]
+#{top.single_subtractor.buff_b_overflow[8:0]} top.single_subtractor.buff_b_overflow[8] top.single_subtractor.buff_b_overflow[7] top.single_subtractor.buff_b_overflow[6] top.single_subtractor.buff_b_overflow[5] top.single_subtractor.buff_b_overflow[4] top.single_subtractor.buff_b_overflow[3] top.single_subtractor.buff_b_overflow[2] top.single_subtractor.buff_b_overflow[1] top.single_subtractor.buff_b_overflow[0]
+#{top.single_subtractor.curr_a_overflow[8:0]} top.single_subtractor.curr_a_overflow[8] top.single_subtractor.curr_a_overflow[7] top.single_subtractor.curr_a_overflow[6] top.single_subtractor.curr_a_overflow[5] top.single_subtractor.curr_a_overflow[4] top.single_subtractor.curr_a_overflow[3] top.single_subtractor.curr_a_overflow[2] top.single_subtractor.curr_a_overflow[1] top.single_subtractor.curr_a_overflow[0]
+#{top.single_subtractor.curr_b_overflow[8:0]} top.single_subtractor.curr_b_overflow[8] top.single_subtractor.curr_b_overflow[7] top.single_subtractor.curr_b_overflow[6] top.single_subtractor.curr_b_overflow[5] top.single_subtractor.curr_b_overflow[4] top.single_subtractor.curr_b_overflow[3] top.single_subtractor.curr_b_overflow[2] top.single_subtractor.curr_b_overflow[1] top.single_subtractor.curr_b_overflow[0]
+#{top.single_subtractor.cocotb_measure_a[32:0]} top.single_subtractor.cocotb_measure_a[32] top.single_subtractor.cocotb_measure_a[31] top.single_subtractor.cocotb_measure_a[30] top.single_subtractor.cocotb_measure_a[29] top.single_subtractor.cocotb_measure_a[28] top.single_subtractor.cocotb_measure_a[27] top.single_subtractor.cocotb_measure_a[26] top.single_subtractor.cocotb_measure_a[25] top.single_subtractor.cocotb_measure_a[24] top.single_subtractor.cocotb_measure_a[23] top.single_subtractor.cocotb_measure_a[22] top.single_subtractor.cocotb_measure_a[21] top.single_subtractor.cocotb_measure_a[20] top.single_subtractor.cocotb_measure_a[19] top.single_subtractor.cocotb_measure_a[18] top.single_subtractor.cocotb_measure_a[17] top.single_subtractor.cocotb_measure_a[16] top.single_subtractor.cocotb_measure_a[15] top.single_subtractor.cocotb_measure_a[14] top.single_subtractor.cocotb_measure_a[13] top.single_subtractor.cocotb_measure_a[12] top.single_subtractor.cocotb_measure_a[11] top.single_subtractor.cocotb_measure_a[10] top.single_subtractor.cocotb_measure_a[9] top.single_subtractor.cocotb_measure_a[8] top.single_subtractor.cocotb_measure_a[7] top.single_subtractor.cocotb_measure_a[6] top.single_subtractor.cocotb_measure_a[5] top.single_subtractor.cocotb_measure_a[4] top.single_subtractor.cocotb_measure_a[3] top.single_subtractor.cocotb_measure_a[2] top.single_subtractor.cocotb_measure_a[1] top.single_subtractor.cocotb_measure_a[0]
+#{top.single_subtractor.cocotb_overflow_b[32:0]} top.single_subtractor.cocotb_overflow_b[32] top.single_subtractor.cocotb_overflow_b[31] top.single_subtractor.cocotb_overflow_b[30] top.single_subtractor.cocotb_overflow_b[29] top.single_subtractor.cocotb_overflow_b[28] top.single_subtractor.cocotb_overflow_b[27] top.single_subtractor.cocotb_overflow_b[26] top.single_subtractor.cocotb_overflow_b[25] top.single_subtractor.cocotb_overflow_b[24] top.single_subtractor.cocotb_overflow_b[23] top.single_subtractor.cocotb_overflow_b[22] top.single_subtractor.cocotb_overflow_b[21] top.single_subtractor.cocotb_overflow_b[20] top.single_subtractor.cocotb_overflow_b[19] top.single_subtractor.cocotb_overflow_b[18] top.single_subtractor.cocotb_overflow_b[17] top.single_subtractor.cocotb_overflow_b[16] top.single_subtractor.cocotb_overflow_b[15] top.single_subtractor.cocotb_overflow_b[14] top.single_subtractor.cocotb_overflow_b[13] top.single_subtractor.cocotb_overflow_b[12] top.single_subtractor.cocotb_overflow_b[11] top.single_subtractor.cocotb_overflow_b[10] top.single_subtractor.cocotb_overflow_b[9] top.single_subtractor.cocotb_overflow_b[8] top.single_subtractor.cocotb_overflow_b[7] top.single_subtractor.cocotb_overflow_b[6] top.single_subtractor.cocotb_overflow_b[5] top.single_subtractor.cocotb_overflow_b[4] top.single_subtractor.cocotb_overflow_b[3] top.single_subtractor.cocotb_overflow_b[2] top.single_subtractor.cocotb_overflow_b[1] top.single_subtractor.cocotb_overflow_b[0]
+#{top.single_subtractor.cocotb_measure_b[32:0]} top.single_subtractor.cocotb_measure_b[32] top.single_subtractor.cocotb_measure_b[31] top.single_subtractor.cocotb_measure_b[30] top.single_subtractor.cocotb_measure_b[29] top.single_subtractor.cocotb_measure_b[28] top.single_subtractor.cocotb_measure_b[27] top.single_subtractor.cocotb_measure_b[26] top.single_subtractor.cocotb_measure_b[25] top.single_subtractor.cocotb_measure_b[24] top.single_subtractor.cocotb_measure_b[23] top.single_subtractor.cocotb_measure_b[22] top.single_subtractor.cocotb_measure_b[21] top.single_subtractor.cocotb_measure_b[20] top.single_subtractor.cocotb_measure_b[19] top.single_subtractor.cocotb_measure_b[18] top.single_subtractor.cocotb_measure_b[17] top.single_subtractor.cocotb_measure_b[16] top.single_subtractor.cocotb_measure_b[15] top.single_subtractor.cocotb_measure_b[14] top.single_subtractor.cocotb_measure_b[13] top.single_subtractor.cocotb_measure_b[12] top.single_subtractor.cocotb_measure_b[11] top.single_subtractor.cocotb_measure_b[10] top.single_subtractor.cocotb_measure_b[9] top.single_subtractor.cocotb_measure_b[8] top.single_subtractor.cocotb_measure_b[7] top.single_subtractor.cocotb_measure_b[6] top.single_subtractor.cocotb_measure_b[5] top.single_subtractor.cocotb_measure_b[4] top.single_subtractor.cocotb_measure_b[3] top.single_subtractor.cocotb_measure_b[2] top.single_subtractor.cocotb_measure_b[1] top.single_subtractor.cocotb_measure_b[0]
+#{top.single_subtractor.a_minus_b[32:0]} top.single_subtractor.a_minus_b[32] top.single_subtractor.a_minus_b[31] top.single_subtractor.a_minus_b[30] top.single_subtractor.a_minus_b[29] top.single_subtractor.a_minus_b[28] top.single_subtractor.a_minus_b[27] top.single_subtractor.a_minus_b[26] top.single_subtractor.a_minus_b[25] top.single_subtractor.a_minus_b[24] top.single_subtractor.a_minus_b[23] top.single_subtractor.a_minus_b[22] top.single_subtractor.a_minus_b[21] top.single_subtractor.a_minus_b[20] top.single_subtractor.a_minus_b[19] top.single_subtractor.a_minus_b[18] top.single_subtractor.a_minus_b[17] top.single_subtractor.a_minus_b[16] top.single_subtractor.a_minus_b[15] top.single_subtractor.a_minus_b[14] top.single_subtractor.a_minus_b[13] top.single_subtractor.a_minus_b[12] top.single_subtractor.a_minus_b[11] top.single_subtractor.a_minus_b[10] top.single_subtractor.a_minus_b[9] top.single_subtractor.a_minus_b[8] top.single_subtractor.a_minus_b[7] top.single_subtractor.a_minus_b[6] top.single_subtractor.a_minus_b[5] top.single_subtractor.a_minus_b[4] top.single_subtractor.a_minus_b[3] top.single_subtractor.a_minus_b[2] top.single_subtractor.a_minus_b[1] top.single_subtractor.a_minus_b[0]
+@200
+-
+-OUTPUT
+@28
+top.single_subtractor.is_buff_a_valid
+top.single_subtractor.is_buff_b_valid
+top.single_subtractor.is_measure_valid
+top.single_subtractor.is_measure_in_wnd
+top.single_subtractor.measure_en
+top.single_subtractor.sub_valid
+@22
+#{top.single_subtractor.sub_out[14:0]} top.single_subtractor.sub_out[14] top.single_subtractor.sub_out[13] top.single_subtractor.sub_out[12] top.single_subtractor.sub_out[11] top.single_subtractor.sub_out[10] top.single_subtractor.sub_out[9] top.single_subtractor.sub_out[8] top.single_subtractor.sub_out[7] top.single_subtractor.sub_out[6] top.single_subtractor.sub_out[5] top.single_subtractor.sub_out[4] top.single_subtractor.sub_out[3] top.single_subtractor.sub_out[2] top.single_subtractor.sub_out[1] top.single_subtractor.sub_out[0]
+[pattern_trace] 1
+[pattern_trace] 0

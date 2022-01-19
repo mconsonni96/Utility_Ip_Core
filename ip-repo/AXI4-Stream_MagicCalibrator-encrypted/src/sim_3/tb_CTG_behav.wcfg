@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_CTG_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="localpackage_mc" />
+            <top_module name="tb_CTG" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="624940000fs"></ZoomStartTime>
+      <ZoomEndTime time="927740001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/tb_CTG/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CharactCurveSPRAM_addra_driver_reg" type="array">
+      <obj_property name="ElementShortName">CharactCurveSPRAM_addra_driver_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CharactCurveSPRAM_addra_driver_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/first_step" type="logic">
+      <obj_property name="ElementShortName">first_step</obj_property>
+      <obj_property name="ObjectShortName">first_step</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/RRequestSample" type="array">
+      <obj_property name="ElementShortName">RRequestSample[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RRequestSample[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/Realign_CalibTableSDPRAM" type="other">
+      <obj_property name="ElementShortName">Realign_CalibTableSDPRAM</obj_property>
+      <obj_property name="ObjectShortName">Realign_CalibTableSDPRAM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/Add_NewSample_addr" type="logic">
+      <obj_property name="ElementShortName">Add_NewSample_addr</obj_property>
+      <obj_property name="ObjectShortName">Add_NewSample_addr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/NewSample_addr" type="array">
+      <obj_property name="ElementShortName">NewSample_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">NewSample_addr[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_addrb" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_addrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_addrb[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_doutb" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_doutb[4:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_doutb[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider42">
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_wea" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_wea[0:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_addra" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_addra[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_addra[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_dina" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_dina[4:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_dina[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CharactCurveSPRAM_addra_driver_reg" type="array">
+      <obj_property name="ElementShortName">CharactCurveSPRAM_addra_driver_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CharactCurveSPRAM_addra_driver_reg[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CharactCurveSPRAM_debug_addrb" type="array">
+      <obj_property name="ElementShortName">CharactCurveSPRAM_debug_addrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CharactCurveSPRAM_debug_addrb[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CharactCurveSPRAM_debug_doutb" type="array">
+      <obj_property name="ElementShortName">CharactCurveSPRAM_debug_doutb[4:0]</obj_property>
+      <obj_property name="ObjectShortName">CharactCurveSPRAM_debug_doutb[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_debug_addrb" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_debug_addrb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_debug_addrb[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/CalibTableSDPRAM_debug_doutb" type="array">
+      <obj_property name="ElementShortName">CalibTableSDPRAM_debug_doutb[4:0]</obj_property>
+      <obj_property name="ObjectShortName">CalibTableSDPRAM_debug_doutb[4:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/dnl_inl_PL" type="array">
+      <obj_property name="ElementShortName">dnl_inl_PL[5:0]</obj_property>
+      <obj_property name="ObjectShortName">dnl_inl_PL[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/inlOLD_PL" type="array">
+      <obj_property name="ElementShortName">inlOLD_PL[5:0]</obj_property>
+      <obj_property name="ObjectShortName">inlOLD_PL[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_CTG/dut_CTG/Inst_CalibTableGen/dnlOLD_PL" type="array">
+      <obj_property name="ElementShortName">dnlOLD_PL[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dnlOLD_PL[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

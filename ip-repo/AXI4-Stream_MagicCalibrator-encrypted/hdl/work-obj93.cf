@@ -1,0 +1,13 @@
+v 4
+file / "/home/nicola/Documents/Vivado/Repositories/2020.2/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/AXI4-Stream_MagicCalibrator/hdl/MagicCalibrator.vhd" "f15ca2e044c0a38f9e174799b4642b2d55f6f38e" "20210531152447.462":
+  entity magiccalibrator at 81( 4738) + 0 on 51;
+  architecture behavioral of magiccalibrator at 238( 13567) + 0 on 52;
+file / "/home/nicola/Documents/Vivado/Repositories/Utility_Ip_Core/ip_repo/TDC_Basic/AXI4Stream_MagicCalibrator/hdl/AXI4Stream_MagicCalibratorWrapper_MC.vhd" "bf8ba89f6ec8ac7b093e4f329af9a039d9f594a7" "20201111172936.506":
+  entity axi4stream_magiccalibratorwrapper_mc at 36( 2862) + 0 on 43;
+  architecture behavioral of axi4stream_magiccalibratorwrapper_mc at 168( 8776) + 0 on 44;
+file . "LocalPackage_MC.vhd" "1bd611c50afeb70fc3526b6502d645c8e09b5e83" "20210224153502.691":
+  package localpackage_mc at 62( 3692) + 0 on 45 body;
+  package body localpackage_mc at 212( 11409) + 0 on 46;
+file / "/home/nicola/Documents/Vivado/Repositories/Utility_Ip_Core/ip_repo/TDC_Basic/AXI4Stream_MagicCalibrator/hdl/AXI4Stream_MagicCalibrator.vhd" "24f1441b5dff43e335c95353719c0d6ef8d839fb" "20201111172924.043":
+  entity axi4stream_magiccalibrator at 35( 2837) + 0 on 41;
+  architecture behavioral of axi4stream_magiccalibrator at 167( 8815) + 0 on 42;

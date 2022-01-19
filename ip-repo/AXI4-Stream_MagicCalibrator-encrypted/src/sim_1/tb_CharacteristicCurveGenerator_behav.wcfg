@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_MagicCalibrator_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="localpackage_mc" />
+            <top_module name="tb_MagicCalibrator" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6957340721fs"></ZoomEndTime>
+      <Cursor1Time time="7280000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="304"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Valid_Uncalibrated_addr">
+      <obj_property name="ElementShortName">Valid_Uncalibrated_addr</obj_property>
+      <obj_property name="ObjectShortName">Valid_Uncalibrated_addr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Uncalibrated_addr">
+      <obj_property name="ElementShortName">Uncalibrated_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Uncalibrated_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Restart_Calibration">
+      <obj_property name="ElementShortName">Restart_Calibration</obj_property>
+      <obj_property name="ObjectShortName">Restart_Calibration</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Valid_Calibrated_dout">
+      <obj_property name="ElementShortName">Valid_Calibrated_dout</obj_property>
+      <obj_property name="ObjectShortName">Valid_Calibrated_dout</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Calibrated_dout">
+      <obj_property name="ElementShortName">Calibrated_dout[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Calibrated_dout[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/RequestSample">
+      <obj_property name="ElementShortName">RequestSample[5:0]</obj_property>
+      <obj_property name="ObjectShortName">RequestSample[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Calibrated">
+      <obj_property name="ElementShortName">Calibrated</obj_property>
+      <obj_property name="ObjectShortName">Calibrated</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/stateSelCharactCurve">
+      <obj_property name="ElementShortName">stateSelCharactCurve[3:0]</obj_property>
+      <obj_property name="ObjectShortName">stateSelCharactCurve[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/selCharactCurve">
+      <obj_property name="ElementShortName">selCharactCurve[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selCharactCurve[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve1SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="label">CharactCurveSPRAM1[0:15][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve1SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="label">CharactCurveSPRAM1[0:15][3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve2SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="label">CharactCurveSPRAM2[0:15][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve2SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][3:0]</obj_property>
+      <obj_property name="label">CharactCurveSPRAM2[0:15][3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/DATA_WIDTH_CALIB_TABLE">
+      <obj_property name="ElementShortName">DATA_WIDTH_CALIB_TABLE</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH_CALIB_TABLE</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/DATA_WIDTH_CHARACT_CURVE">
+      <obj_property name="ElementShortName">DATA_WIDTH_CHARACT_CURVE</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH_CHARACT_CURVE</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/ADDR_WIDTH">
+      <obj_property name="ElementShortName">ADDR_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/SAVE_BIT">
+      <obj_property name="ElementShortName">SAVE_BIT</obj_property>
+      <obj_property name="ObjectShortName">SAVE_BIT</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/INTEGRATION_METHOD">
+      <obj_property name="ElementShortName">INTEGRATION_METHOD[1:1]</obj_property>
+      <obj_property name="ObjectShortName">INTEGRATION_METHOD[1:1]</obj_property>
+   </wvobject>
+</wave_config>

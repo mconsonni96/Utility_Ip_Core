@@ -1,0 +1,6 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_RETAIN_SINGLE_NODE_ENABLEMENT {PASS_THROUGH } {expr [expr {$PASS_THROUGH} == "{Both}" || {$PASS_THROUGH} == "{Belt-Bus}"] }
+proc gen_USERPARAMETER_HOLD_ON_SINGLE_NODE_ENABLEMENT {PASS_THROUGH } {expr [expr {$PASS_THROUGH} == "{Both}" || {$PASS_THROUGH} == "{Belt-Bus}"] }
+proc gen_USERPARAMETER_HOLD_ON_MIN_MOD_ENABLEMENT {PASS_THROUGH } {expr [expr {$PASS_THROUGH} == "{Both}" || {$PASS_THROUGH} == "{Belt-Bus}"] }
+proc gen_USERPARAMETER_HOLD_ON_INTEGRAL_ENABLEMENT {PASS_THROUGH } {expr [expr {$PASS_THROUGH} == "{Both}" || {$PASS_THROUGH} == "{Belt-Bus}"] }
+proc gen_USERPARAMETER_INJECT_CYCLES_ENABLEMENT {PASS_THROUGH } {expr [expr {$PASS_THROUGH} == "{Both}" || {$PASS_THROUGH} == "{Belt-Bus}"] }

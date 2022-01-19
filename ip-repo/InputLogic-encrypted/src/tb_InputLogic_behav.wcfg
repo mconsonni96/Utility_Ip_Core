@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_InputLogic_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_InputLogic" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="46090000fs"></ZoomStartTime>
+      <ZoomEndTime time="285590001fs"></ZoomEndTime>
+      <Cursor1Time time="157590000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="96"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/tb_InputLogic/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/AsyncEventIn" type="logic">
+      <obj_property name="ElementShortName">AsyncEventIn</obj_property>
+      <obj_property name="ObjectShortName">AsyncEventIn</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider109">
+      <obj_property name="label">Stretcher</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/StretchLength" type="array">
+      <obj_property name="ElementShortName">StretchLength[3:0]</obj_property>
+      <obj_property name="ObjectShortName">StretchLength[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/dut_InputLogic/Inst_Stretcher_IL/StretchedEventOut" type="logic">
+      <obj_property name="ElementShortName">StretchedEventOut</obj_property>
+      <obj_property name="ObjectShortName">StretchedEventOut</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider110">
+      <obj_property name="label">Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/Divider" type="array">
+      <obj_property name="ElementShortName">Divider[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Divider[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/dut_InputLogic/Inst_Divider_IL/DividedEventOut" type="logic">
+      <obj_property name="ElementShortName">DividedEventOut</obj_property>
+      <obj_property name="ObjectShortName">DividedEventOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/AsyncEventOut" type="logic">
+      <obj_property name="ElementShortName">AsyncEventOut</obj_property>
+      <obj_property name="ObjectShortName">AsyncEventOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/EdgeTrigger" type="logic">
+      <obj_property name="ElementShortName">EdgeTrigger</obj_property>
+      <obj_property name="ObjectShortName">EdgeTrigger</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/ASYNC_EVENT_PERIOD" type="other">
+      <obj_property name="ElementShortName">ASYNC_EVENT_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">ASYNC_EVENT_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/ASYNC_EVENT_DC" type="other">
+      <obj_property name="ElementShortName">ASYNC_EVENT_DC</obj_property>
+      <obj_property name="ObjectShortName">ASYNC_EVENT_DC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/ASYNC_EVENT_PULSE" type="other">
+      <obj_property name="ElementShortName">ASYNC_EVENT_PULSE</obj_property>
+      <obj_property name="ObjectShortName">ASYNC_EVENT_PULSE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/ASYNC_EVENT_DELAY" type="other">
+      <obj_property name="ElementShortName">ASYNC_EVENT_DELAY</obj_property>
+      <obj_property name="ObjectShortName">ASYNC_EVENT_DELAY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/RESET_WAIT" type="other">
+      <obj_property name="ElementShortName">RESET_WAIT</obj_property>
+      <obj_property name="ObjectShortName">RESET_WAIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/TRIGGER_EVENT_PERIOD" type="other">
+      <obj_property name="ElementShortName">TRIGGER_EVENT_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">TRIGGER_EVENT_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/TRIGGER_EVENT_DC" type="other">
+      <obj_property name="ElementShortName">TRIGGER_EVENT_DC</obj_property>
+      <obj_property name="ObjectShortName">TRIGGER_EVENT_DC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/TRIGGER_EVENT_PULSE" type="other">
+      <obj_property name="ElementShortName">TRIGGER_EVENT_PULSE</obj_property>
+      <obj_property name="ObjectShortName">TRIGGER_EVENT_PULSE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/TUNING_MODE" type="other">
+      <obj_property name="ElementShortName">TUNING_MODE</obj_property>
+      <obj_property name="ObjectShortName">TUNING_MODE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/EDGE_TRIGGER_INIT" type="array">
+      <obj_property name="ElementShortName">EDGE_TRIGGER_INIT[1:4]</obj_property>
+      <obj_property name="ObjectShortName">EDGE_TRIGGER_INIT[1:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/STRETCH_LENGTH_INIT" type="other">
+      <obj_property name="ElementShortName">STRETCH_LENGTH_INIT</obj_property>
+      <obj_property name="ObjectShortName">STRETCH_LENGTH_INIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/BIT_STRETCH_LENGTH" type="other">
+      <obj_property name="ElementShortName">BIT_STRETCH_LENGTH</obj_property>
+      <obj_property name="ObjectShortName">BIT_STRETCH_LENGTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/DIVIDER_INIT" type="other">
+      <obj_property name="ElementShortName">DIVIDER_INIT</obj_property>
+      <obj_property name="ObjectShortName">DIVIDER_INIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_InputLogic/BIT_DIVIDER" type="other">
+      <obj_property name="ElementShortName">BIT_DIVIDER</obj_property>
+      <obj_property name="ObjectShortName">BIT_DIVIDER</obj_property>
+   </wvobject>
+</wave_config>

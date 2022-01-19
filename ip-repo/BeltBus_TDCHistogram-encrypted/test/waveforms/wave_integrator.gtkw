@@ -1,0 +1,67 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Fri Dec 13 09:10:59 2019
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/build/waveforms.ghw"
+[dumpfile_mtime] "Fri Dec 13 09:10:41 2019"
+[dumpfile_size] 74960155
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/waveforms/wave_integrator.gtkw"
+[timestart] 170874600000
+[size] 2493 1385
+[pos] -1 -1
+*-24.643856 171032000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.simple_integrator.
+[treeopen] top.simple_integrator.xpm_memory_sdpram_inst.xpm_memory_sdpram_fe8de5fed214047c43fd904dfe62a0b4_gen.xpm_memory_sdpram_fe8de5fed214047c43fd904dfe62a0b4_inst.
+[sst_width] 377
+[signals_width] 289
+[sst_expanded] 1
+[sst_vpaned_height] 428
+@200
+-
+@28
+top.simple_integrator.clk
+top.simple_integrator.reset
+top.simple_integrator.xpm_memory_sdpram_inst.clka
+top.simple_integrator.sel_bit
+top.simple_integrator.write_on_read
+top.simple_integrator.int_read_ready
+top.simple_integrator.write_en_delay
+top.simple_integrator.fifo_read_ready
+@200
+-
+@28
+#{top.simple_integrator.state[1:0]} top.simple_integrator.state[1] top.simple_integrator.state[0]
+@200
+-
+@22
+#{top.simple_integrator.addr_counter[14:0]} top.simple_integrator.addr_counter[14] top.simple_integrator.addr_counter[13] top.simple_integrator.addr_counter[12] top.simple_integrator.addr_counter[11] top.simple_integrator.addr_counter[10] top.simple_integrator.addr_counter[9] top.simple_integrator.addr_counter[8] top.simple_integrator.addr_counter[7] top.simple_integrator.addr_counter[6] top.simple_integrator.addr_counter[5] top.simple_integrator.addr_counter[4] top.simple_integrator.addr_counter[3] top.simple_integrator.addr_counter[2] top.simple_integrator.addr_counter[1] top.simple_integrator.addr_counter[0]
+@200
+-
+-READ_FASE (11)
+@22
+top.simple_integrator.sel_bit
+top.simple_integrator.int_read_ready
+top.simple_integrator.fifo_read_ready
+top.simple_integrator.fifo_read_wen
+@28
+#{top.simple_integrator.state[1:0]} top.simple_integrator.state[1] top.simple_integrator.state[0]
+@22
+#{top.simple_integrator.addr_counter[14:0]} top.simple_integrator.addr_counter[14] top.simple_integrator.addr_counter[13] top.simple_integrator.addr_counter[12] top.simple_integrator.addr_counter[11] top.simple_integrator.addr_counter[10] top.simple_integrator.addr_counter[9] top.simple_integrator.addr_counter[8] top.simple_integrator.addr_counter[7] top.simple_integrator.addr_counter[6] top.simple_integrator.addr_counter[5] top.simple_integrator.addr_counter[4] top.simple_integrator.addr_counter[3] top.simple_integrator.addr_counter[2] top.simple_integrator.addr_counter[1] top.simple_integrator.addr_counter[0]
+#{top.simple_integrator.mem_read_addr[14:0]} top.simple_integrator.mem_read_addr[14] top.simple_integrator.mem_read_addr[13] top.simple_integrator.mem_read_addr[12] top.simple_integrator.mem_read_addr[11] top.simple_integrator.mem_read_addr[10] top.simple_integrator.mem_read_addr[9] top.simple_integrator.mem_read_addr[8] top.simple_integrator.mem_read_addr[7] top.simple_integrator.mem_read_addr[6] top.simple_integrator.mem_read_addr[5] top.simple_integrator.mem_read_addr[4] top.simple_integrator.mem_read_addr[3] top.simple_integrator.mem_read_addr[2] top.simple_integrator.mem_read_addr[1] top.simple_integrator.mem_read_addr[0]
+#{top.simple_integrator.fifo_read_data[19:0]} top.simple_integrator.fifo_read_data[19] top.simple_integrator.fifo_read_data[18] top.simple_integrator.fifo_read_data[17] top.simple_integrator.fifo_read_data[16] top.simple_integrator.fifo_read_data[15] top.simple_integrator.fifo_read_data[14] top.simple_integrator.fifo_read_data[13] top.simple_integrator.fifo_read_data[12] top.simple_integrator.fifo_read_data[11] top.simple_integrator.fifo_read_data[10] top.simple_integrator.fifo_read_data[9] top.simple_integrator.fifo_read_data[8] top.simple_integrator.fifo_read_data[7] top.simple_integrator.fifo_read_data[6] top.simple_integrator.fifo_read_data[5] top.simple_integrator.fifo_read_data[4] top.simple_integrator.fifo_read_data[3] top.simple_integrator.fifo_read_data[2] top.simple_integrator.fifo_read_data[1] top.simple_integrator.fifo_read_data[0]
+@200
+-
+-WRITE_FASE (10)
+@28
+#{top.simple_integrator.state[1:0]} top.simple_integrator.state[1] top.simple_integrator.state[0]
+@23
+#{top.simple_integrator.bin_addr[14:0]} top.simple_integrator.bin_addr[14] top.simple_integrator.bin_addr[13] top.simple_integrator.bin_addr[12] top.simple_integrator.bin_addr[11] top.simple_integrator.bin_addr[10] top.simple_integrator.bin_addr[9] top.simple_integrator.bin_addr[8] top.simple_integrator.bin_addr[7] top.simple_integrator.bin_addr[6] top.simple_integrator.bin_addr[5] top.simple_integrator.bin_addr[4] top.simple_integrator.bin_addr[3] top.simple_integrator.bin_addr[2] top.simple_integrator.bin_addr[1] top.simple_integrator.bin_addr[0]
+@28
+top.simple_integrator.integrate
+#{top.simple_integrator.increment[1:0]} top.simple_integrator.increment[1] top.simple_integrator.increment[0]
+@22
+#{top.simple_integrator.mem_data_out[19:0]} top.simple_integrator.mem_data_out[19] top.simple_integrator.mem_data_out[18] top.simple_integrator.mem_data_out[17] top.simple_integrator.mem_data_out[16] top.simple_integrator.mem_data_out[15] top.simple_integrator.mem_data_out[14] top.simple_integrator.mem_data_out[13] top.simple_integrator.mem_data_out[12] top.simple_integrator.mem_data_out[11] top.simple_integrator.mem_data_out[10] top.simple_integrator.mem_data_out[9] top.simple_integrator.mem_data_out[8] top.simple_integrator.mem_data_out[7] top.simple_integrator.mem_data_out[6] top.simple_integrator.mem_data_out[5] top.simple_integrator.mem_data_out[4] top.simple_integrator.mem_data_out[3] top.simple_integrator.mem_data_out[2] top.simple_integrator.mem_data_out[1] top.simple_integrator.mem_data_out[0]
+#{top.simple_integrator.mem_data_in[19:0]} top.simple_integrator.mem_data_in[19] top.simple_integrator.mem_data_in[18] top.simple_integrator.mem_data_in[17] top.simple_integrator.mem_data_in[16] top.simple_integrator.mem_data_in[15] top.simple_integrator.mem_data_in[14] top.simple_integrator.mem_data_in[13] top.simple_integrator.mem_data_in[12] top.simple_integrator.mem_data_in[11] top.simple_integrator.mem_data_in[10] top.simple_integrator.mem_data_in[9] top.simple_integrator.mem_data_in[8] top.simple_integrator.mem_data_in[7] top.simple_integrator.mem_data_in[6] top.simple_integrator.mem_data_in[5] top.simple_integrator.mem_data_in[4] top.simple_integrator.mem_data_in[3] top.simple_integrator.mem_data_in[2] top.simple_integrator.mem_data_in[1] top.simple_integrator.mem_data_in[0]
+[pattern_trace] 1
+[pattern_trace] 0

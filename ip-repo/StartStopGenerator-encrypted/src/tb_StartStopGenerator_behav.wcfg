@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_StartStopGenerator_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_StartStopGenerator" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="99930000000fs"></ZoomStartTime>
+      <ZoomEndTime time="100014000001fs"></ZoomEndTime>
+      <Cursor1Time time="100000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/tb_StartStopGenerator/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/clk_in" type="logic">
+      <obj_property name="ElementShortName">clk_in</obj_property>
+      <obj_property name="ObjectShortName">clk_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/Divider" type="array">
+      <obj_property name="ElementShortName">Divider[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Divider[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/Dut_StartStopGenerator/Inst_Divider_SS/DividedOscIn" type="logic">
+      <obj_property name="ElementShortName">DividedOscIn</obj_property>
+      <obj_property name="ObjectShortName">DividedOscIn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/Dut_StartStopGenerator/Inst_Divider_SS/DividedEvent" type="logic">
+      <obj_property name="ElementShortName">DividedEvent</obj_property>
+      <obj_property name="ObjectShortName">DividedEvent</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/Dut_StartStopGenerator/Inst_Divider_SS/DividedEventOut" type="logic">
+      <obj_property name="ElementShortName">DividedEventOut</obj_property>
+      <obj_property name="ObjectShortName">DividedEventOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/StartOut" type="logic">
+      <obj_property name="ElementShortName">StartOut</obj_property>
+      <obj_property name="ObjectShortName">StartOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/StopOut" type="logic">
+      <obj_property name="ElementShortName">StopOut</obj_property>
+      <obj_property name="ObjectShortName">StopOut</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/WAIT_PERIOD" type="other">
+      <obj_property name="ElementShortName">WAIT_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">WAIT_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/RESET_WAIT" type="other">
+      <obj_property name="ElementShortName">RESET_WAIT</obj_property>
+      <obj_property name="ObjectShortName">RESET_WAIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/NUM_CARRY_BLOCK" type="other">
+      <obj_property name="ElementShortName">NUM_CARRY_BLOCK</obj_property>
+      <obj_property name="ObjectShortName">NUM_CARRY_BLOCK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/HALF_DIVIDER" type="other">
+      <obj_property name="ElementShortName">HALF_DIVIDER</obj_property>
+      <obj_property name="ObjectShortName">HALF_DIVIDER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/TUNING_MODE" type="other">
+      <obj_property name="ElementShortName">TUNING_MODE</obj_property>
+      <obj_property name="ObjectShortName">TUNING_MODE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/DIVIDER_INIT" type="other">
+      <obj_property name="ElementShortName">DIVIDER_INIT</obj_property>
+      <obj_property name="ObjectShortName">DIVIDER_INIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/CLK_SELECT" type="array">
+      <obj_property name="ElementShortName">CLK_SELECT[1:8]</obj_property>
+      <obj_property name="ObjectShortName">CLK_SELECT[1:8]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_StartStopGenerator/START_STOP_DALAY_NUM_CARRY_BLOCK" type="other">
+      <obj_property name="ElementShortName">START_STOP_DALAY_NUM_CARRY_BLOCK</obj_property>
+      <obj_property name="ObjectShortName">START_STOP_DALAY_NUM_CARRY_BLOCK</obj_property>
+   </wvobject>
+</wave_config>

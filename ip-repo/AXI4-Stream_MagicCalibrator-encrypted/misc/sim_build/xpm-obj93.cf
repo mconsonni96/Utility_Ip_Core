@@ -1,0 +1,41 @@
+v 4
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_entities.vhd" "dac02f3c5138032fcf14e58776e21ecec962e1e8" "20200412104025.499":
+  entity xpm_memory_spram at 9( 301) + 0 on 12;
+  entity xpm_memory_sdpram at 66( 2284) + 0 on 13;
+  entity xpm_memory_tdpram at 126( 4561) + 0 on 14;
+  entity xpm_memory_sprom at 201( 7591) + 0 on 15;
+  entity xpm_memory_dprom at 246( 9139) + 0 on 16;
+  entity xpm_memory_dpdistram at 310( 11444) + 0 on 17;
+  entity xpm_cdc_single at 364( 13310) + 0 on 18;
+  entity xpm_cdc_gray at 385( 13773) + 0 on 19;
+  entity xpm_cdc_handshake at 409( 14419) + 0 on 20;
+  entity xpm_cdc_pulse at 437( 15140) + 0 on 21;
+  entity xpm_cdc_array_single at 463( 15721) + 0 on 22;
+  entity xpm_cdc_sync_rst at 486( 16288) + 0 on 23;
+  entity xpm_cdc_async_rst at 508( 16731) + 0 on 24;
+  entity xpm_fifo_async at 529( 17149) + 0 on 25;
+  entity xpm_fifo_sync at 587( 19284) + 0 on 26;
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_memory_sdpram_161f17bdedc2a6c07528eff9f41d356b.vhd" "43d026a512244d0d3f05c3b069a2daa44e3490f5" "20200412104021.124":
+  entity xpm_memory_base_161f17bdedc2a6c07528eff9f41d356b at 13( 964) + 0 on 4;
+  architecture structure of xpm_memory_base_161f17bdedc2a6c07528eff9f41d356b at 167( 10441) + 0 on 4;
+  entity xpm_memory_sdpram_161f17bdedc2a6c07528eff9f41d356b at 345( 15848) + 0 on 4;
+  architecture structure of xpm_memory_sdpram_161f17bdedc2a6c07528eff9f41d356b at 426( 20553) + 0 on 4;
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_memory_sdpram_64661eed5e0b334792780022881403bc.vhd" "d9dba411b18731f4b7462b46e117b16e49c993b2" "20200412104021.143":
+  entity xpm_memory_base_64661eed5e0b334792780022881403bc at 13( 964) + 0 on 4;
+  architecture structure of xpm_memory_base_64661eed5e0b334792780022881403bc at 167( 10442) + 0 on 4;
+  entity xpm_memory_sdpram_64661eed5e0b334792780022881403bc at 461( 19395) + 0 on 4;
+  architecture structure of xpm_memory_sdpram_64661eed5e0b334792780022881403bc at 542( 24101) + 0 on 4;
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_memory_sdpram_555c51ae1a4f05b1ae9865006409dd10.vhd" "d035093b767f3175f41a1fffe50174d984078022" "20200412104021.161":
+  entity xpm_memory_base_555c51ae1a4f05b1ae9865006409dd10 at 13( 964) + 0 on 4;
+  architecture structure of xpm_memory_base_555c51ae1a4f05b1ae9865006409dd10 at 167( 10457) + 0 on 4;
+  entity xpm_memory_sdpram_555c51ae1a4f05b1ae9865006409dd10 at 361( 22316) + 0 on 4;
+  architecture structure of xpm_memory_sdpram_555c51ae1a4f05b1ae9865006409dd10 at 442( 27024) + 0 on 4;
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_memory_sdpram_wrapper.vhd" "39dd0ab81822603bf192104813d6dfb89bf6c115" "20200412104025.499":
+  architecture wrapper of xpm_memory_sdpram at 1( 0) + 0 on 31;
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_VCOMP.vhd" "ae72f758fd2490dbda65213eba63f2d1fb4f0478" "20200412104025.498":
+  package vcomponents at 9( 301) + 0 on 11;
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/xpm/xpm_memory_sdpram_43e957c8a0152a84c00d543e1bc604cb.vhd" "ea8c67f215fed264d73842898edf7b18f97ed054" "20200412104025.499":
+  entity xpm_memory_base_43e957c8a0152a84c00d543e1bc604cb at 13( 964) + 0 on 27;
+  architecture structure of xpm_memory_base_43e957c8a0152a84c00d543e1bc604cb at 167( 10457) + 0 on 28;
+  entity xpm_memory_sdpram_43e957c8a0152a84c00d543e1bc604cb at 351( 21961) + 0 on 29;
+  architecture structure of xpm_memory_sdpram_43e957c8a0152a84c00d543e1bc604cb at 432( 26669) + 0 on 30;

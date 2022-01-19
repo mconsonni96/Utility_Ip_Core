@@ -1,0 +1,9 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1621612710" />
+    <testcase name="test_windowed_sub" classname="test_single_positive_subtractor" file="/home/pc-fisso/Documents/IP/ip_repo/BeltBus_TDCHistogram/test/test_single_positive_subtractor.py" lineno="283" time="0" sim_time_ns="0" ratio_time="nan">
+      <skipped />
+    </testcase>
+    <testcase name="test_sync_division" classname="test_single_positive_subtractor" file="/home/pc-fisso/Documents/IP/ip_repo/BeltBus_TDCHistogram/test/test_single_positive_subtractor.py" lineno="334" time="10.90889835357666" sim_time_ns="72792.000001" ratio_time="6672.717779713655" />
+  </testsuite>
+</testsuites>

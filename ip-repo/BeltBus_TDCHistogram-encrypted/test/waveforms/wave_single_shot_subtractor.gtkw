@@ -1,0 +1,74 @@
+[*]
+[*] GTKWave Analyzer v3.3.101 (w)1999-2019 BSI
+[*] Wed Jan 22 06:54:00 2020
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer/test/build/waveforms.ghw"
+[dumpfile_mtime] "Wed Jan 22 06:52:24 2020"
+[dumpfile_size] 2595396
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer/test/waveforms/wave_single_shot_subtractor.gtkw"
+[timestart] 68041210000
+[size] 1850 1016
+[pos] -1 -1
+*-23.830606 68107220000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.single_shot_subtractor.
+[sst_width] 233
+[signals_width] 303
+[sst_expanded] 1
+[sst_vpaned_height] 428
+@28
+top.single_shot_subtractor.clk
+top.single_shot_subtractor.reset
+@200
+-
+-BELT_DATA
+@28
+top.single_shot_subtractor.belt_tvalid
+@22
+#{top.single_shot_subtractor.belt_bus_in.tchannel[3:0]} top.single_shot_subtractor.belt_bus_in.tchannel[3] top.single_shot_subtractor.belt_bus_in.tchannel[2] top.single_shot_subtractor.belt_bus_in.tchannel[1] top.single_shot_subtractor.belt_bus_in.tchannel[0]
+#{top.single_shot_subtractor.belt_bus_in.tdata[23:0]} top.single_shot_subtractor.belt_bus_in.tdata[23] top.single_shot_subtractor.belt_bus_in.tdata[22] top.single_shot_subtractor.belt_bus_in.tdata[21] top.single_shot_subtractor.belt_bus_in.tdata[20] top.single_shot_subtractor.belt_bus_in.tdata[19] top.single_shot_subtractor.belt_bus_in.tdata[18] top.single_shot_subtractor.belt_bus_in.tdata[17] top.single_shot_subtractor.belt_bus_in.tdata[16] top.single_shot_subtractor.belt_bus_in.tdata[15] top.single_shot_subtractor.belt_bus_in.tdata[14] top.single_shot_subtractor.belt_bus_in.tdata[13] top.single_shot_subtractor.belt_bus_in.tdata[12] top.single_shot_subtractor.belt_bus_in.tdata[11] top.single_shot_subtractor.belt_bus_in.tdata[10] top.single_shot_subtractor.belt_bus_in.tdata[9] top.single_shot_subtractor.belt_bus_in.tdata[8] top.single_shot_subtractor.belt_bus_in.tdata[7] top.single_shot_subtractor.belt_bus_in.tdata[6] top.single_shot_subtractor.belt_bus_in.tdata[5] top.single_shot_subtractor.belt_bus_in.tdata[4] top.single_shot_subtractor.belt_bus_in.tdata[3] top.single_shot_subtractor.belt_bus_in.tdata[2] top.single_shot_subtractor.belt_bus_in.tdata[1] top.single_shot_subtractor.belt_bus_in.tdata[0]
+@28
+top.single_shot_subtractor.belt_a_valid
+top.single_shot_subtractor.belt_b_valid
+top.single_shot_subtractor.belt_a_overflow
+top.single_shot_subtractor.belt_b_overflow
+top.single_shot_subtractor.is_buff_a_changed
+top.single_shot_subtractor.is_buff_b_changed
+@200
+-
+-CONFIGURATION
+@22
+#{top.single_shot_subtractor.ch_a_sel[3:0]} top.single_shot_subtractor.ch_a_sel[3] top.single_shot_subtractor.ch_a_sel[2] top.single_shot_subtractor.ch_a_sel[1] top.single_shot_subtractor.ch_a_sel[0]
+#{top.single_shot_subtractor.ch_b_sel[3:0]} top.single_shot_subtractor.ch_b_sel[3] top.single_shot_subtractor.ch_b_sel[2] top.single_shot_subtractor.ch_b_sel[1] top.single_shot_subtractor.ch_b_sel[0]
+#{top.single_shot_subtractor.prog_overflow[3:0]} top.single_shot_subtractor.prog_overflow[3] top.single_shot_subtractor.prog_overflow[2] top.single_shot_subtractor.prog_overflow[1] top.single_shot_subtractor.prog_overflow[0]
+#{top.single_shot_subtractor.window_pos[31:0]} top.single_shot_subtractor.window_pos[31] top.single_shot_subtractor.window_pos[30] top.single_shot_subtractor.window_pos[29] top.single_shot_subtractor.window_pos[28] top.single_shot_subtractor.window_pos[27] top.single_shot_subtractor.window_pos[26] top.single_shot_subtractor.window_pos[25] top.single_shot_subtractor.window_pos[24] top.single_shot_subtractor.window_pos[23] top.single_shot_subtractor.window_pos[22] top.single_shot_subtractor.window_pos[21] top.single_shot_subtractor.window_pos[20] top.single_shot_subtractor.window_pos[19] top.single_shot_subtractor.window_pos[18] top.single_shot_subtractor.window_pos[17] top.single_shot_subtractor.window_pos[16] top.single_shot_subtractor.window_pos[15] top.single_shot_subtractor.window_pos[14] top.single_shot_subtractor.window_pos[13] top.single_shot_subtractor.window_pos[12] top.single_shot_subtractor.window_pos[11] top.single_shot_subtractor.window_pos[10] top.single_shot_subtractor.window_pos[9] top.single_shot_subtractor.window_pos[8] top.single_shot_subtractor.window_pos[7] top.single_shot_subtractor.window_pos[6] top.single_shot_subtractor.window_pos[5] top.single_shot_subtractor.window_pos[4] top.single_shot_subtractor.window_pos[3] top.single_shot_subtractor.window_pos[2] top.single_shot_subtractor.window_pos[1] top.single_shot_subtractor.window_pos[0]
+#{top.single_shot_subtractor.half_window[31:0]} top.single_shot_subtractor.half_window[31] top.single_shot_subtractor.half_window[30] top.single_shot_subtractor.half_window[29] top.single_shot_subtractor.half_window[28] top.single_shot_subtractor.half_window[27] top.single_shot_subtractor.half_window[26] top.single_shot_subtractor.half_window[25] top.single_shot_subtractor.half_window[24] top.single_shot_subtractor.half_window[23] top.single_shot_subtractor.half_window[22] top.single_shot_subtractor.half_window[21] top.single_shot_subtractor.half_window[20] top.single_shot_subtractor.half_window[19] top.single_shot_subtractor.half_window[18] top.single_shot_subtractor.half_window[17] top.single_shot_subtractor.half_window[16] top.single_shot_subtractor.half_window[15] top.single_shot_subtractor.half_window[14] top.single_shot_subtractor.half_window[13] top.single_shot_subtractor.half_window[12] top.single_shot_subtractor.half_window[11] top.single_shot_subtractor.half_window[10] top.single_shot_subtractor.half_window[9] top.single_shot_subtractor.half_window[8] top.single_shot_subtractor.half_window[7] top.single_shot_subtractor.half_window[6] top.single_shot_subtractor.half_window[5] top.single_shot_subtractor.half_window[4] top.single_shot_subtractor.half_window[3] top.single_shot_subtractor.half_window[2] top.single_shot_subtractor.half_window[1] top.single_shot_subtractor.half_window[0]
+#{top.single_shot_subtractor.window[31:0]} top.single_shot_subtractor.window[31] top.single_shot_subtractor.window[30] top.single_shot_subtractor.window[29] top.single_shot_subtractor.window[28] top.single_shot_subtractor.window[27] top.single_shot_subtractor.window[26] top.single_shot_subtractor.window[25] top.single_shot_subtractor.window[24] top.single_shot_subtractor.window[23] top.single_shot_subtractor.window[22] top.single_shot_subtractor.window[21] top.single_shot_subtractor.window[20] top.single_shot_subtractor.window[19] top.single_shot_subtractor.window[18] top.single_shot_subtractor.window[17] top.single_shot_subtractor.window[16] top.single_shot_subtractor.window[15] top.single_shot_subtractor.window[14] top.single_shot_subtractor.window[13] top.single_shot_subtractor.window[12] top.single_shot_subtractor.window[11] top.single_shot_subtractor.window[10] top.single_shot_subtractor.window[9] top.single_shot_subtractor.window[8] top.single_shot_subtractor.window[7] top.single_shot_subtractor.window[6] top.single_shot_subtractor.window[5] top.single_shot_subtractor.window[4] top.single_shot_subtractor.window[3] top.single_shot_subtractor.window[2] top.single_shot_subtractor.window[1] top.single_shot_subtractor.window[0]
+#{top.single_shot_subtractor.int_wind_pos[32:0]} top.single_shot_subtractor.int_wind_pos[31] top.single_shot_subtractor.int_wind_pos[30] top.single_shot_subtractor.int_wind_pos[29] top.single_shot_subtractor.int_wind_pos[28] top.single_shot_subtractor.int_wind_pos[27] top.single_shot_subtractor.int_wind_pos[26] top.single_shot_subtractor.int_wind_pos[25] top.single_shot_subtractor.int_wind_pos[24] top.single_shot_subtractor.int_wind_pos[23] top.single_shot_subtractor.int_wind_pos[22] top.single_shot_subtractor.int_wind_pos[21] top.single_shot_subtractor.int_wind_pos[20] top.single_shot_subtractor.int_wind_pos[19] top.single_shot_subtractor.int_wind_pos[18] top.single_shot_subtractor.int_wind_pos[17] top.single_shot_subtractor.int_wind_pos[16] top.single_shot_subtractor.int_wind_pos[15] top.single_shot_subtractor.int_wind_pos[14] top.single_shot_subtractor.int_wind_pos[13] top.single_shot_subtractor.int_wind_pos[12] top.single_shot_subtractor.int_wind_pos[11] top.single_shot_subtractor.int_wind_pos[10] top.single_shot_subtractor.int_wind_pos[9] top.single_shot_subtractor.int_wind_pos[8] top.single_shot_subtractor.int_wind_pos[7] top.single_shot_subtractor.int_wind_pos[6] top.single_shot_subtractor.int_wind_pos[5] top.single_shot_subtractor.int_wind_pos[4] top.single_shot_subtractor.int_wind_pos[3] top.single_shot_subtractor.int_wind_pos[2] top.single_shot_subtractor.int_wind_pos[1] top.single_shot_subtractor.int_wind_pos[0]
+@200
+-
+-SUB_STAGE
+@22
+#{top.single_shot_subtractor.buff_a_overflow[8:0]} top.single_shot_subtractor.buff_a_overflow[8] top.single_shot_subtractor.buff_a_overflow[7] top.single_shot_subtractor.buff_a_overflow[6] top.single_shot_subtractor.buff_a_overflow[5] top.single_shot_subtractor.buff_a_overflow[4] top.single_shot_subtractor.buff_a_overflow[3] top.single_shot_subtractor.buff_a_overflow[2] top.single_shot_subtractor.buff_a_overflow[1] top.single_shot_subtractor.buff_a_overflow[0]
+#{top.single_shot_subtractor.buff_b_overflow[8:0]} top.single_shot_subtractor.buff_b_overflow[8] top.single_shot_subtractor.buff_b_overflow[7] top.single_shot_subtractor.buff_b_overflow[6] top.single_shot_subtractor.buff_b_overflow[5] top.single_shot_subtractor.buff_b_overflow[4] top.single_shot_subtractor.buff_b_overflow[3] top.single_shot_subtractor.buff_b_overflow[2] top.single_shot_subtractor.buff_b_overflow[1] top.single_shot_subtractor.buff_b_overflow[0]
+#{top.single_shot_subtractor.tstamp_a[23:0]} top.single_shot_subtractor.tstamp_a[23] top.single_shot_subtractor.tstamp_a[22] top.single_shot_subtractor.tstamp_a[21] top.single_shot_subtractor.tstamp_a[20] top.single_shot_subtractor.tstamp_a[19] top.single_shot_subtractor.tstamp_a[18] top.single_shot_subtractor.tstamp_a[17] top.single_shot_subtractor.tstamp_a[16] top.single_shot_subtractor.tstamp_a[15] top.single_shot_subtractor.tstamp_a[14] top.single_shot_subtractor.tstamp_a[13] top.single_shot_subtractor.tstamp_a[12] top.single_shot_subtractor.tstamp_a[11] top.single_shot_subtractor.tstamp_a[10] top.single_shot_subtractor.tstamp_a[9] top.single_shot_subtractor.tstamp_a[8] top.single_shot_subtractor.tstamp_a[7] top.single_shot_subtractor.tstamp_a[6] top.single_shot_subtractor.tstamp_a[5] top.single_shot_subtractor.tstamp_a[4] top.single_shot_subtractor.tstamp_a[3] top.single_shot_subtractor.tstamp_a[2] top.single_shot_subtractor.tstamp_a[1] top.single_shot_subtractor.tstamp_a[0]
+#{top.single_shot_subtractor.tstamp_b[32:0]} top.single_shot_subtractor.tstamp_b[32] top.single_shot_subtractor.tstamp_b[31] top.single_shot_subtractor.tstamp_b[30] top.single_shot_subtractor.tstamp_b[29] top.single_shot_subtractor.tstamp_b[28] top.single_shot_subtractor.tstamp_b[27] top.single_shot_subtractor.tstamp_b[26] top.single_shot_subtractor.tstamp_b[25] top.single_shot_subtractor.tstamp_b[24] top.single_shot_subtractor.tstamp_b[23] top.single_shot_subtractor.tstamp_b[22] top.single_shot_subtractor.tstamp_b[21] top.single_shot_subtractor.tstamp_b[20] top.single_shot_subtractor.tstamp_b[19] top.single_shot_subtractor.tstamp_b[18] top.single_shot_subtractor.tstamp_b[17] top.single_shot_subtractor.tstamp_b[16] top.single_shot_subtractor.tstamp_b[15] top.single_shot_subtractor.tstamp_b[14] top.single_shot_subtractor.tstamp_b[13] top.single_shot_subtractor.tstamp_b[12] top.single_shot_subtractor.tstamp_b[11] top.single_shot_subtractor.tstamp_b[10] top.single_shot_subtractor.tstamp_b[9] top.single_shot_subtractor.tstamp_b[8] top.single_shot_subtractor.tstamp_b[7] top.single_shot_subtractor.tstamp_b[6] top.single_shot_subtractor.tstamp_b[5] top.single_shot_subtractor.tstamp_b[4] top.single_shot_subtractor.tstamp_b[3] top.single_shot_subtractor.tstamp_b[2] top.single_shot_subtractor.tstamp_b[1] top.single_shot_subtractor.tstamp_b[0]
+#{top.single_shot_subtractor.a_minus_b[32:0]} top.single_shot_subtractor.a_minus_b[32] top.single_shot_subtractor.a_minus_b[31] top.single_shot_subtractor.a_minus_b[30] top.single_shot_subtractor.a_minus_b[29] top.single_shot_subtractor.a_minus_b[28] top.single_shot_subtractor.a_minus_b[27] top.single_shot_subtractor.a_minus_b[26] top.single_shot_subtractor.a_minus_b[25] top.single_shot_subtractor.a_minus_b[24] top.single_shot_subtractor.a_minus_b[23] top.single_shot_subtractor.a_minus_b[22] top.single_shot_subtractor.a_minus_b[21] top.single_shot_subtractor.a_minus_b[20] top.single_shot_subtractor.a_minus_b[19] top.single_shot_subtractor.a_minus_b[18] top.single_shot_subtractor.a_minus_b[17] top.single_shot_subtractor.a_minus_b[16] top.single_shot_subtractor.a_minus_b[15] top.single_shot_subtractor.a_minus_b[14] top.single_shot_subtractor.a_minus_b[13] top.single_shot_subtractor.a_minus_b[12] top.single_shot_subtractor.a_minus_b[11] top.single_shot_subtractor.a_minus_b[10] top.single_shot_subtractor.a_minus_b[9] top.single_shot_subtractor.a_minus_b[8] top.single_shot_subtractor.a_minus_b[7] top.single_shot_subtractor.a_minus_b[6] top.single_shot_subtractor.a_minus_b[5] top.single_shot_subtractor.a_minus_b[4] top.single_shot_subtractor.a_minus_b[3] top.single_shot_subtractor.a_minus_b[2] top.single_shot_subtractor.a_minus_b[1] top.single_shot_subtractor.a_minus_b[0]
+@28
+top.single_shot_subtractor.is_buff_b_valid
+top.single_shot_subtractor.is_buff_a_valid
+top.single_shot_subtractor.is_measure_new
+top.single_shot_subtractor.is_measure_valid
+top.single_shot_subtractor.is_measure_in_wnd
+top.single_shot_subtractor.a_new
+top.single_shot_subtractor.b_new
+top.single_shot_subtractor.is_last_b
+@200
+-
+-OUTPUT
+@28
+top.single_shot_subtractor.sub_valid
+@22
+#{top.single_shot_subtractor.sub_out[14:0]} top.single_shot_subtractor.sub_out[14] top.single_shot_subtractor.sub_out[13] top.single_shot_subtractor.sub_out[12] top.single_shot_subtractor.sub_out[11] top.single_shot_subtractor.sub_out[10] top.single_shot_subtractor.sub_out[9] top.single_shot_subtractor.sub_out[8] top.single_shot_subtractor.sub_out[7] top.single_shot_subtractor.sub_out[6] top.single_shot_subtractor.sub_out[5] top.single_shot_subtractor.sub_out[4] top.single_shot_subtractor.sub_out[3] top.single_shot_subtractor.sub_out[2] top.single_shot_subtractor.sub_out[1] top.single_shot_subtractor.sub_out[0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,4 @@
+v 4
+file / "/home/nicola/Documents/Vivado/Repositories/2020.2/Utility_Ip_Core/ip_repo/TDC_Basic/magic_debugger/hdl/AXI4_MagicCalibratorDebugger.vhd" "bd64720f81d44581fd52e10f5d67fb1ef068849c" "20210113172613.309":
+  entity axi4_magiccalibratordebugger at 10( 532) + 0 on 17;
+  architecture behavioral of axi4_magiccalibratordebugger at 202( 10040) + 0 on 18;

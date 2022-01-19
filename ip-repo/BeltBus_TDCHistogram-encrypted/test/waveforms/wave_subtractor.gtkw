@@ -1,0 +1,59 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Dec 12 14:53:09 2019
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/build/waveforms.ghw"
+[dumpfile_mtime] "Thu Dec 12 12:23:34 2019"
+[dumpfile_size] 1838975
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/waveforms/wave_subtractor.gtkw"
+[timestart] 203118
+[size] 2493 1385
+[pos] -1 -1
+*-5.643856 203534 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.simple_subtractor.
+[treeopen] top.simple_subtractor.feb_bus_in.
+[sst_width] 223
+[signals_width] 289
+[sst_expanded] 1
+[sst_vpaned_height] 428
+@28
+top.simple_subtractor.clk
+@22
+#{top.simple_subtractor.ch_a_sel[3:0]} top.simple_subtractor.ch_a_sel[3] top.simple_subtractor.ch_a_sel[2] top.simple_subtractor.ch_a_sel[1] top.simple_subtractor.ch_a_sel[0]
+#{top.simple_subtractor.ch_b_sel[3:0]} top.simple_subtractor.ch_b_sel[3] top.simple_subtractor.ch_b_sel[2] top.simple_subtractor.ch_b_sel[1] top.simple_subtractor.ch_b_sel[0]
+@200
+-
+@28
+top.simple_subtractor.belt_tvalid
+@22
+#{top.simple_subtractor.feb_bus_in.fchannel[3:0]} top.simple_subtractor.feb_bus_in.fchannel[3] top.simple_subtractor.feb_bus_in.fchannel[2] top.simple_subtractor.feb_bus_in.fchannel[1] top.simple_subtractor.feb_bus_in.fchannel[0]
+@25
+#{top.simple_subtractor.feb_bus_in.fdata[23:0]} top.simple_subtractor.feb_bus_in.fdata[23] top.simple_subtractor.feb_bus_in.fdata[22] top.simple_subtractor.feb_bus_in.fdata[21] top.simple_subtractor.feb_bus_in.fdata[20] top.simple_subtractor.feb_bus_in.fdata[19] top.simple_subtractor.feb_bus_in.fdata[18] top.simple_subtractor.feb_bus_in.fdata[17] top.simple_subtractor.feb_bus_in.fdata[16] top.simple_subtractor.feb_bus_in.fdata[15] top.simple_subtractor.feb_bus_in.fdata[14] top.simple_subtractor.feb_bus_in.fdata[13] top.simple_subtractor.feb_bus_in.fdata[12] top.simple_subtractor.feb_bus_in.fdata[11] top.simple_subtractor.feb_bus_in.fdata[10] top.simple_subtractor.feb_bus_in.fdata[9] top.simple_subtractor.feb_bus_in.fdata[8] top.simple_subtractor.feb_bus_in.fdata[7] top.simple_subtractor.feb_bus_in.fdata[6] top.simple_subtractor.feb_bus_in.fdata[5] top.simple_subtractor.feb_bus_in.fdata[4] top.simple_subtractor.feb_bus_in.fdata[3] top.simple_subtractor.feb_bus_in.fdata[2] top.simple_subtractor.feb_bus_in.fdata[1] top.simple_subtractor.feb_bus_in.fdata[0]
+@22
+#{top.simple_subtractor.belt_tdata[31:0]} top.simple_subtractor.belt_tdata[31] top.simple_subtractor.belt_tdata[30] top.simple_subtractor.belt_tdata[29] top.simple_subtractor.belt_tdata[28] top.simple_subtractor.belt_tdata[27] top.simple_subtractor.belt_tdata[26] top.simple_subtractor.belt_tdata[25] top.simple_subtractor.belt_tdata[24] top.simple_subtractor.belt_tdata[23] top.simple_subtractor.belt_tdata[22] top.simple_subtractor.belt_tdata[21] top.simple_subtractor.belt_tdata[20] top.simple_subtractor.belt_tdata[19] top.simple_subtractor.belt_tdata[18] top.simple_subtractor.belt_tdata[17] top.simple_subtractor.belt_tdata[16] top.simple_subtractor.belt_tdata[15] top.simple_subtractor.belt_tdata[14] top.simple_subtractor.belt_tdata[13] top.simple_subtractor.belt_tdata[12] top.simple_subtractor.belt_tdata[11] top.simple_subtractor.belt_tdata[10] top.simple_subtractor.belt_tdata[9] top.simple_subtractor.belt_tdata[8] top.simple_subtractor.belt_tdata[7] top.simple_subtractor.belt_tdata[6] top.simple_subtractor.belt_tdata[5] top.simple_subtractor.belt_tdata[4] top.simple_subtractor.belt_tdata[3] top.simple_subtractor.belt_tdata[2] top.simple_subtractor.belt_tdata[1] top.simple_subtractor.belt_tdata[0]
+@200
+-
+@28
+top.simple_subtractor.valid_ch_a
+@24
+#{top.simple_subtractor.ch_a_buff[23:0]} top.simple_subtractor.ch_a_buff[23] top.simple_subtractor.ch_a_buff[22] top.simple_subtractor.ch_a_buff[21] top.simple_subtractor.ch_a_buff[20] top.simple_subtractor.ch_a_buff[19] top.simple_subtractor.ch_a_buff[18] top.simple_subtractor.ch_a_buff[17] top.simple_subtractor.ch_a_buff[16] top.simple_subtractor.ch_a_buff[15] top.simple_subtractor.ch_a_buff[14] top.simple_subtractor.ch_a_buff[13] top.simple_subtractor.ch_a_buff[12] top.simple_subtractor.ch_a_buff[11] top.simple_subtractor.ch_a_buff[10] top.simple_subtractor.ch_a_buff[9] top.simple_subtractor.ch_a_buff[8] top.simple_subtractor.ch_a_buff[7] top.simple_subtractor.ch_a_buff[6] top.simple_subtractor.ch_a_buff[5] top.simple_subtractor.ch_a_buff[4] top.simple_subtractor.ch_a_buff[3] top.simple_subtractor.ch_a_buff[2] top.simple_subtractor.ch_a_buff[1] top.simple_subtractor.ch_a_buff[0]
+#{top.simple_subtractor.ch_a_value[31:0]} top.simple_subtractor.ch_a_value[31] top.simple_subtractor.ch_a_value[30] top.simple_subtractor.ch_a_value[29] top.simple_subtractor.ch_a_value[28] top.simple_subtractor.ch_a_value[27] top.simple_subtractor.ch_a_value[26] top.simple_subtractor.ch_a_value[25] top.simple_subtractor.ch_a_value[24] top.simple_subtractor.ch_a_value[23] top.simple_subtractor.ch_a_value[22] top.simple_subtractor.ch_a_value[21] top.simple_subtractor.ch_a_value[20] top.simple_subtractor.ch_a_value[19] top.simple_subtractor.ch_a_value[18] top.simple_subtractor.ch_a_value[17] top.simple_subtractor.ch_a_value[16] top.simple_subtractor.ch_a_value[15] top.simple_subtractor.ch_a_value[14] top.simple_subtractor.ch_a_value[13] top.simple_subtractor.ch_a_value[12] top.simple_subtractor.ch_a_value[11] top.simple_subtractor.ch_a_value[10] top.simple_subtractor.ch_a_value[9] top.simple_subtractor.ch_a_value[8] top.simple_subtractor.ch_a_value[7] top.simple_subtractor.ch_a_value[6] top.simple_subtractor.ch_a_value[5] top.simple_subtractor.ch_a_value[4] top.simple_subtractor.ch_a_value[3] top.simple_subtractor.ch_a_value[2] top.simple_subtractor.ch_a_value[1] top.simple_subtractor.ch_a_value[0]
+@28
+top.simple_subtractor.valid_ch_b
+@24
+#{top.simple_subtractor.ch_b_buff[23:0]} top.simple_subtractor.ch_b_buff[23] top.simple_subtractor.ch_b_buff[22] top.simple_subtractor.ch_b_buff[21] top.simple_subtractor.ch_b_buff[20] top.simple_subtractor.ch_b_buff[19] top.simple_subtractor.ch_b_buff[18] top.simple_subtractor.ch_b_buff[17] top.simple_subtractor.ch_b_buff[16] top.simple_subtractor.ch_b_buff[15] top.simple_subtractor.ch_b_buff[14] top.simple_subtractor.ch_b_buff[13] top.simple_subtractor.ch_b_buff[12] top.simple_subtractor.ch_b_buff[11] top.simple_subtractor.ch_b_buff[10] top.simple_subtractor.ch_b_buff[9] top.simple_subtractor.ch_b_buff[8] top.simple_subtractor.ch_b_buff[7] top.simple_subtractor.ch_b_buff[6] top.simple_subtractor.ch_b_buff[5] top.simple_subtractor.ch_b_buff[4] top.simple_subtractor.ch_b_buff[3] top.simple_subtractor.ch_b_buff[2] top.simple_subtractor.ch_b_buff[1] top.simple_subtractor.ch_b_buff[0]
+#{top.simple_subtractor.ch_b_value[31:0]} top.simple_subtractor.ch_b_value[31] top.simple_subtractor.ch_b_value[30] top.simple_subtractor.ch_b_value[29] top.simple_subtractor.ch_b_value[28] top.simple_subtractor.ch_b_value[27] top.simple_subtractor.ch_b_value[26] top.simple_subtractor.ch_b_value[25] top.simple_subtractor.ch_b_value[24] top.simple_subtractor.ch_b_value[23] top.simple_subtractor.ch_b_value[22] top.simple_subtractor.ch_b_value[21] top.simple_subtractor.ch_b_value[20] top.simple_subtractor.ch_b_value[19] top.simple_subtractor.ch_b_value[18] top.simple_subtractor.ch_b_value[17] top.simple_subtractor.ch_b_value[16] top.simple_subtractor.ch_b_value[15] top.simple_subtractor.ch_b_value[14] top.simple_subtractor.ch_b_value[13] top.simple_subtractor.ch_b_value[12] top.simple_subtractor.ch_b_value[11] top.simple_subtractor.ch_b_value[10] top.simple_subtractor.ch_b_value[9] top.simple_subtractor.ch_b_value[8] top.simple_subtractor.ch_b_value[7] top.simple_subtractor.ch_b_value[6] top.simple_subtractor.ch_b_value[5] top.simple_subtractor.ch_b_value[4] top.simple_subtractor.ch_b_value[3] top.simple_subtractor.ch_b_value[2] top.simple_subtractor.ch_b_value[1] top.simple_subtractor.ch_b_value[0]
+@22
+#{top.simple_subtractor.ch_b_overflow[7:0]} top.simple_subtractor.ch_b_overflow[7] top.simple_subtractor.ch_b_overflow[6] top.simple_subtractor.ch_b_overflow[5] top.simple_subtractor.ch_b_overflow[4] top.simple_subtractor.ch_b_overflow[3] top.simple_subtractor.ch_b_overflow[2] top.simple_subtractor.ch_b_overflow[1] top.simple_subtractor.ch_b_overflow[0]
+#{top.simple_subtractor.ch_b_overflow[7:0]} top.simple_subtractor.ch_b_overflow[7] top.simple_subtractor.ch_b_overflow[6] top.simple_subtractor.ch_b_overflow[5] top.simple_subtractor.ch_b_overflow[4] top.simple_subtractor.ch_b_overflow[3] top.simple_subtractor.ch_b_overflow[2] top.simple_subtractor.ch_b_overflow[1] top.simple_subtractor.ch_b_overflow[0]
+@200
+-
+@28
+top.simple_subtractor.sub_valid
+@24
+#{top.simple_subtractor.int_sub_out[31:0]} top.simple_subtractor.int_sub_out[31] top.simple_subtractor.int_sub_out[30] top.simple_subtractor.int_sub_out[29] top.simple_subtractor.int_sub_out[28] top.simple_subtractor.int_sub_out[27] top.simple_subtractor.int_sub_out[26] top.simple_subtractor.int_sub_out[25] top.simple_subtractor.int_sub_out[24] top.simple_subtractor.int_sub_out[23] top.simple_subtractor.int_sub_out[22] top.simple_subtractor.int_sub_out[21] top.simple_subtractor.int_sub_out[20] top.simple_subtractor.int_sub_out[19] top.simple_subtractor.int_sub_out[18] top.simple_subtractor.int_sub_out[17] top.simple_subtractor.int_sub_out[16] top.simple_subtractor.int_sub_out[15] top.simple_subtractor.int_sub_out[14] top.simple_subtractor.int_sub_out[13] top.simple_subtractor.int_sub_out[12] top.simple_subtractor.int_sub_out[11] top.simple_subtractor.int_sub_out[10] top.simple_subtractor.int_sub_out[9] top.simple_subtractor.int_sub_out[8] top.simple_subtractor.int_sub_out[7] top.simple_subtractor.int_sub_out[6] top.simple_subtractor.int_sub_out[5] top.simple_subtractor.int_sub_out[4] top.simple_subtractor.int_sub_out[3] top.simple_subtractor.int_sub_out[2] top.simple_subtractor.int_sub_out[1] top.simple_subtractor.int_sub_out[0]
+@22
+#{top.simple_subtractor.sub_out[23:0]} top.simple_subtractor.sub_out[14] top.simple_subtractor.sub_out[13] top.simple_subtractor.sub_out[12] top.simple_subtractor.sub_out[11] top.simple_subtractor.sub_out[10] top.simple_subtractor.sub_out[9] top.simple_subtractor.sub_out[8] top.simple_subtractor.sub_out[7] top.simple_subtractor.sub_out[6] top.simple_subtractor.sub_out[5] top.simple_subtractor.sub_out[4] top.simple_subtractor.sub_out[3] top.simple_subtractor.sub_out[2] top.simple_subtractor.sub_out[1] top.simple_subtractor.sub_out[0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:busDefinition xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>DigiLAB</spirit:vendor>
+  <spirit:library>if</spirit:library>
+  <spirit:name>ft601</spirit:name>
+  <spirit:version>1.2</spirit:version>
+  <spirit:directConnection>false</spirit:directConnection>
+  <spirit:isAddressable>false</spirit:isAddressable>
+  <spirit:maxMasters>1</spirit:maxMasters>
+  <spirit:maxSlaves>1</spirit:maxSlaves>
+  <spirit:description>Interface for all DATA and CONTROL signals coming from FT601</spirit:description>
+  <spirit:vendorExtensions>
+    <xilinx:busDefinitionInfo>
+      <xilinx:displayName>FT601 Interface</xilinx:displayName>
+    </xilinx:busDefinitionInfo>
+  </spirit:vendorExtensions>
+</spirit:busDefinition>

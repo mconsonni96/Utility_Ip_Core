@@ -1,0 +1,65 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Jan 22 14:34:12 2020
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/build/waveforms.ghw"
+[dumpfile_mtime] "Wed Jan 22 14:34:12 2020"
+[dumpfile_size] 20677852
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/waveforms/wave_positive_only_subtractor.gtkw"
+[timestart] 2655992500000
+[size] 2493 1385
+[pos] -1 -1
+*-24.643856 85403500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.positive_only_subtractor.
+[treeopen] top.positive_only_subtractor.belt_bus_in.
+[sst_width] 223
+[signals_width] 289
+[sst_expanded] 1
+[sst_vpaned_height] 428
+@28
+top.positive_only_subtractor.clk
+top.positive_only_subtractor.reset
+@22
+#{top.positive_only_subtractor.belt_tdata[31:0]} top.positive_only_subtractor.belt_tdata[31] top.positive_only_subtractor.belt_tdata[30] top.positive_only_subtractor.belt_tdata[29] top.positive_only_subtractor.belt_tdata[28] top.positive_only_subtractor.belt_tdata[27] top.positive_only_subtractor.belt_tdata[26] top.positive_only_subtractor.belt_tdata[25] top.positive_only_subtractor.belt_tdata[24] top.positive_only_subtractor.belt_tdata[23] top.positive_only_subtractor.belt_tdata[22] top.positive_only_subtractor.belt_tdata[21] top.positive_only_subtractor.belt_tdata[20] top.positive_only_subtractor.belt_tdata[19] top.positive_only_subtractor.belt_tdata[18] top.positive_only_subtractor.belt_tdata[17] top.positive_only_subtractor.belt_tdata[16] top.positive_only_subtractor.belt_tdata[15] top.positive_only_subtractor.belt_tdata[14] top.positive_only_subtractor.belt_tdata[13] top.positive_only_subtractor.belt_tdata[12] top.positive_only_subtractor.belt_tdata[11] top.positive_only_subtractor.belt_tdata[10] top.positive_only_subtractor.belt_tdata[9] top.positive_only_subtractor.belt_tdata[8] top.positive_only_subtractor.belt_tdata[7] top.positive_only_subtractor.belt_tdata[6] top.positive_only_subtractor.belt_tdata[5] top.positive_only_subtractor.belt_tdata[4] top.positive_only_subtractor.belt_tdata[3] top.positive_only_subtractor.belt_tdata[2] top.positive_only_subtractor.belt_tdata[1] top.positive_only_subtractor.belt_tdata[0]
+@23
+#{top.positive_only_subtractor.belt_bus_in.tdata[23:0]} top.positive_only_subtractor.belt_bus_in.tdata[23] top.positive_only_subtractor.belt_bus_in.tdata[22] top.positive_only_subtractor.belt_bus_in.tdata[21] top.positive_only_subtractor.belt_bus_in.tdata[20] top.positive_only_subtractor.belt_bus_in.tdata[19] top.positive_only_subtractor.belt_bus_in.tdata[18] top.positive_only_subtractor.belt_bus_in.tdata[17] top.positive_only_subtractor.belt_bus_in.tdata[16] top.positive_only_subtractor.belt_bus_in.tdata[15] top.positive_only_subtractor.belt_bus_in.tdata[14] top.positive_only_subtractor.belt_bus_in.tdata[13] top.positive_only_subtractor.belt_bus_in.tdata[12] top.positive_only_subtractor.belt_bus_in.tdata[11] top.positive_only_subtractor.belt_bus_in.tdata[10] top.positive_only_subtractor.belt_bus_in.tdata[9] top.positive_only_subtractor.belt_bus_in.tdata[8] top.positive_only_subtractor.belt_bus_in.tdata[7] top.positive_only_subtractor.belt_bus_in.tdata[6] top.positive_only_subtractor.belt_bus_in.tdata[5] top.positive_only_subtractor.belt_bus_in.tdata[4] top.positive_only_subtractor.belt_bus_in.tdata[3] top.positive_only_subtractor.belt_bus_in.tdata[2] top.positive_only_subtractor.belt_bus_in.tdata[1] top.positive_only_subtractor.belt_bus_in.tdata[0]
+@200
+-
+-INPUT_STAGE
+@28
+top.positive_only_subtractor.belt_a_valid
+top.positive_only_subtractor.belt_b_valid
+top.positive_only_subtractor.belt_a_overflow
+top.positive_only_subtractor.belt_b_overflow
+@200
+-
+-WINDOW
+@22
+#{top.positive_only_subtractor.prog_overflow[3:0]} top.positive_only_subtractor.prog_overflow[3] top.positive_only_subtractor.prog_overflow[2] top.positive_only_subtractor.prog_overflow[1] top.positive_only_subtractor.prog_overflow[0]
+#{top.positive_only_subtractor.int_wind_pos[32:0]} top.positive_only_subtractor.int_wind_pos[32] top.positive_only_subtractor.int_wind_pos[31] top.positive_only_subtractor.int_wind_pos[30] top.positive_only_subtractor.int_wind_pos[29] top.positive_only_subtractor.int_wind_pos[28] top.positive_only_subtractor.int_wind_pos[27] top.positive_only_subtractor.int_wind_pos[26] top.positive_only_subtractor.int_wind_pos[25] top.positive_only_subtractor.int_wind_pos[24] top.positive_only_subtractor.int_wind_pos[23] top.positive_only_subtractor.int_wind_pos[22] top.positive_only_subtractor.int_wind_pos[21] top.positive_only_subtractor.int_wind_pos[20] top.positive_only_subtractor.int_wind_pos[19] top.positive_only_subtractor.int_wind_pos[18] top.positive_only_subtractor.int_wind_pos[17] top.positive_only_subtractor.int_wind_pos[16] top.positive_only_subtractor.int_wind_pos[15] top.positive_only_subtractor.int_wind_pos[14] top.positive_only_subtractor.int_wind_pos[13] top.positive_only_subtractor.int_wind_pos[12] top.positive_only_subtractor.int_wind_pos[11] top.positive_only_subtractor.int_wind_pos[10] top.positive_only_subtractor.int_wind_pos[9] top.positive_only_subtractor.int_wind_pos[8] top.positive_only_subtractor.int_wind_pos[7] top.positive_only_subtractor.int_wind_pos[6] top.positive_only_subtractor.int_wind_pos[5] top.positive_only_subtractor.int_wind_pos[4] top.positive_only_subtractor.int_wind_pos[3] top.positive_only_subtractor.int_wind_pos[2] top.positive_only_subtractor.int_wind_pos[1] top.positive_only_subtractor.int_wind_pos[0]
+#{top.positive_only_subtractor.window[31:0]} top.positive_only_subtractor.window[31] top.positive_only_subtractor.window[30] top.positive_only_subtractor.window[29] top.positive_only_subtractor.window[28] top.positive_only_subtractor.window[27] top.positive_only_subtractor.window[26] top.positive_only_subtractor.window[25] top.positive_only_subtractor.window[24] top.positive_only_subtractor.window[23] top.positive_only_subtractor.window[22] top.positive_only_subtractor.window[21] top.positive_only_subtractor.window[20] top.positive_only_subtractor.window[19] top.positive_only_subtractor.window[18] top.positive_only_subtractor.window[17] top.positive_only_subtractor.window[16] top.positive_only_subtractor.window[15] top.positive_only_subtractor.window[14] top.positive_only_subtractor.window[13] top.positive_only_subtractor.window[12] top.positive_only_subtractor.window[11] top.positive_only_subtractor.window[10] top.positive_only_subtractor.window[9] top.positive_only_subtractor.window[8] top.positive_only_subtractor.window[7] top.positive_only_subtractor.window[6] top.positive_only_subtractor.window[5] top.positive_only_subtractor.window[4] top.positive_only_subtractor.window[3] top.positive_only_subtractor.window[2] top.positive_only_subtractor.window[1] top.positive_only_subtractor.window[0]
+@200
+-
+-SUBTRACTOR_STAGE
+@28
+top.positive_only_subtractor.is_buff_a_valid
+top.positive_only_subtractor.is_buff_b_valid
+@22
+#{top.positive_only_subtractor.buff_a_overflow[8:0]} top.positive_only_subtractor.buff_a_overflow[8] top.positive_only_subtractor.buff_a_overflow[7] top.positive_only_subtractor.buff_a_overflow[6] top.positive_only_subtractor.buff_a_overflow[5] top.positive_only_subtractor.buff_a_overflow[4] top.positive_only_subtractor.buff_a_overflow[3] top.positive_only_subtractor.buff_a_overflow[2] top.positive_only_subtractor.buff_a_overflow[1] top.positive_only_subtractor.buff_a_overflow[0]
+#{top.positive_only_subtractor.tstamp_a[23:0]} top.positive_only_subtractor.tstamp_a[23] top.positive_only_subtractor.tstamp_a[22] top.positive_only_subtractor.tstamp_a[21] top.positive_only_subtractor.tstamp_a[20] top.positive_only_subtractor.tstamp_a[19] top.positive_only_subtractor.tstamp_a[18] top.positive_only_subtractor.tstamp_a[17] top.positive_only_subtractor.tstamp_a[16] top.positive_only_subtractor.tstamp_a[15] top.positive_only_subtractor.tstamp_a[14] top.positive_only_subtractor.tstamp_a[13] top.positive_only_subtractor.tstamp_a[12] top.positive_only_subtractor.tstamp_a[11] top.positive_only_subtractor.tstamp_a[10] top.positive_only_subtractor.tstamp_a[9] top.positive_only_subtractor.tstamp_a[8] top.positive_only_subtractor.tstamp_a[7] top.positive_only_subtractor.tstamp_a[6] top.positive_only_subtractor.tstamp_a[5] top.positive_only_subtractor.tstamp_a[4] top.positive_only_subtractor.tstamp_a[3] top.positive_only_subtractor.tstamp_a[2] top.positive_only_subtractor.tstamp_a[1] top.positive_only_subtractor.tstamp_a[0]
+#{top.positive_only_subtractor.tstamp_b[32:0]} top.positive_only_subtractor.tstamp_b[32] top.positive_only_subtractor.tstamp_b[31] top.positive_only_subtractor.tstamp_b[30] top.positive_only_subtractor.tstamp_b[29] top.positive_only_subtractor.tstamp_b[28] top.positive_only_subtractor.tstamp_b[27] top.positive_only_subtractor.tstamp_b[26] top.positive_only_subtractor.tstamp_b[25] top.positive_only_subtractor.tstamp_b[24] top.positive_only_subtractor.tstamp_b[23] top.positive_only_subtractor.tstamp_b[22] top.positive_only_subtractor.tstamp_b[21] top.positive_only_subtractor.tstamp_b[20] top.positive_only_subtractor.tstamp_b[19] top.positive_only_subtractor.tstamp_b[18] top.positive_only_subtractor.tstamp_b[17] top.positive_only_subtractor.tstamp_b[16] top.positive_only_subtractor.tstamp_b[15] top.positive_only_subtractor.tstamp_b[14] top.positive_only_subtractor.tstamp_b[13] top.positive_only_subtractor.tstamp_b[12] top.positive_only_subtractor.tstamp_b[11] top.positive_only_subtractor.tstamp_b[10] top.positive_only_subtractor.tstamp_b[9] top.positive_only_subtractor.tstamp_b[8] top.positive_only_subtractor.tstamp_b[7] top.positive_only_subtractor.tstamp_b[6] top.positive_only_subtractor.tstamp_b[5] top.positive_only_subtractor.tstamp_b[4] top.positive_only_subtractor.tstamp_b[3] top.positive_only_subtractor.tstamp_b[2] top.positive_only_subtractor.tstamp_b[1] top.positive_only_subtractor.tstamp_b[0]
+@200
+-
+-OUTPUT_STAGE
+@28
+top.positive_only_subtractor.is_buff_valid
+top.positive_only_subtractor.is_measure_in_wnd
+@22
+#{top.positive_only_subtractor.a_minus_b[32:0]} top.positive_only_subtractor.a_minus_b[32] top.positive_only_subtractor.a_minus_b[31] top.positive_only_subtractor.a_minus_b[30] top.positive_only_subtractor.a_minus_b[29] top.positive_only_subtractor.a_minus_b[28] top.positive_only_subtractor.a_minus_b[27] top.positive_only_subtractor.a_minus_b[26] top.positive_only_subtractor.a_minus_b[25] top.positive_only_subtractor.a_minus_b[24] top.positive_only_subtractor.a_minus_b[23] top.positive_only_subtractor.a_minus_b[22] top.positive_only_subtractor.a_minus_b[21] top.positive_only_subtractor.a_minus_b[20] top.positive_only_subtractor.a_minus_b[19] top.positive_only_subtractor.a_minus_b[18] top.positive_only_subtractor.a_minus_b[17] top.positive_only_subtractor.a_minus_b[16] top.positive_only_subtractor.a_minus_b[15] top.positive_only_subtractor.a_minus_b[14] top.positive_only_subtractor.a_minus_b[13] top.positive_only_subtractor.a_minus_b[12] top.positive_only_subtractor.a_minus_b[11] top.positive_only_subtractor.a_minus_b[10] top.positive_only_subtractor.a_minus_b[9] top.positive_only_subtractor.a_minus_b[8] top.positive_only_subtractor.a_minus_b[7] top.positive_only_subtractor.a_minus_b[6] top.positive_only_subtractor.a_minus_b[5] top.positive_only_subtractor.a_minus_b[4] top.positive_only_subtractor.a_minus_b[3] top.positive_only_subtractor.a_minus_b[2] top.positive_only_subtractor.a_minus_b[1] top.positive_only_subtractor.a_minus_b[0]
+@28
+top.positive_only_subtractor.sub_valid
+@22
+#{top.positive_only_subtractor.sub_out[14:0]} top.positive_only_subtractor.sub_out[14] top.positive_only_subtractor.sub_out[13] top.positive_only_subtractor.sub_out[12] top.positive_only_subtractor.sub_out[11] top.positive_only_subtractor.sub_out[10] top.positive_only_subtractor.sub_out[9] top.positive_only_subtractor.sub_out[8] top.positive_only_subtractor.sub_out[7] top.positive_only_subtractor.sub_out[6] top.positive_only_subtractor.sub_out[5] top.positive_only_subtractor.sub_out[4] top.positive_only_subtractor.sub_out[3] top.positive_only_subtractor.sub_out[2] top.positive_only_subtractor.sub_out[1] top.positive_only_subtractor.sub_out[0]
+[pattern_trace] 1
+[pattern_trace] 0

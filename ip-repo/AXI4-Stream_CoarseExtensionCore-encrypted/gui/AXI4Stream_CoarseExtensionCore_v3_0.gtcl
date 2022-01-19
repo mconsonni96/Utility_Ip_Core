@@ -1,0 +1,3 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_CEC_COARSE_CNT_INIT_ENABLEMENT {CEC_VS_CTD_COUNTER } {expr [expr {$CEC_VS_CTD_COUNTER} == "{CEC}"]}
+proc gen_USERPARAMETER_CDC_SYNC_STAGES_ENABLEMENT {RELATED_CLOCKS } {expr [expr {$RELATED_CLOCKS} != "{true}"]}

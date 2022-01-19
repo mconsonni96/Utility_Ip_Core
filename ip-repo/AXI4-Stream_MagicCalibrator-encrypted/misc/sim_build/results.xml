@@ -1,0 +1,12 @@
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <property name="random_seed" value="1586688029" />
+    <testcase classname="test_simple_integrator" name="test_simple_write_process" ratio_time="0.0" sim_time_ns="0.0" time="0.0">
+      <skipped />
+    </testcase>
+    <testcase classname="test_simple_integrator" name="test_multi_sequence" ratio_time="0.0" sim_time_ns="0.0" time="0.0">
+      <skipped />
+    </testcase>
+    <testcase classname="test_simple_integrator" name="test_integration_process" ratio_time="3780.8473019986923" sim_time_ns="6072.000001" time="1.6059892177581787" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,20 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Dec 18 11:36:28 2019
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/build/waveforms.ghw"
+[dumpfile_mtime] "Wed Dec 18 11:35:07 2019"
+[dumpfile_size] 1354
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer_1.0/test/waveforms/wave_m_axis_controller.gtkw"
+[timestart] 0
+[size] 2493 1385
+[pos] -1 -1
+*-25.643856 1063665500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.m_axis_controller.
+[sst_width] 747
+[signals_width] 289
+[sst_expanded] 1
+[sst_vpaned_height] 428
+[pattern_trace] 1
+[pattern_trace] 0

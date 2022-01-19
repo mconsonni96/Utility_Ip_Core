@@ -1,0 +1,845 @@
+proc update_contents {} {
+
+
+
+
+  # List the VLNV of IPs
+  set _VLNV(AXI4Stream_DataMover_MM2S) "DigiLAB:ip:AXI4Stream_DataMover_MM2S:2.1"
+  set _VLNV(AXI4Stream_Datamover_S2MM) "DigiLAB:ip:AXI4Stream_Datamover_S2MM:2.1"
+  set _VLNV(AXI4Stream_PacketFetcher) "DigiLAB:ip:AXI4Stream_PacketFetcher:2.1"
+  set _VLNV(AXI4Stream_Packetizer) "DigiLAB:ip:AXI4Stream_Packetizer:2.2"
+  set _VLNV(AXI4Stream_multicobs_upsizer) "DigiLAB:ip:AXI4Stream_multicobs_upsizer:1.1"
+  set _VLNV(AXI4Stream_TDEST_filter) "DigiLAB:ip:AXI4Stream_TDEST_filter:1.1"
+
+
+
+
+
+  # cell_obj is set as the current bloc design intance
+  set cell_obj [::ipxit::current_inst]
+  set cell_name [::ipxit::current_instname]
+
+
+  # Suppress warning messages
+  set_msg_config -quiet -suppress -id {[BD 41-1306]}
+  set_msg_config -quiet -suppress -id {[BD 41-1271]}
+
+  ## Variables needed to handle ip parameters
+  # Number of ports (master and slave)
+  set num [get_property CONFIG.PORTS_NUMBER $cell_obj]
+  # Datamover generics
+  set btt_used [get_property CONFIG.BTT_USED $cell_obj]
+  set burst_size [get_property CONFIG.BURST_SIZE $cell_obj]
+  # Tlast on master ports
+  set HasTlast [get_property CONFIG.MASTER_TLAST $cell_obj]
+  # TDEST necessary for routing (autopush)
+  set tdest_routing [get_property CONFIG.TDEST_ROUTING $cell_obj]
+  set binary_routing [binary scan [binary format I $tdest_routing] B32 var;string range $var end-8 end]
+  # Indicates if the PTE ports should appear in the hirarchical cell
+  set AdditionalPorts [get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj]
+  #Indicates the maximum packet length
+  set max_length_packetizer [get_property CONFIG.MAX_PACKET_LENGTH_PACKETIZER $cell_obj]
+  set max_length_packetfetcher [get_property CONFIG.MAX_PACKET_LENGTH_PACKETFETCHER $cell_obj]
+
+  ## Manage the switch beetween 8 and 32 bits: delete the objects which need to be changed
+
+
+
+  # Delete nets of input and output cells
+  delete_bd_objs [get_bd_intf_nets -quiet S_AXIS_1]
+  delete_bd_objs [get_bd_intf_nets -quiet -regexp "(S_AXIS_1|axis_dwidth_converter|AXI4Stream_multicobs_upsizer|axis_subset_converter|axis_interconnect_2|axis_dwidth_converter|axis_interconnect_1|axis_subset_converter_output|AXI4Stream_Packetizer)_.*"]
+  # Delete upsizers, subset converters and dwidth converters
+  delete_bd_objs [get_bd_cells -quiet -regexp "(AXI4Stream_multicobs_upsizer|axis_subset_converter|axis_dwidth_converter)_.*"]
+
+  # Manage the switch beetween number of ports: delete the unecessary objects
+
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      set i 0
+      while {[get_bd_cells -quiet axis_subset_converter_$i] == "axis_subset_converter_$i"} {
+          if { $i >= $num } {
+              delete_bd_objs  [get_bd_cells -quiet axis_subset_converter_$i]
+          }
+          incr i
+      }
+  }
+  # Delete all subset converters if there is only one interface (previous one wouldn't delete axis_subset_converter_0)
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      set i 0
+      while {[get_bd_cells -quiet axis_subset_converter_$i] == "axis_subset_converter_$i"} {
+
+              delete_bd_objs  [get_bd_cells -quiet axis_subset_converter_$i]
+
+          incr i
+      }
+  }
+  # Delete the packetizer subset converter if there is only one interface
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      if { [get_bd_cells -quiet axis_subset_converter_packetizer] == "axis_subset_converter_packetizer" } {
+          delete_bd_objs  [get_bd_cells -quiet axis_subset_converter_packetizer]
+      }
+  }
+  # Delete axis_subset_converter Output
+  set i 0
+  while {[get_bd_intf_nets -quiet axis_subset_converter_$i\_M_AXIS] == "axis_subset_converter_$i\_M_AXIS"} {
+      if { $i >= $num  } {
+          delete_bd_objs [get_bd_intf_nets -quiet axis_subset_converter_$i\_M_AXIS]
+      }
+      incr i
+  }
+  # Manage axis_subset_converter connections
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      set i 0
+      while {[get_bd_intf_nets -quiet axis_subset_converter_$i\_M_AXIS] == "axis_subset_converter_$i\_M_AXIS"} {
+
+              delete_bd_objs [get_bd_intf_nets -quiet axis_subset_converter_$i\_M_AXIS]
+
+          incr i
+      }
+  }
+  # Delete the packetizer axis_subset_converter connection if there is only one interface
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      if {[get_bd_intf_nets -quiet axis_subset_converter_packetizer_M_AXIS] == "axis_subset_converter_packetizer_M_AXIS"} {
+          delete_bd_objs [get_bd_intf_nets -quiet axis_subset_converter_packetizer_M_AXIS]
+      }
+  }
+  # Delete AXI4Stream_PacketFetcher
+  set i 0
+  while {[get_bd_cells -quiet AXI4Stream_PacketFetcher_$i] == "AXI4Stream_PacketFetcher_$i"} {
+      if { $i >= $num  } {
+          delete_bd_objs [get_bd_cells -quiet AXI4Stream_PacketFetcher_$i]
+      }
+      incr i
+  }
+  # Delete AXI4Stream_PacketFetcher's output
+  set i 0
+  while {[get_bd_intf_nets -quiet AXI4Stream_PacketFetcher_$i\_M_AXIS] == "AXI4Stream_PacketFetcher_$i\_M_AXIS"} {
+      if { $i >= $num  } {
+          delete_bd_objs [get_bd_intf_nets -quiet AXI4Stream_PacketFetcher_$i\_M_AXIS]
+      }
+      incr i
+  }
+  # Delete axis_interconnect_2
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      if {[get_bd_cells -quiet axis_interconnect_2] == "axis_interconnect_2"} {
+          delete_bd_objs  [get_bd_cells -quiet axis_interconnect_2]
+      }
+  }
+
+
+
+  # Build the block design
+
+  ##############################  ISTANCES  ##################################
+
+  # Create instance: AXI4Stream_DataMover_MM2S_0, and set properties
+  if {[get_bd_cells -quiet AXI4Stream_DataMover_MM2S_0] == ""} {
+      set AXI4Stream_DataMover_MM2S_0 [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_DataMover_MM2S) AXI4Stream_DataMover_MM2S_0 ]
+  }
+  set_property -dict [ list \
+   CONFIG.TDEST_ROUTING "$tdest_routing" \
+   ] [get_bd_cells -quiet AXI4Stream_DataMover_MM2S_0]
+  # Create instance: AXI4Stream_Datamover_S2MM_0, and set properties
+  if {[get_bd_cells -quiet AXI4Stream_Datamover_S2MM_0] == ""} {
+       set AXI4Stream_Datamover_S2MM_0 [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_Datamover_S2MM) AXI4Stream_Datamover_S2MM_0 ]
+  }
+  # Create instance: AXI4Stream_PacketFetcher_0, and set properties
+  if {[get_bd_cells -quiet AXI4Stream_PacketFetcher_0] == ""} {
+      set AXI4Stream_PacketFetcher_0 [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_PacketFetcher) AXI4Stream_PacketFetcher_0 ]
+  }
+  # Create instance: AXI4Stream_Packetizer_0, and set properties
+  if {[get_bd_cells -quiet AXI4Stream_Packetizer_0] == ""} {
+      set AXI4Stream_Packetizer_0 [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_Packetizer) AXI4Stream_Packetizer_0 ]
+  }
+  set_property -dict [ list \
+   CONFIG.MAX_PACKET_LENGTH "$max_length_packetizer" \
+   ] [get_bd_cells -quiet AXI4Stream_Packetizer_0]
+  # Create instance: AXI4Stream_multicobs_upsizer_0, and set properties (only if 8 bits)
+  if {[get_bd_cells -quiet AXI4Stream_multicobs_upsizer_0] == ""  && [get_property CONFIG.BITS_00 $cell_obj] != "32"} {
+      set AXI4Stream_multicobs_upsizer_0 [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_multicobs_upsizer) AXI4Stream_multicobs_upsizer_0 ]
+  }
+  # Create instance: axi_datamover_0, and set properties
+  if {[get_bd_cells -quiet axi_datamover_0] == ""} {
+      set axi_datamover_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_datamover:5.1 axi_datamover_0 ]
+  }
+      set_property -dict [ list \
+       CONFIG.c_mm2s_btt_used "$btt_used" \
+       CONFIG.c_mm2s_burst_size "$burst_size" \
+       CONFIG.c_s2mm_btt_used "$btt_used" \
+       CONFIG.c_s2mm_burst_size "$burst_size" \
+       ] [get_bd_cells -quiet axi_datamover_0]
+
+  # Create instance: axis_dwidth_converter_0, and set properties (only if 8 bits)
+  if {[get_bd_cells -quiet axis_dwidth_converter_0] == "" && [get_property CONFIG.BITSM_00 $cell_obj] != "32"} {
+      set axis_dwidth_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_dwidth_converter:1.1 axis_dwidth_converter_0 ]
+      set_property -dict [ list \
+       CONFIG.M_TDATA_NUM_BYTES {1} \
+       CONFIG.S_TDATA_NUM_BYTES {4} \
+       CONFIG.TDEST_WIDTH {0} \
+      ] [get_bd_cells -quiet axis_dwidth_converter_0]
+  }
+  if {[get_property CONFIG.TLAST_00 $cell_obj] == "no" && [get_property CONFIG.BITSM_00 $cell_obj] != "32"} {
+      set_property -dict [ list \
+       CONFIG.HAS_TLAST {0} \
+      ] [get_bd_cells -quiet axis_dwidth_converter_0]
+  }
+  if {[get_property CONFIG.TLAST_00 $cell_obj] == "yes" && [get_property CONFIG.BITSM_00 $cell_obj] != "32"} {
+      set_property -dict [ list \
+       CONFIG.HAS_TLAST {1} \
+      ] [get_bd_cells -quiet axis_dwidth_converter_0]
+  }
+  # Create instance: axis_interconnect_0, and set properties
+  if {[get_bd_cells -quiet axis_interconnect_0] == ""} {
+      set axis_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 axis_interconnect_0 ]
+  }
+  # Set properties to axis_interconnect_0 (1 interface)
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      set_property -dict [ list \
+      CONFIG.NUM_MI {2} \
+      CONFIG.NUM_SI {1} \
+      ] [get_bd_cells -quiet axis_interconnect_0]
+  }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      set_property -dict [ list \
+       CONFIG.NUM_MI {2} \
+       CONFIG.NUM_SI "$num" \
+      ] [get_bd_cells -quiet axis_interconnect_0]
+  }
+  # Create instance: axis_interconnect_1, and set properties
+  if {[get_bd_cells -quiet axis_interconnect_1] == ""} {
+      set axis_interconnect_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 axis_interconnect_1 ]
+      set_property -dict [ list \
+      CONFIG.NUM_MI {1} \
+      CONFIG.NUM_SI {2} \
+      CONFIG.M00_AXIS_HIGHTDEST {0x000000FF} \
+      ] [get_bd_cells -quiet axis_interconnect_1]
+  }
+  # Create instance: axis_interconnect_2, and set properties
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      if {[get_bd_cells -quiet axis_interconnect_2] == ""} {
+          set axis_interconnect_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 axis_interconnect_2 ]
+      }
+      set_property -dict [ list \
+      CONFIG.NUM_MI "$num" \
+      CONFIG.NUM_SI {1} \
+      ] [get_bd_cells -quiet axis_interconnect_2]
+ }
+  # Create instance: AXI4Stream_multicobs_upsizer, and set properties (case of more pins)
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 1} {$i<$num} {incr i} {
+        if {[get_property CONFIG.[format "BITS_%.2d" $i] $cell_obj] != "32"} {
+            if {[get_bd_cells -quiet AXI4Stream_multicobs_upsizer_$i] == "" } {
+              set AXI4Stream_multicobs_upsizer_$i [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_multicobs_upsizer) AXI4Stream_multicobs_upsizer_$i ]
+            }
+        }
+      }
+  }
+  # Create instance: axis_dwidth_converter, and set properties (case of more pins)
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"}  {
+      for {set i 1} {$i<$num} {incr i} {
+            if {[get_property CONFIG.[format "BITSM_%.2d" $i] $cell_obj] != "32"} {
+                  if {[get_bd_cells -quiet axis_dwidth_converter_$i] == "" } {
+                      set axis_dwidth_converter_$i [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_dwidth_converter:1.1 axis_dwidth_converter_$i ]
+                      set_property -dict [ list \
+                       CONFIG.M_TDATA_NUM_BYTES {1} \
+                       CONFIG.S_TDATA_NUM_BYTES {4} \
+                       CONFIG.TDEST_WIDTH {0} \
+                      ] [get_bd_cells -quiet axis_dwidth_converter_$i]
+                    }
+                      if {[get_property CONFIG.[format "TLAST_%.2d" $i] $cell_obj] == "no"} {
+                          set_property -dict [ list \
+                           CONFIG.HAS_TLAST {0} \
+                          ] [get_bd_cells -quiet axis_dwidth_converter_$i]
+                      }
+                      if {[get_property CONFIG.[format "TLAST_%.2d" $i] $cell_obj] == "yes"} {
+                          set_property -dict [ list \
+                           CONFIG.HAS_TLAST {1} \
+                          ] [get_bd_cells -quiet axis_dwidth_converter_$i]
+                      }
+            }
+      }
+  }
+  # Create instance: axis_subset_converter, and set properties
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 0} {$i<$num} {incr i} {
+          if {[get_bd_cells -quiet axis_subset_converter_$i] == ""} {
+              set axis_subset_converter_$i [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_$i ]
+          }
+      }
+  }
+  # Create instance: AXI4Stream_PacketFetcher, and set properties (case of more pins)
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 1} {$i<$num} {incr i} {
+          if {[get_bd_cells -quiet AXI4Stream_PacketFetcher_$i] == ""} {
+              set AXI4Stream_PacketFetcher_$i [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_PacketFetcher) AXI4Stream_PacketFetcher_$i ]
+          }
+      }
+  }
+  for {set i 0} {$i<$num} {incr i} {
+          set_property -dict [ list \
+           CONFIG.MAX_PACKET_LENGTH "$max_length_packetfetcher" \
+           ] [get_bd_cells -quiet AXI4Stream_PacketFetcher_$i]
+ }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      if  {[get_bd_cells -quiet axis_subset_converter_packetizer] == ""} {
+          set axis_subset_converter_packetizer [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_packetizer ]
+     }
+ }
+ # Create instance: axis_subset_converter_output, and set properties (subset conv. used at the output to remove tlast)
+ for {set i 0} {$i<$num} {incr i} {
+      if {[get_property CONFIG.[format "BITSM_%.2d" $i] $cell_obj] == "32"} {
+         if {[get_bd_cells -quiet axis_subset_converter_output_$i] == ""} {
+             set axis_subset_converter_output_$i [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_output_$i ]
+             set_property -dict [ list \
+             CONFIG.S_TDEST_WIDTH {0} \
+             CONFIG.M_TDEST_WIDTH {0} \
+             ] [get_bd_cells -quiet axis_subset_converter_output_$i]
+
+             if {[get_property CONFIG.[format "TLAST_%.2d" $i] $cell_obj] == "yes"} {
+                 set_property -dict [ list \
+                 CONFIG.S_HAS_TLAST {1} \
+                 CONFIG.M_HAS_TLAST {1} \
+                 ] [get_bd_cells -quiet axis_subset_converter_output_$i]
+             }
+             if {[get_property CONFIG.[format "TLAST_%.2d" $i] $cell_obj] == "no"} {
+                 set_property -dict [ list \
+                 CONFIG.S_HAS_TLAST {0} \
+                 CONFIG.M_HAS_TLAST {0} \
+                 ] [get_bd_cells -quiet axis_subset_converter_output_$i]
+             }
+         }
+ }
+}
+
+  #####################################################################INTERFACE################################################################################################
+
+  # Create interface connections
+  if {[get_bd_intf_nets -quiet AXI4Stream_DataMover_MM2S_0_M_AXIS] == ""} {
+      connect_bd_intf_net -intf_net AXI4Stream_DataMover_MM2S_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_DataMover_MM2S_0/M_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_1/S00_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_DataMover_MM2S_0_M_AXIS_MM2S_CMD] == ""} {
+      connect_bd_intf_net -intf_net AXI4Stream_DataMover_MM2S_0_M_AXIS_MM2S_CMD [get_bd_intf_pins -quiet  AXI4Stream_DataMover_MM2S_0/M_AXIS_MM2S_CMD] [get_bd_intf_pins -quiet  axi_datamover_0/S_AXIS_MM2S_CMD]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_DataMover_MM2S_0_M_AXIS_AUX] == ""} {
+      connect_bd_intf_net -intf_net AXI4Stream_DataMover_MM2S_0_M_AXIS_AUX [get_bd_intf_pins -quiet AXI4Stream_DataMover_MM2S_0/M_AXIS_AUX] [get_bd_intf_ports M_AXIS_AUX]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_Datamover_S2MM_0_M_AXIS] == ""} {
+      connect_bd_intf_net -intf_net AXI4Stream_Datamover_S2MM_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_Datamover_S2MM_0/M_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_1/S01_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM ] == ""} {
+      connect_bd_intf_net -intf_net AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM [get_bd_intf_pins -quiet  AXI4Stream_Datamover_S2MM_0/M_AXIS_S2MM] [get_bd_intf_pins -quiet  axi_datamover_0/S_AXIS_S2MM]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM_CMD] == ""} {
+      connect_bd_intf_net -intf_net AXI4Stream_Datamover_S2MM_0_M_AXIS_S2MM_CMD [get_bd_intf_pins -quiet  AXI4Stream_Datamover_S2MM_0/M_AXIS_S2MM_CMD] [get_bd_intf_pins -quiet  axi_datamover_0/S_AXIS_S2MM_CMD]
+  }
+  if {[get_bd_intf_nets -quiet AXI4Stream_PacketFetcher_0_M_AXIS] == "" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      connect_bd_intf_net -intf_net AXI4Stream_PacketFetcher_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_0/M_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_0/S00_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet S_AXIS_AUX_1 ] == ""} {
+      connect_bd_intf_net -intf_net S_AXIS_AUX_1 [get_bd_intf_ports -quiet S_AXIS_AUX] [get_bd_intf_pins -quiet  AXI4Stream_DataMover_MM2S_0/S_AXIS_AUX]
+  }
+  if {[get_bd_intf_nets -quiet axi_datamover_0_M_AXIS_MM2S] == ""} {
+      connect_bd_intf_net -intf_net axi_datamover_0_M_AXIS_MM2S [get_bd_intf_pins -quiet  AXI4Stream_DataMover_MM2S_0/S_AXIS_MM2S] [get_bd_intf_pins -quiet  axi_datamover_0/M_AXIS_MM2S]
+  }
+  if {[get_bd_intf_nets -quiet axi_datamover_0_M_AXIS_MM2S_STS] == ""} {
+      connect_bd_intf_net -intf_net axi_datamover_0_M_AXIS_MM2S_STS [get_bd_intf_pins -quiet  AXI4Stream_DataMover_MM2S_0/S_AXIS_MM2S_STS] [get_bd_intf_pins -quiet  axi_datamover_0/M_AXIS_MM2S_STS]
+  }
+  if {[get_bd_intf_nets -quiet axi_datamover_0_M_AXIS_S2MM_STS] == ""} {
+      connect_bd_intf_net -intf_net axi_datamover_0_M_AXIS_S2MM_STS [get_bd_intf_pins -quiet  AXI4Stream_Datamover_S2MM_0/S_AXIS_S2MM_STS] [get_bd_intf_pins -quiet  axi_datamover_0/M_AXIS_S2MM_STS]
+  }
+  if {[get_bd_intf_nets -quiet axi_datamover_0_M_AXI_MM2S] == ""} {
+      connect_bd_intf_net -intf_net axi_datamover_0_M_AXI_MM2S [get_bd_intf_ports -quiet M_AXI_MM2S] [get_bd_intf_pins -quiet  axi_datamover_0/M_AXI_MM2S]
+  }
+  if {[get_bd_intf_nets -quiet axi_datamover_0_M_AXI_S2MM] == ""} {
+      connect_bd_intf_net -intf_net axi_datamover_0_M_AXI_S2MM [get_bd_intf_ports -quiet M_AXI_S2MM] [get_bd_intf_pins -quiet  axi_datamover_0/M_AXI_S2MM]
+  }
+  if {[get_bd_intf_nets -quiet axis_interconnect_0_M00_AXIS] == ""} {
+      connect_bd_intf_net -intf_net axis_interconnect_0_M00_AXIS [get_bd_intf_pins -quiet  AXI4Stream_DataMover_MM2S_0/S_AXIS_MAIN] [get_bd_intf_pins -quiet  axis_interconnect_0/M00_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet axis_interconnect_0_M01_AXIS ] == ""} {
+      connect_bd_intf_net -intf_net axis_interconnect_0_M01_AXIS [get_bd_intf_pins -quiet  AXI4Stream_Datamover_S2MM_0/S_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_0/M01_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet axis_interconnect_1_M00_AXIS] == ""} {
+      connect_bd_intf_net -intf_net axis_interconnect_1_M00_AXIS [get_bd_intf_pins -quiet  AXI4Stream_Packetizer_0/S_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_1/M00_AXIS]
+  }
+  # Create S_AXIS_1 (4 different cases)
+  if {[get_bd_intf_nets -quiet S_AXIS_1] == "" && [get_property CONFIG.BITS_00 $cell_obj] != "32" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_ports -quiet S_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_multicobs_upsizer_0/S_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet S_AXIS_1] == "" && [get_property CONFIG.BITS_00 $cell_obj] == "32" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_ports -quiet S_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_0/S_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet S_AXIS_1] == "" && [get_property CONFIG.BITS_00 $cell_obj] != "32" && [get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_ports -quiet S_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_multicobs_upsizer_0/S_AXIS]
+  }
+  if {[get_bd_intf_nets -quiet S_AXIS_1] == "" && [get_property CONFIG.BITS_00 $cell_obj] == "32" && [get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_ports -quiet S_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_0/S_AXIS]
+  }
+  # Create connections for the packetfetchers and the multicobsUpsizers (all cases)
+  if {[get_property CONFIG.BITS_00 $cell_obj] != "32" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      if {[get_bd_intf_nets -quiet AXI4Stream_multicobs_upsizer_0_M_AXIS ] == ""} {
+          connect_bd_intf_net -intf_net AXI4Stream_multicobs_upsizer_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_0/S_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_multicobs_upsizer_0/M_AXIS]
+      }
+  }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" && [get_property CONFIG.BITS_00 $cell_obj] != "32" } {
+      if {[get_bd_intf_nets -quiet AXI4Stream_multicobs_upsizer_0_M_AXIS ] == ""} {
+          connect_bd_intf_net -intf_net AXI4Stream_multicobs_upsizer_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_0/S_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_multicobs_upsizer_0/M_AXIS]
+      }
+  }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 1} {$i<$num} {incr i} {
+            if {[get_property CONFIG.[format "BITS_%.2d" $i] $cell_obj] != "32"} {
+                  if {[get_bd_intf_nets -quiet AXI4Stream_multicobs_upsizer_$i\_M_AXIS] == "" } {
+                      connect_bd_intf_net -intf_net AXI4Stream_multicobs_upsizer_$i\_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_multicobs_upsizer_$i/M_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_$i/S_AXIS]
+                  }
+                  if {[get_bd_intf_nets -quiet S_AXIS_1_$i] == "" } {
+                      connect_bd_intf_net -intf_net S_AXIS_1_$i [get_bd_intf_ports -quiet S_AXIS_$i] [get_bd_intf_pins -quiet  AXI4Stream_multicobs_upsizer_$i/S_AXIS]
+                  }
+            }
+      }
+  }
+  # If 32 bits, no upsizer is needed. Directly connect to the packetfetcher
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 1} {$i<$num} {incr i} {
+            if {[get_property CONFIG.[format "BITS_%.2d" $i] $cell_obj] == "32"} {
+                  if {[get_bd_intf_nets -quiet S_AXIS_1_$i] == "" } {
+                      connect_bd_intf_net -intf_net S_AXIS_1_$i [get_bd_intf_ports -quiet S_AXIS_$i] [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_$i/S_AXIS]
+                  }
+             }
+      }
+  }
+  # Manage the subset converters
+  if { [get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      for {set i 0} {$i<$num} {incr i} {
+          if {[get_bd_intf_nets -quiet AXI4Stream_PacketFetcher_$i\_M_AXIS] == "" } {
+              connect_bd_intf_net -intf_net AXI4Stream_PacketFetcher_$i\_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_PacketFetcher_$i/M_AXIS] [get_bd_intf_pins -quiet  axis_subset_converter_$i/S_AXIS]
+          }
+      }
+  }
+  if { [get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      for {set i 0} {$i<$num} {incr i} {
+          if {[get_bd_intf_nets -quiet axis_subset_converter_$i\_M_AXIS] == "" && $i < 10 } {
+              connect_bd_intf_net -intf_net axis_subset_converter_$i\_M_AXIS [get_bd_intf_pins -quiet  axis_subset_converter_$i/M_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_0/S0$i\_AXIS]
+          }
+          if {[get_bd_intf_nets -quiet axis_subset_converter_$i\_M_AXIS] == "" && $i > 9 } {
+              connect_bd_intf_net -intf_net axis_subset_converter_$i\_M_AXIS [get_bd_intf_pins -quiet  axis_subset_converter_$i/M_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_0/S$i\_AXIS]
+          }
+      }
+  }
+  # Create connections for the dwidthConverters and the packetizers
+  if { [get_property CONFIG.BITSM_00 $cell_obj] == "32" &&  [get_bd_intf_nets -quiet AXI4Stream_Packetizer_0_M_AXIS] == "" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      connect_bd_intf_net -intf_net AXI4Stream_Packetizer_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_Packetizer_0/M_AXIS] [get_bd_intf_pins -quiet axis_subset_converter_output_0/S_AXIS]
+  }
+  if {[get_property CONFIG.BITSM_00 $cell_obj] != "32" && [get_bd_intf_nets -quiet AXI4Stream_Packetizer_0_M_AXIS] == "" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      connect_bd_intf_net -intf_net AXI4Stream_Packetizer_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_Packetizer_0/M_AXIS] [get_bd_intf_pins -quiet  axis_dwidth_converter_0/S_AXIS]
+  }
+  if { [get_property CONFIG.BITSM_00 $cell_obj] != "32" &&  [get_bd_intf_nets -quiet axis_dwidth_converter_0_M_AXIS] == "" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+      connect_bd_intf_net -intf_net axis_dwidth_converter_0_M_AXIS [get_bd_intf_ports -quiet M_AXIS] [get_bd_intf_pins -quiet  axis_dwidth_converter_0/M_AXIS]
+  }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+      connect_bd_intf_net -intf_net AXI4Stream_Packetizer_0_M_AXIS [get_bd_intf_pins -quiet  AXI4Stream_Packetizer_0/M_AXIS] [get_bd_intf_pins -quiet  axis_subset_converter_packetizer/S_AXIS]
+      connect_bd_intf_net -intf_net axis_subset_converter_packetizer_M_AXIS [get_bd_intf_pins -quiet  axis_subset_converter_packetizer/M_AXIS] [get_bd_intf_pins -quiet  axis_interconnect_2/S00_AXIS]
+  }
+  # Manage the axis_interconnect_2 (all cases)
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+
+      for {set i 1} {$i<$num} {incr i} {
+          if {[get_property CONFIG.[format "BITSM_%.2d" $i] $cell_obj] != "32"} {
+              if {[get_bd_intf_nets -quiet axis_interconnect_2_M0$i\_AXIS] == "" && $i < 10  } {
+                  connect_bd_intf_net -intf_net axis_interconnect_2_M0$i\_AXIS [get_bd_intf_pins -quiet  axis_interconnect_2/M0$i\_AXIS] [get_bd_intf_pins -quiet  axis_dwidth_converter_$i/S_AXIS]
+              }
+              if {[get_bd_intf_nets -quiet axis_interconnect_2_M$i\_AXIS] == "" && $i > 9  } {
+                  connect_bd_intf_net -intf_net axis_interconnect_2_M$i\_AXIS [get_bd_intf_pins -quiet  axis_interconnect_2/M$i\_AXIS] [get_bd_intf_pins -quiet  axis_dwidth_converter_$i/S_AXIS]
+              }
+              if {[get_bd_intf_nets -quiet axis_dwidth_converter_$i\_M_AXIS] == "" } {
+                  connect_bd_intf_net -intf_net axis_dwidth_converter_$i\_M_AXIS [get_bd_intf_pins -quiet  axis_dwidth_converter_$i/M_AXIS] [get_bd_intf_ports -quiet M_AXIS_$i]
+              }
+          }
+      }
+      if {[get_bd_intf_nets -quiet axis_dwidth_converter_0_M_AXIS] == "" &&  [get_property CONFIG.[format "BITSM_00"] $cell_obj] != "32"}  {
+          connect_bd_intf_net -intf_net axis_dwidth_converter_0_M_AXIS [get_bd_intf_pins -quiet  axis_dwidth_converter_0/M_AXIS] [get_bd_intf_ports -quiet M_AXIS]
+      }
+      if {[get_bd_intf_nets -quiet axis_interconnect_2_M00_AXIS] == "" &&  [get_property CONFIG.[format "BITSM_00"] $cell_obj] != "32" } {
+          connect_bd_intf_net -intf_net axis_interconnect_2_M00_AXIS [get_bd_intf_pins -quiet  axis_interconnect_2/M00_AXIS] [get_bd_intf_pins -quiet  axis_dwidth_converter_0/S_AXIS]
+      }
+  }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 1} {$i<$num} {incr i} {
+            if {[get_property CONFIG.[format "BITSM_%.2d" $i] $cell_obj] == "32" && $i < 10} {
+                  if {[get_bd_intf_nets -quiet axis_interconnect_2_M0$i\_AXIS] == "" } {
+                      connect_bd_intf_net -intf_net axis_interconnect_2_M0$i\_AXIS [get_bd_intf_pins -quiet  axis_interconnect_2/M0$i\_AXIS] [get_bd_intf_pins -quiet axis_subset_converter_output_$i/S_AXIS]
+                  }
+            }
+            if {[get_property CONFIG.[format "BITSM_%.2d" $i] $cell_obj] == "32" && $i > 9} {
+                  if {[get_bd_intf_nets -quiet axis_interconnect_2_M$i\_AXIS] == "" } {
+                      connect_bd_intf_net -intf_net axis_interconnect_2_M$i\_AXIS [get_bd_intf_pins -quiet  axis_interconnect_2/M$i\_AXIS] [get_bd_intf_pins -quiet axis_subset_converter_output_$i/S_AXIS]
+                  }
+            }
+      }
+      if {[get_property CONFIG.BITSM_00 $cell_obj] == "32"} {
+          connect_bd_intf_net -intf_net axis_interconnect_2_M00_AXIS [get_bd_intf_pins -quiet  axis_interconnect_2/M00_AXIS] [get_bd_intf_pins -quiet axis_subset_converter_output_0/S_AXIS]
+      }
+  }
+  # Manage the axis_subset_converter_output
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+      for {set i 1} {$i<$num} {incr i} {
+            if {[get_property CONFIG.[format "BITSM_%.2d" $i] $cell_obj] == "32"} {
+                  if {[get_bd_intf_nets -quiet axis_subset_converter_output_$i\_M_AXIS] == "" } {
+                      connect_bd_intf_net -intf_net axis_subset_converter_output_$i\_M_AXIS [get_bd_intf_pins -quiet axis_subset_converter_output_$i/M_AXIS] [get_bd_intf_ports -quiet M_AXIS_$i]
+                  }
+            }
+      }
+      if {[get_property CONFIG.BITSM_00 $cell_obj] == "32"} {
+          connect_bd_intf_net -intf_net axis_subset_converter_output_0\_M_AXIS [get_bd_intf_pins -quiet axis_subset_converter_output_0/M_AXIS] [get_bd_intf_ports -quiet M_AXIS]
+      }
+  }
+  if {[get_property CONFIG.BITSM_00 $cell_obj] == "32" && [get_property CONFIG.PORTS_NUMBER $cell_obj] == "1"} {
+    if {[get_bd_intf_nets -quiet axis_subset_converter_output_0\_M_AXIS] == "" } {
+         connect_bd_intf_net -intf_net axis_subset_converter_output_0\_M_AXIS [get_bd_intf_pins -quiet axis_subset_converter_output_0/M_AXIS] [get_bd_intf_ports -quiet M_AXIS]
+    }
+  }
+
+  ##################################################################################################################################################################
+  # Handle the parameter PTE_AUXILIARY_PORTS
+  if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+      # Set properties to axis_interconnect_0 to add the needed master interface
+      set_property -dict [ list \
+      CONFIG.NUM_MI {3} \
+      CONFIG.M02_AXIS_HIGHTDEST {0x000000FF} \
+      ] [get_bd_cells -quiet axis_interconnect_0]
+
+      connect_bd_intf_net -intf_net axis_interconnect_0_M02_AXIS [get_bd_intf_pins -quiet  axis_interconnect_0/M02_AXIS] [get_bd_intf_ports -quiet PTE_OUTPUT]
+
+
+      set AXI4Stream_TDEST_filter_0 [ create_bd_cell -type ip -vlnv $_VLNV(AXI4Stream_TDEST_filter) AXI4Stream_TDEST_filter_0 ]
+
+      set_property -dict [ list \
+      CONFIG.NUM_MI {1} \
+      CONFIG.NUM_SI {3} \
+      CONFIG.M00_AXIS_HIGHTDEST {0x000000FF} \
+      ] [get_bd_cells -quiet axis_interconnect_1]
+
+      connect_bd_intf_net -intf_net axis_interconnect_1_S02_AXIS [get_bd_intf_pins -quiet  axis_interconnect_1/S02_AXIS] [get_bd_intf_pins -quiet  AXI4Stream_TDEST_filter_0/m_axis]
+      connect_bd_intf_net -intf_net axis_filter_S00_AXIS [get_bd_intf_pins -quiet  AXI4Stream_TDEST_filter_0/s_axis] [get_bd_intf_ports -quiet PTE_INPUT]
+ }
+
+ # Create port connections
+
+  #clock
+  if {[get_bd_nets -quiet clk_1 ] == "/clk_1"} {
+    delete_bd_objs [get_bd_nets -quiet clk_1]
+  }
+
+  connect_bd_net -net clk_1 [get_bd_ports -quiet clk] \
+  [get_bd_pins AXI4Stream_DataMover_MM2S_0/clk] \
+  [get_bd_pins AXI4Stream_Datamover_S2MM_0/clk] \
+  [get_bd_pins AXI4Stream_PacketFetcher_0/aclk] \
+  [get_bd_pins AXI4Stream_Packetizer_0/aclk] \
+  [get_bd_pins axi_datamover_0/m_axi_mm2s_aclk] \
+  [get_bd_pins axi_datamover_0/m_axi_s2mm_aclk] \
+  [get_bd_pins axi_datamover_0/m_axis_mm2s_cmdsts_aclk] \
+  [get_bd_pins axi_datamover_0/m_axis_s2mm_cmdsts_awclk] \
+  [get_bd_pins axis_interconnect_0/aclk] \
+  [get_bd_pins axis_interconnect_1/aclk] \
+  [get_bd_pins axis_interconnect_0/M00_AXIS_ACLK] \
+  [get_bd_pins axis_interconnect_0/M01_AXIS_ACLK] \
+  [get_bd_pins axis_interconnect_0/S00_AXIS_ACLK] \
+  [get_bd_pins axis_interconnect_1/S00_AXIS_ACLK] \
+  [get_bd_pins axis_interconnect_1/S01_AXIS_ACLK] \
+  [get_bd_pins axis_interconnect_1/M00_AXIS_ACLK]
+  if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+    connect_bd_net -net clk_1 [get_bd_pins axis_interconnect_0/M02_AXIS_ACLK]
+    connect_bd_net -net clk_1 [get_bd_pins axis_interconnect_1/S02_AXIS_ACLK]
+    connect_bd_net -net clk_1 [get_bd_pins AXI4Stream_TDEST_filter_0/aclk]
+  }
+
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+     connect_bd_net -net clk_1 [get_bd_ports -quiet clk] \
+     [get_bd_pins axis_subset_converter_packetizer/aclk] \
+     [get_bd_pins axis_interconnect_2/aclk] \
+     [get_bd_pins axis_interconnect_2/S00_AXIS_ACLK] \
+     [get_bd_pins axis_subset_converter_0/aclk]
+
+     for {set i 0} {$i<$num} {incr i} {
+        if { $i < 10 } {
+           connect_bd_net -net clk_1 [get_bd_pins axis_interconnect_0/S0$i\_AXIS_ACLK]
+           connect_bd_net -net clk_1 [get_bd_pins axis_interconnect_2/M0$i\_AXIS_ACLK]
+        }
+        if { $i > 9 } {
+           connect_bd_net -net clk_1 [get_bd_pins axis_interconnect_0/S$i\_AXIS_ACLK]
+           connect_bd_net -net clk_1 [get_bd_pins axis_interconnect_2/M$i\_AXIS_ACLK]
+        }
+     }
+     for {set i 1} {$i<$num} {incr i} {
+         connect_bd_net -net clk_1 [get_bd_pins AXI4Stream_PacketFetcher_$i/aclk]
+         connect_bd_net -net clk_1 [get_bd_pins axis_subset_converter_$i/aclk]
+     }
+  }
+
+  for {set i 0} {$i<$num} {incr i} {
+      if {[get_bd_cells -quiet axis_subset_converter_output_$i] == "/axis_subset_converter_output_$i"} {
+            connect_bd_net -net clk_1 [get_bd_pins axis_subset_converter_output_$i/aclk]
+      }
+  }
+  for {set i 0} {$i<$num} {incr i} {
+      if {[get_bd_cells -quiet axis_dwidth_converter_$i] == "/axis_dwidth_converter_$i"} {
+            connect_bd_net -net clk_1 [get_bd_pins axis_dwidth_converter_$i/aclk]
+      }
+  }
+  for {set i 0} {$i<$num} {incr i} {
+      if {[get_bd_cells -quiet AXI4Stream_multicobs_upsizer_$i] == "/AXI4Stream_multicobs_upsizer_$i"} {
+            connect_bd_net -net clk_1 [get_bd_pins AXI4Stream_multicobs_upsizer_$i/aclk]
+      }
+  }
+
+ #interconnect_aresetn
+
+  if {[get_bd_nets -quiet interconnect_aresetn_1] == "/interconnect_aresetn_1"} {
+    delete_bd_objs [get_bd_nets -quiet interconnect_aresetn_1]
+  }
+
+  connect_bd_net -net interconnect_aresetn_1 [get_bd_ports -quiet interconnect_aresetn] \
+  [get_bd_pins axis_interconnect_0/aresetn] \
+  [get_bd_pins axis_interconnect_1/aresetn]
+
+  if {[get_bd_cells -quiet axis_interconnect_2] == "/axis_interconnect_2"} {
+        connect_bd_net -net interconnect_aresetn_1 [get_bd_pins axis_interconnect_2/aresetn]
+  }
+
+  #peripherals_aresetn
+
+  if {[get_bd_nets -quiet peripherals_aresetn_1] == "/peripherals_aresetn_1"} {
+    delete_bd_objs [get_bd_nets -quiet peripherals_aresetn_1]
+  }
+
+  connect_bd_net -net peripherals_aresetn_1 [get_bd_ports -quiet peripherals_aresetn] \
+  [get_bd_pins AXI4Stream_DataMover_MM2S_0/rstn] \
+  [get_bd_pins AXI4Stream_Datamover_S2MM_0/rstn] \
+  [get_bd_pins AXI4Stream_PacketFetcher_0/aresetn] \
+  [get_bd_pins AXI4Stream_Packetizer_0/aresetn] \
+  [get_bd_pins axi_datamover_0/m_axi_mm2s_aresetn] \
+  [get_bd_pins axi_datamover_0/m_axi_s2mm_aresetn] \
+  [get_bd_pins axi_datamover_0/m_axis_mm2s_cmdsts_aresetn] \
+  [get_bd_pins axi_datamover_0/m_axis_s2mm_cmdsts_aresetn] \
+  [get_bd_pins axis_interconnect_0/M00_AXIS_ARESETN] \
+  [get_bd_pins axis_interconnect_0/M01_AXIS_ARESETN] \
+  [get_bd_pins axis_interconnect_0/S00_AXIS_ARESETN] \
+  [get_bd_pins axis_interconnect_1/S00_AXIS_ARESETN] \
+  [get_bd_pins axis_interconnect_1/S01_AXIS_ARESETN] \
+  [get_bd_pins axis_interconnect_1/M00_AXIS_ARESETN]
+  if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+    connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_interconnect_0/M02_AXIS_ARESETN]
+    connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_interconnect_1/S02_AXIS_ARESETN]
+    connect_bd_net -net peripherals_aresetn_1 [get_bd_pins AXI4Stream_TDEST_filter_0/aresetn]
+  }
+
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+    connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_subset_converter_packetizer/aresetn] \
+    [get_bd_pins axis_interconnect_2/S00_AXIS_ARESETN] \
+    [get_bd_pins axis_subset_converter_0/aresetn]
+
+    for {set i 1} {$i<$num} {incr i} {
+       connect_bd_net -net peripherals_aresetn_1 [get_bd_pins AXI4Stream_PacketFetcher_$i/aresetn]
+       connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_subset_converter_$i/aresetn]
+    }
+    for {set i 0} {$i<$num} {incr i} {
+        if { $i < 10 } {
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_interconnect_0/S0$i\_AXIS_ARESETN]
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_interconnect_2/M0$i\_AXIS_ARESETN]
+        }
+        if { $i > 9 } {
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_interconnect_0/S$i\_AXIS_ARESETN]
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_interconnect_2/M$i\_AXIS_ARESETN]
+        }
+    }
+  }
+  for {set i 0} {$i<$num} {incr i} {
+      if {[get_bd_cells -quiet axis_subset_converter_output_$i] == "/axis_subset_converter_output_$i"} {
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_subset_converter_output_$i/aresetn]
+      }
+  }
+  for {set i 0} {$i<$num} {incr i} {
+      if {[get_bd_cells -quiet  axis_dwidth_converter_$i] == "/axis_dwidth_converter_$i"} {
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins axis_dwidth_converter_$i/aresetn]
+      }
+  }
+  for {set i 0} {$i<$num} {incr i} {
+      if {[get_bd_cells -quiet AXI4Stream_multicobs_upsizer_$i] == "/AXI4Stream_multicobs_upsizer_$i"} {
+            connect_bd_net -net peripherals_aresetn_1 [get_bd_pins AXI4Stream_multicobs_upsizer_$i/aresetn]
+      }
+  }
+
+  # Error pins
+  if {[get_bd_nets -quiet error_code] == ""} {
+    connect_bd_net -net error_code [get_bd_pins AXI4Stream_PacketFetcher_0/error_code] [get_bd_pins Packetfetcher_error_code]
+  }
+  if {[get_bd_nets -quiet packet_error] == ""} {
+    connect_bd_net -net packet_error [get_bd_pins AXI4Stream_Packetizer_0/packet_error] [get_bd_pins Packetizer_packet_error]
+  }
+  if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+    for {set i 1} {$i<$num} {incr i} {
+        connect_bd_net -net packet_error_$i [get_bd_pins AXI4Stream_PacketFetcher_$i/error_code] [get_bd_pins Packetfetcher_$i\_error_code]
+    }
+ }
+}
+
+
+proc post_propagate { } {
+    set cell_obj [::ipxit::current_inst]
+    set cell_name [::ipxit::current_instname]
+
+    # Variables needed for routing (long, binary and hex values)
+	set num [get_property CONFIG.PORTS_NUMBER $cell_obj]
+    set Tdest [expr {log($num)/log(2)}]
+    set add  [expr {ceil($Tdest)}]
+    set addInt [expr int($add)]
+    set hexAdd [format %x $addInt]
+    set addHigh  [expr {$add-1}]
+    set addHighInt [expr int($addHigh)]
+    set BitRouting [expr (8 + $add)]
+    set BitRoutingInt [expr int($BitRouting)]
+    set hexBitRouting [format %x $BitRoutingInt]
+    set BitRoutingHigh [expr ($BitRouting -1)]
+
+    # Set properties of AXIS interconnect_0
+	if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+		set_property -dict [ list \
+		CONFIG.ARB_ALGORITHM {3} \
+		CONFIG.ARB_ON_MAX_XFERS {0} \
+		CONFIG.ARB_ON_TLAST {1} \
+		] [get_bd_cells -quiet axis_interconnect_0]
+	}
+
+    # Set properties of AXIS interconnect_1
+    set_property -dict [ list \
+		CONFIG.ARB_ON_TLAST {1} \
+		CONFIG.ARB_ALGORITHM {3} \
+		CONFIG.ARB_ON_MAX_XFERS {0} \
+	] [get_bd_cells -quiet axis_interconnect_1]
+
+    # Set properties of the subset converter at the output of the packetizer
+    if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+			set_property -dict [ list \
+            CONFIG.S_TDATA_NUM_BYTES {4} \
+            CONFIG.M_TDATA_NUM_BYTES {4} \
+            CONFIG.S_TDEST_WIDTH "$BitRoutingInt" \
+			CONFIG.M_TDEST_WIDTH "$addInt" \
+            CONFIG.S_HAS_TLAST {1} \
+            CONFIG.M_HAS_TLAST {1} \
+			CONFIG.TDATA_REMAP {tdata[31:0]} \
+			CONFIG.TLAST_REMAP {tlast[0]} \
+            CONFIG.TDEST_REMAP "tdest[$addHighInt:0]" \
+		   ] [get_bd_cells  axis_subset_converter_packetizer]
+	}
+
+    # Set properties of the subset converters at the output of the packetfetcher
+    if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1" } {
+		for {set i 0} {$i<$num} {incr i} {
+            set width $addInt
+            set bits [binary scan [binary format I $i] B32 var;string range $var end-$addHighInt end]
+			set_property -dict [ list \
+            CONFIG.S_TDEST_WIDTH {8} \
+			CONFIG.M_TDEST_WIDTH "$BitRoutingInt" \
+            CONFIG.TDEST_REMAP "tdest[7:0],$width\'b$bits" \
+			] [get_bd_cells -quiet axis_subset_converter_$i]
+		}
+	}
+    # If needed, set the routing
+    if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+
+         for {set i 0} {$i<$num} {incr i} {
+            if { $i < 10 } {
+                 set width $addInt
+                 set bits [binary scan [binary format I $i] B32 var;string range $var end-$addHighInt end]
+                 set hexBits [format %x $i ]
+
+                 set_property -dict [ list \
+                 CONFIG.M0$i\_AXIS_BASETDEST "0x$hexBits" \
+                 CONFIG.M0$i\_AXIS_HIGHTDEST "0x$hexBits" \
+                 ] [get_bd_cells -quiet axis_interconnect_2]
+            }
+            if { $i > 9 } {
+                set width $addInt
+                set bits [binary scan [binary format I $i] B32 var;string range $var end-$addHighInt end]
+                set hexBits [format %x $i ]
+
+                set_property -dict [ list \
+                CONFIG.M$i\_AXIS_BASETDEST "0x$hexBits" \
+                CONFIG.M$i\_AXIS_HIGHTDEST "0x$hexBits" \
+                ] [get_bd_cells -quiet axis_interconnect_2]
+           }
+         }
+     }
+
+    # Set the width of TDEST on packetizer and DataMover S2MM and MM2S
+     set_property -dict [ list \
+ 		CONFIG.C_S_AXIS_TDEST_WIDTH "$BitRoutingInt" \
+        CONFIG.C_M_AXIS_TDEST_WIDTH "$BitRoutingInt" \
+ 	] [get_bd_cells -quiet AXI4Stream_Datamover_S2MM_0]
+
+    set_property -dict [ list \
+		CONFIG.C_S_AXIS_MAIN_TDEST_WIDTH "$BitRouting" \
+        CONFIG.C_M_AXIS_MAIN_TDEST_WIDTH "$BitRouting" \
+	] [get_bd_cells -quiet AXI4Stream_DataMover_MM2S_0]
+
+    set_property -dict [ list \
+		CONFIG.TDEST_WIDTH "$BitRoutingInt" \
+	] [get_bd_cells -quiet AXI4Stream_Packetizer_0]
+
+    # Set properties to axis_interconnect_0 (multiple interfaces)
+    if {[get_property CONFIG.PORTS_NUMBER $cell_obj] > "1"} {
+        if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "false"} {
+            set highTdest  [expr { ( pow( 2, $add) - 1)}]
+            set highTdestInt [expr int($highTdest)]
+            set hexHigh [format %x $highTdestInt ]
+            set baseTdest  [expr { pow( 2, $add) }]
+            set baseTdestInt [expr int($baseTdest)]
+            set hexBase [format %x $baseTdestInt ]
+            set addPlusOne  [expr {$add+1}]
+            set highTdest2  [expr { ( pow( 2, $addPlusOne) - 1)}]
+            set highTdestInt2 [expr int($highTdest2)]
+            set hexHigh2 [format %x $highTdestInt2 ]
+            set_property -dict [ list \
+             CONFIG.M00_AXIS_BASETDEST {0x00000000} \
+             CONFIG.M00_AXIS_HIGHTDEST "0x$hexHigh" \
+             CONFIG.M01_AXIS_BASETDEST "0x$hexBase" \
+             CONFIG.M01_AXIS_HIGHTDEST "0x$hexHigh2" \
+            ] [get_bd_cells -quiet axis_interconnect_0]
+        }
+
+        if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+            set highTdest  [expr { ( pow( 2, $add) - 1)}]
+            set highTdestInt [expr int($highTdest)]
+            set hexHigh [format %x $highTdestInt ]
+            set baseTdest  [expr { pow( 2, $add) }]
+            set baseTdestInt [expr int($baseTdest)]
+            set hexBase [format %x $baseTdestInt ]
+            set addPlusOne  [expr {$add+1}]
+            set highTdest2  [expr { ( pow( 2, $addPlusOne) - 1)}]
+            set highTdestInt2 [expr int($highTdest2)]
+            set hexHigh2 [format %x $highTdestInt2 ]
+            set M02TDEST  [expr { ( pow( 2, $addPlusOne))}]
+            set M02TDESTint [expr int($M02TDEST)]
+            set M02TDESThex [format %x $M02TDESTint ]
+            set_property -dict [ list \
+            CONFIG.M00_AXIS_BASETDEST {0x00000000} \
+            CONFIG.M00_AXIS_HIGHTDEST "0x$hexHigh" \
+            CONFIG.M01_AXIS_BASETDEST "0x$hexBase" \
+            CONFIG.M01_AXIS_HIGHTDEST "0x$hexHigh2" \
+            CONFIG.M02_AXIS_BASETDEST "0x$M02TDESThex" \
+            CONFIG.M02_AXIS_HIGHTDEST "0x0000000FF" \
+            ] [get_bd_cells -quiet axis_interconnect_0]
+        }
+    }
+
+    if {[get_property CONFIG.PTE_AUXILIARY_PORTS $cell_obj] == "true"} {
+        set_property -dict [ list \
+        CONFIG.TDEST_WIDTH "$BitRoutingInt" \
+        ] [get_bd_cells -quiet AXI4Stream_TDEST_filter_0]
+    }
+
+}
+
+# Procs are not called automatically like in the other type of hier, need to be called
+update_contents
+
+post_propagate

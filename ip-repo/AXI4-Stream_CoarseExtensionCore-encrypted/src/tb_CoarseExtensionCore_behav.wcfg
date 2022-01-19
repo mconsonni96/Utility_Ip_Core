@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_CEC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="localpackage_cec" />
+            <top_module name="localpackage_tc" />
+            <top_module name="tb_CEC" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="617080000fs"></ZoomStartTime>
+      <ZoomEndTime time="661287600fs"></ZoomEndTime>
+      <Cursor1Time time="638400000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="389"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="48" />
+   <wvobject type="array" fp_name="/tb_CEC/CoarseCounter_CTD">
+      <obj_property name="ElementShortName">CoarseCounter_CTD[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CoarseCounter_CTD[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider80" type="divider">
+      <obj_property name="label">Tree Comparator</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/dut_CoarseExtensionCore/Inst_TreeComparator/Inst_TreeComparatorWrapper/Data_pipe">
+      <obj_property name="ElementShortName">Data_pipe[0:2][15:0]</obj_property>
+      <obj_property name="ObjectShortName">Data_pipe[0:2][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/dut_CoarseExtensionCore/OVERFLOW_REF">
+      <obj_property name="ElementShortName">OVERFLOW_REF</obj_property>
+      <obj_property name="ObjectShortName">OVERFLOW_REF</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider49" type="divider">
+      <obj_property name="label">Input at clk_TDC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/reset_TDC">
+      <obj_property name="ElementShortName">reset_TDC</obj_property>
+      <obj_property name="ObjectShortName">reset_TDC</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/clk_TDC">
+      <obj_property name="ElementShortName">clk_TDC</obj_property>
+      <obj_property name="ObjectShortName">clk_TDC</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/dut_CoarseExtensionCore/CoarseCounter">
+      <obj_property name="ElementShortName">CoarseCounter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CoarseCounter[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/Equality_check">
+      <obj_property name="ElementShortName">Equality_check</obj_property>
+      <obj_property name="ObjectShortName">Equality_check</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/subint_tvalid">
+      <obj_property name="ElementShortName">subint_tvalid</obj_property>
+      <obj_property name="ObjectShortName">subint_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/subint_tdata">
+      <obj_property name="ElementShortName">subint_tdata[5:0]</obj_property>
+      <obj_property name="ObjectShortName">subint_tdata[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/Inst_FIFO_Synchronizer/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/dut_CoarseExtensionCore/din">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus51">
+      <obj_property name="label">din(overflow)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[9]">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus45">
+      <obj_property name="label">din(CoarseCounter)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus43">
+      <obj_property name="label">din(subint_tvalid)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus38">
+      <obj_property name="label">din(subint_tdata)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/din[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider78" type="divider">
+      <obj_property name="label">Output at clk_SYS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/reset_SYS">
+      <obj_property name="ElementShortName">reset_SYS</obj_property>
+      <obj_property name="ObjectShortName">reset_SYS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/clk_SYS">
+      <obj_property name="ElementShortName">clk_SYS</obj_property>
+      <obj_property name="ObjectShortName">clk_SYS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/queue">
+      <obj_property name="ElementShortName">queue</obj_property>
+      <obj_property name="ObjectShortName">queue</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/Inst_FIFO_Synchronizer/Inst_xpm_fifo_async/rd_en">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/Inst_FIFO_Synchronizer/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/dut_CoarseExtensionCore/CoarseOverflow_cnt">
+      <obj_property name="ElementShortName">CoarseOverflow_cnt[13:0]</obj_property>
+      <obj_property name="ObjectShortName">CoarseOverflow_cnt[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/dut_CoarseExtensionCore/uncalib_tdata_tmp">
+      <obj_property name="ElementShortName">uncalib_tdata_tmp[14:0]</obj_property>
+      <obj_property name="ObjectShortName">uncalib_tdata_tmp[14:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout">
+      <obj_property name="ElementShortName">dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/Inst_FIFO_Synchronizer/Inst_xpm_fifo_async/full">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus76">
+      <obj_property name="label">dout(overflow)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[9]">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">[9]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus71">
+      <obj_property name="label">dout(CoarseCounter)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus68">
+      <obj_property name="label">dout(subint_tvalid)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus63">
+      <obj_property name="label">dout(subint_tdata)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/dut_CoarseExtensionCore/dout[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider109" type="divider">
+      <obj_property name="label">Uncalib TS at clk_SYS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/uncalib_tdata">
+      <obj_property name="ElementShortName">uncalib_tdata[14:0]</obj_property>
+      <obj_property name="ObjectShortName">uncalib_tdata[14:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_CEC/uncalib_tvalid">
+      <obj_property name="ElementShortName">uncalib_tvalid</obj_property>
+      <obj_property name="ObjectShortName">uncalib_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus105">
+      <obj_property name="label">uncalib_fid</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[8]">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">[8]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus100">
+      <obj_property name="label">uncalib_coarse</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[7]">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[6]">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[5]">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[4]">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus95">
+      <obj_property name="label">uncalib_fine</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[3]">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[2]">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[1]">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_CEC/uncalib_tdata[0]">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider91" type="divider">
+      <obj_property name="label">Constants</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/CLK_TDC_PERIOD">
+      <obj_property name="ElementShortName">CLK_TDC_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_TDC_PERIOD</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/CLK_SYS_PERIOD">
+      <obj_property name="ElementShortName">CLK_SYS_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_SYS_PERIOD</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/RESET_WAIT">
+      <obj_property name="ElementShortName">RESET_WAIT</obj_property>
+      <obj_property name="ObjectShortName">RESET_WAIT</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/VALID_WAIT">
+      <obj_property name="ElementShortName">VALID_WAIT</obj_property>
+      <obj_property name="ObjectShortName">VALID_WAIT</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_CEC/CEC_VS_CTD_COUNTER">
+      <obj_property name="ElementShortName">CEC_VS_CTD_COUNTER[1:3]</obj_property>
+      <obj_property name="ObjectShortName">CEC_VS_CTD_COUNTER[1:3]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/CEC_COARSE_CNT_INIT">
+      <obj_property name="ElementShortName">CEC_COARSE_CNT_INIT</obj_property>
+      <obj_property name="ObjectShortName">CEC_COARSE_CNT_INIT</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/BIT_COARSE">
+      <obj_property name="ElementShortName">BIT_COARSE</obj_property>
+      <obj_property name="ObjectShortName">BIT_COARSE</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/BIT_SUB_INT">
+      <obj_property name="ElementShortName">BIT_SUB_INT</obj_property>
+      <obj_property name="ObjectShortName">BIT_SUB_INT</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/BIT_UNCALIBRATED">
+      <obj_property name="ElementShortName">BIT_UNCALIBRATED</obj_property>
+      <obj_property name="ObjectShortName">BIT_UNCALIBRATED</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_CEC/BIT_FID">
+      <obj_property name="ElementShortName">BIT_FID</obj_property>
+      <obj_property name="ObjectShortName">BIT_FID</obj_property>
+   </wvobject>
+</wave_config>

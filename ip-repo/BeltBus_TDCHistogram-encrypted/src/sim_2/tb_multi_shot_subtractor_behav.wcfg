@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_subtractor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_subtractor" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="995977474fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="186"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="64" />
+   <wvobject type="logic" fp_name="/tb_subtractor/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/belt_tvalid">
+      <obj_property name="ElementShortName">belt_tvalid</obj_property>
+      <obj_property name="ObjectShortName">belt_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/belt_tdata">
+      <obj_property name="ElementShortName">belt_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">belt_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/bb_num_ch">
+      <obj_property name="ElementShortName">bb_num_ch[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_num_ch[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/bb_fid">
+      <obj_property name="ElementShortName">bb_fid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_fid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/bb_coarse">
+      <obj_property name="ElementShortName">bb_coarse[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_coarse[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/bb_fine">
+      <obj_property name="ElementShortName">bb_fine[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_fine[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/belt_bus_in">
+      <obj_property name="ElementShortName">belt_bus_in</obj_property>
+      <obj_property name="ObjectShortName">belt_bus_in</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/int_sub_out">
+      <obj_property name="ElementShortName">int_sub_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">int_sub_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/buff_a_overflow">
+      <obj_property name="ElementShortName">buff_a_overflow[8:0]</obj_property>
+      <obj_property name="ObjectShortName">buff_a_overflow[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fin_valid">
+      <obj_property name="ElementShortName">fin_valid</obj_property>
+      <obj_property name="ObjectShortName">fin_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fin_data">
+      <obj_property name="ElementShortName">fin_data[32:0]</obj_property>
+      <obj_property name="ObjectShortName">fin_data[32:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fout_valid">
+      <obj_property name="ElementShortName">fout_valid</obj_property>
+      <obj_property name="ObjectShortName">fout_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fout_data">
+      <obj_property name="ElementShortName">fout_data[32:0]</obj_property>
+      <obj_property name="ObjectShortName">fout_data[32:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/belt_a_valid">
+      <obj_property name="ElementShortName">belt_a_valid</obj_property>
+      <obj_property name="ObjectShortName">belt_a_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/belt_b_valid">
+      <obj_property name="ElementShortName">belt_b_valid</obj_property>
+      <obj_property name="ObjectShortName">belt_b_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/belt_a_overflow">
+      <obj_property name="ElementShortName">belt_a_overflow</obj_property>
+      <obj_property name="ObjectShortName">belt_a_overflow</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/belt_b_overflow">
+      <obj_property name="ElementShortName">belt_b_overflow</obj_property>
+      <obj_property name="ObjectShortName">belt_b_overflow</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/last_a">
+      <obj_property name="ElementShortName">last_a[32:0]</obj_property>
+      <obj_property name="ObjectShortName">last_a[32:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/last_a_overflow">
+      <obj_property name="ElementShortName">last_a_overflow[7:0]</obj_property>
+      <obj_property name="ObjectShortName">last_a_overflow[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/flush_data">
+      <obj_property name="ElementShortName">flush_data</obj_property>
+      <obj_property name="ObjectShortName">flush_data</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/discard_data">
+      <obj_property name="ElementShortName">discard_data</obj_property>
+      <obj_property name="ObjectShortName">discard_data</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/measure_valid">
+      <obj_property name="ElementShortName">measure_valid</obj_property>
+      <obj_property name="ObjectShortName">measure_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_valid">
+      <obj_property name="ElementShortName">fa_valid</obj_property>
+      <obj_property name="ObjectShortName">fa_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_dout">
+      <obj_property name="ElementShortName">fa_dout[36:0]</obj_property>
+      <obj_property name="ObjectShortName">fa_dout[36:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_full">
+      <obj_property name="ElementShortName">fa_full</obj_property>
+      <obj_property name="ObjectShortName">fa_full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_empty">
+      <obj_property name="ElementShortName">fa_empty</obj_property>
+      <obj_property name="ObjectShortName">fa_empty</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_din">
+      <obj_property name="ElementShortName">fa_din[36:0]</obj_property>
+      <obj_property name="ObjectShortName">fa_din[36:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_wr_en">
+      <obj_property name="ElementShortName">fa_wr_en</obj_property>
+      <obj_property name="ObjectShortName">fa_wr_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_rd_en">
+      <obj_property name="ElementShortName">fa_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fa_rd_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_wr_data_count">
+      <obj_property name="ElementShortName">fb_wr_data_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">fb_wr_data_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_valid">
+      <obj_property name="ElementShortName">fb_valid</obj_property>
+      <obj_property name="ObjectShortName">fb_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_dout">
+      <obj_property name="ElementShortName">fb_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fb_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_full">
+      <obj_property name="ElementShortName">fb_full</obj_property>
+      <obj_property name="ObjectShortName">fb_full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_empty">
+      <obj_property name="ElementShortName">fb_empty</obj_property>
+      <obj_property name="ObjectShortName">fb_empty</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_din">
+      <obj_property name="ElementShortName">fb_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fb_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_wr_en">
+      <obj_property name="ElementShortName">fb_wr_en</obj_property>
+      <obj_property name="ObjectShortName">fb_wr_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fb_rd_en">
+      <obj_property name="ElementShortName">fb_rd_en</obj_property>
+      <obj_property name="ObjectShortName">fb_rd_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/is_ch_b_valid">
+      <obj_property name="ElementShortName">is_ch_b_valid</obj_property>
+      <obj_property name="ObjectShortName">is_ch_b_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/window_depth">
+      <obj_property name="ElementShortName">window_depth[31:0]</obj_property>
+      <obj_property name="ObjectShortName">window_depth[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/prev_num_elem">
+      <obj_property name="ElementShortName">prev_num_elem[3:0]</obj_property>
+      <obj_property name="ObjectShortName">prev_num_elem[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/int_prev_num_elem">
+      <obj_property name="ElementShortName">int_prev_num_elem[3:0]</obj_property>
+      <obj_property name="ObjectShortName">int_prev_num_elem[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/delta_measure">
+      <obj_property name="ElementShortName">delta_measure[31:0]</obj_property>
+      <obj_property name="ObjectShortName">delta_measure[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/new_b_avaiable">
+      <obj_property name="ElementShortName">new_b_avaiable</obj_property>
+      <obj_property name="ObjectShortName">new_b_avaiable</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/old_b_not_valid">
+      <obj_property name="ElementShortName">old_b_not_valid</obj_property>
+      <obj_property name="ObjectShortName">old_b_not_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/int_sub_valid">
+      <obj_property name="ElementShortName">int_sub_valid</obj_property>
+      <obj_property name="ObjectShortName">int_sub_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/delta_overflow">
+      <obj_property name="ElementShortName">delta_overflow[8:0]</obj_property>
+      <obj_property name="ObjectShortName">delta_overflow[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/new_b_elem">
+      <obj_property name="ElementShortName">new_b_elem</obj_property>
+      <obj_property name="ObjectShortName">new_b_elem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/int_b_empty">
+      <obj_property name="ElementShortName">int_b_empty</obj_property>
+      <obj_property name="ObjectShortName">int_b_empty</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/b_index">
+      <obj_property name="ElementShortName">b_index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_index[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/delta_index">
+      <obj_property name="ElementShortName">delta_index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">delta_index[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/pointer_to_b">
+      <obj_property name="ElementShortName">pointer_to_b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer_to_b[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/pointer_minus_delta">
+      <obj_property name="ElementShortName">pointer_minus_delta[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pointer_minus_delta[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/is_before_b">
+      <obj_property name="ElementShortName">is_before_b</obj_property>
+      <obj_property name="ObjectShortName">is_before_b</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/fa_overflow">
+      <obj_property name="ElementShortName">fa_overflow[8:0]</obj_property>
+      <obj_property name="ObjectShortName">fa_overflow[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/backup_a_overflow">
+      <obj_property name="ElementShortName">backup_a_overflow[8:0]</obj_property>
+      <obj_property name="ObjectShortName">backup_a_overflow[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/security_overflow">
+      <obj_property name="ElementShortName">security_overflow[8:0]</obj_property>
+      <obj_property name="ObjectShortName">security_overflow[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/secutiry_flush">
+      <obj_property name="ElementShortName">secutiry_flush</obj_property>
+      <obj_property name="ObjectShortName">secutiry_flush</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/ch_a_value">
+      <obj_property name="ElementShortName">ch_a_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_a_value[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/ch_a_backup">
+      <obj_property name="ElementShortName">ch_a_backup[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_a_backup[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/ch_a_valid">
+      <obj_property name="ElementShortName">ch_a_valid</obj_property>
+      <obj_property name="ObjectShortName">ch_a_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/ch_b_value">
+      <obj_property name="ElementShortName">ch_b_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_b_value[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_subtractor/dut3_multi_shot_subtractor/dut3/ch_b_valid">
+      <obj_property name="ElementShortName">ch_b_valid</obj_property>
+      <obj_property name="ObjectShortName">ch_b_valid</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,26 @@
+package require xilinx::board 1.0
+namespace import ::xilinx::board::*
+
+set instname [current_inst]
+set f_xdc [add_ipfile -usedIn  [list synthesis implementation board ] -force ${instname}_board.xdc]
+puts_ipfile $f_xdc "#--------------------Physical Constraints-----------------\n"
+if { [get_project_property BOARD] == "" } {
+	close_ipfile $f_xdc
+	return 
+}
+
+set board_if [get_property PARAM_VALUE.FT245_BOARD_INTERFACE]
+if { $board_if ne "Custom"} {
+	
+	board_add_tri_state_port_constraints $f_xdc $board_if \
+	DATA_I DATA_i DATA_O DATA_o DATA_T DATA_t 8
+	
+	board_add_port_constraints $f_xdc $board_if RXF RXFn
+	board_add_port_constraints $f_xdc $board_if TXE TXEn
+	board_add_port_constraints $f_xdc $board_if RD RDn
+	board_add_port_constraints $f_xdc $board_if WR WRn
+	board_add_port_constraints $f_xdc $board_if OE OEn
+	board_add_port_constraints $f_xdc $board_if SIWU SIWU
+	
+}
+close_ipfile $f_xdc

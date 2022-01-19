@@ -1,0 +1,7 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_FIFO_MEMORY_TYPE_ENABLEMENT {MODE_SEL } {expr [expr {$MODE_SEL} == "{FIFO}"]}
+proc gen_USERPARAMETER_RELATED_CLOCKS_ENABLEMENT {MODE_SEL } {expr [expr {$MODE_SEL} == "{FIFO}"]}
+proc gen_USERPARAMETER_CDC_SYNC_STAGES_ENABLEMENT {MODE_SEL RELATED_CLOCKS } {expr [expr {$MODE_SEL} == "{FIFO}" && {$RELATED_CLOCKS} != "{true}"]}
+proc gen_USERPARAMETER_DEST_SYNC_FF_ENABLEMENT {MODE_SEL } {expr [expr {$MODE_SEL} == "{CDC}"]}
+proc gen_USERPARAMETER_SRC_SYNC_FF_ENABLEMENT {MODE_SEL } {expr [expr {$MODE_SEL} == "{CDC}"]}
+proc gen_USERPARAMETER_FIFO_DEPTH_ENABLEMENT {MODE_SEL } {expr [expr {$MODE_SEL} == "{FIFO}"]}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_subtractor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_subtractor" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="982436883fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="190"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/belt_tvalid" type="logic">
+      <obj_property name="ElementShortName">belt_tvalid</obj_property>
+      <obj_property name="ObjectShortName">belt_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/belt_tdata" type="array">
+      <obj_property name="ElementShortName">belt_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">belt_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/bb_num_ch" type="array">
+      <obj_property name="ElementShortName">bb_num_ch[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_num_ch[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/bb_fid" type="array">
+      <obj_property name="ElementShortName">bb_fid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_fid[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/bb_coarse" type="array">
+      <obj_property name="ElementShortName">bb_coarse[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_coarse[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/bb_fine" type="array">
+      <obj_property name="ElementShortName">bb_fine[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_fine[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/ch_a_sel" type="array">
+      <obj_property name="ElementShortName">ch_a_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_a_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/ch_b_sel" type="array">
+      <obj_property name="ElementShortName">ch_b_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ch_b_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/sub_valid" type="logic">
+      <obj_property name="ElementShortName">sub_valid</obj_property>
+      <obj_property name="ObjectShortName">sub_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/sub_out" type="array">
+      <obj_property name="ElementShortName">sub_out[14:0]</obj_property>
+      <obj_property name="ObjectShortName">sub_out[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/overflow_fsr" type="logic">
+      <obj_property name="ElementShortName">overflow_fsr</obj_property>
+      <obj_property name="ObjectShortName">overflow_fsr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/prog_overflow" type="array">
+      <obj_property name="ElementShortName">prog_overflow[3:0]</obj_property>
+      <obj_property name="ObjectShortName">prog_overflow[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/window_pos" type="array">
+      <obj_property name="ElementShortName">window_pos[31:0]</obj_property>
+      <obj_property name="ObjectShortName">window_pos[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/belt_tvalid" type="logic">
+      <obj_property name="ElementShortName">belt_tvalid</obj_property>
+      <obj_property name="ObjectShortName">belt_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/belt_tdata" type="array">
+      <obj_property name="ElementShortName">belt_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">belt_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/belt_bus_in" type="array">
+      <obj_property name="ElementShortName">belt_bus_in</obj_property>
+      <obj_property name="ObjectShortName">belt_bus_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/belt_a_valid" type="logic">
+      <obj_property name="ElementShortName">belt_a_valid</obj_property>
+      <obj_property name="ObjectShortName">belt_a_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/belt_b_valid" type="logic">
+      <obj_property name="ElementShortName">belt_b_valid</obj_property>
+      <obj_property name="ObjectShortName">belt_b_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/belt_a_overflow" type="logic">
+      <obj_property name="ElementShortName">belt_a_overflow</obj_property>
+      <obj_property name="ObjectShortName">belt_a_overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/buff_a_overflow" type="array">
+      <obj_property name="ElementShortName">buff_a_overflow[8:0]</obj_property>
+      <obj_property name="ObjectShortName">buff_a_overflow[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/tstamp_a" type="array">
+      <obj_property name="ElementShortName">tstamp_a[23:0]</obj_property>
+      <obj_property name="ObjectShortName">tstamp_a[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/tstamp_b" type="array">
+      <obj_property name="ElementShortName">tstamp_b[32:0]</obj_property>
+      <obj_property name="ObjectShortName">tstamp_b[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/a_minus_b" type="array">
+      <obj_property name="ElementShortName">a_minus_b[32:0]</obj_property>
+      <obj_property name="ObjectShortName">a_minus_b[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/windowed_measure" type="array">
+      <obj_property name="ElementShortName">windowed_measure[14:0]</obj_property>
+      <obj_property name="ObjectShortName">windowed_measure[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/window" type="array">
+      <obj_property name="ElementShortName">window[31:0]</obj_property>
+      <obj_property name="ObjectShortName">window[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/is_buff_a_valid" type="logic">
+      <obj_property name="ElementShortName">is_buff_a_valid</obj_property>
+      <obj_property name="ObjectShortName">is_buff_a_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/is_buff_b_valid" type="logic">
+      <obj_property name="ElementShortName">is_buff_b_valid</obj_property>
+      <obj_property name="ObjectShortName">is_buff_b_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/is_buff_valid" type="logic">
+      <obj_property name="ElementShortName">is_buff_valid</obj_property>
+      <obj_property name="ObjectShortName">is_buff_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/is_measure_in_wnd" type="logic">
+      <obj_property name="ElementShortName">is_measure_in_wnd</obj_property>
+      <obj_property name="ObjectShortName">is_measure_in_wnd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_subtractor/dut1_positive_only_subtractor/dut1/is_measure_valid" type="logic">
+      <obj_property name="ElementShortName">is_measure_valid</obj_property>
+      <obj_property name="ObjectShortName">is_measure_valid</obj_property>
+   </wvobject>
+</wave_config>

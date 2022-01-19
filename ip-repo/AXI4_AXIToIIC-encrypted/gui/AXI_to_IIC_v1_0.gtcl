@@ -1,0 +1,3 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_CHECK_SLAVE_PRESENCE_ENABLEMENT {I2C_STANDARD_MODE } {expr {$I2C_STANDARD_MODE ? 1 : 0}}
+proc gen_USERPARAMETER_CHECK_SLAVE_PRESENCE_VALUE {I2C_STANDARD_MODE } {expr {$I2C_STANDARD_MODE ? true : false}}

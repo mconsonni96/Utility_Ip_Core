@@ -1,0 +1,4 @@
+v 4
+file / "/mnt/c/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/axi4stream_magiccalibrator/misc/simple_integrator.vhd" "f4a500fc385226427f477199bdc836ba25d845c1" "20200412104025.499":
+  entity simple_integrator at 1( 0) + 0 on 11;
+  architecture mem_dual_port of simple_integrator at 49( 1247) + 0 on 12;

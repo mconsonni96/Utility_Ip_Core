@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_Axi4Stream_PeriodMeter_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_Axi4Stream_PeriodMeter" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="101842334fs"></ZoomStartTime>
+      <ZoomEndTime time="103388335fs"></ZoomEndTime>
+      <Cursor1Time time="102100000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/s00_bb_tvalid" type="logic">
+      <obj_property name="ElementShortName">s00_bb_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s00_bb_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/s00_bb_tdata" type="array">
+      <obj_property name="ElementShortName">s00_bb_tdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s00_bb_tdata[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/s00_bb_tready" type="logic">
+      <obj_property name="ElementShortName">s00_bb_tready</obj_property>
+      <obj_property name="ObjectShortName">s00_bb_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/m00_axis_tready" type="logic">
+      <obj_property name="ElementShortName">m00_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">m00_axis_tready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/m00_axis_tvalid" type="logic">
+      <obj_property name="ElementShortName">m00_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m00_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/m00_axis_tdata" type="array">
+      <obj_property name="ElementShortName">m00_axis_tdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">m00_axis_tdata[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/i" type="other">
+      <obj_property name="ElementShortName">i</obj_property>
+      <obj_property name="ObjectShortName">i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/ov" type="other">
+      <obj_property name="ElementShortName">ov</obj_property>
+      <obj_property name="ObjectShortName">ov</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/flag" type="logic">
+      <obj_property name="ElementShortName">flag</obj_property>
+      <obj_property name="ObjectShortName">flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/RESET_WAIT" type="other">
+      <obj_property name="ElementShortName">RESET_WAIT</obj_property>
+      <obj_property name="ObjectShortName">RESET_WAIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/VALID_WAIT" type="other">
+      <obj_property name="ElementShortName">VALID_WAIT</obj_property>
+      <obj_property name="ObjectShortName">VALID_WAIT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/EXPSAMPLE" type="other">
+      <obj_property name="ElementShortName">EXPSAMPLE</obj_property>
+      <obj_property name="ObjectShortName">EXPSAMPLE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/CH_SYNC" type="other">
+      <obj_property name="ElementShortName">CH_SYNC</obj_property>
+      <obj_property name="ObjectShortName">CH_SYNC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/BIT_OVERFLOW" type="other">
+      <obj_property name="ElementShortName">BIT_OVERFLOW</obj_property>
+      <obj_property name="ObjectShortName">BIT_OVERFLOW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/BIT_NUM_CH" type="other">
+      <obj_property name="ElementShortName">BIT_NUM_CH</obj_property>
+      <obj_property name="ObjectShortName">BIT_NUM_CH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/BIT_FID" type="other">
+      <obj_property name="ElementShortName">BIT_FID</obj_property>
+      <obj_property name="ObjectShortName">BIT_FID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/BIT_COARSE" type="other">
+      <obj_property name="ElementShortName">BIT_COARSE</obj_property>
+      <obj_property name="ObjectShortName">BIT_COARSE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_Axi4Stream_PeriodMeter/BIT_RESOLUTION" type="other">
+      <obj_property name="ElementShortName">BIT_RESOLUTION</obj_property>
+      <obj_property name="ObjectShortName">BIT_RESOLUTION</obj_property>
+   </wvobject>
+</wave_config>

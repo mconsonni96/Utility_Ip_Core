@@ -1,0 +1,4 @@
+v 4
+file . "LocalPackage_TC.vhd" "b1867a0829ae2190dcb0b27ad272b1a78bfd774e" "20200318131523.156":
+  package localpackage_tc at 28( 2269) + 0 on 13 body;
+  package body localpackage_tc at 144( 7110) + 0 on 14;

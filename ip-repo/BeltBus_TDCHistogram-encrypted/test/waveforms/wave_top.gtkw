@@ -1,0 +1,138 @@
+[*]
+[*] GTKWave Analyzer v3.3.101 (w)1999-2019 BSI
+[*] Wed Feb 12 17:31:44 2020
+[*]
+[dumpfile] "/home/simone/Documents/IPs/ip_repo/histogrammer/test/build/waveforms.ghw"
+[dumpfile_mtime] "Wed Feb 12 17:30:54 2020"
+[dumpfile_size] 525383
+[savefile] "/home/simone/Documents/IPs/ip_repo/histogrammer/test/waveforms/wave_top.gtkw"
+[timestart] 421340300000
+[size] 1850 1016
+[pos] -1 -1
+*-25.000000 421432000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.histogrammer_v1_0.
+[treeopen] top.histogrammer_v1_0.histogrammer_cu_inst.
+[treeopen] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.
+[treeopen] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.
+[treeopen] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.
+[treeopen] top.histogrammer_v1_0.m_axis_controller_inst.
+[sst_width] 344
+[signals_width] 368
+[sst_expanded] 1
+[sst_vpaned_height] 609
+@28
+top.histogrammer_v1_0.s00_axi_aclk
+top.histogrammer_v1_0.s00_axi_aresetn
+@200
+-
+-S_AXI_WRITE
+@28
+top.histogrammer_v1_0.s00_axi_awvalid
+top.histogrammer_v1_0.s00_axi_wvalid
+@200
+-S_AXI_READ
+@22
+#{top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[11:0]} top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[11] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[10] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[9] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[8] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[7] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[6] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[5] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[4] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[3] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[2] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[1] top.histogrammer_v1_0.axilite_controller_inst.axi_araddr[0]
+#{top.histogrammer_v1_0.s00_axi_rdata[31:0]} top.histogrammer_v1_0.s00_axi_rdata[31] top.histogrammer_v1_0.s00_axi_rdata[30] top.histogrammer_v1_0.s00_axi_rdata[29] top.histogrammer_v1_0.s00_axi_rdata[28] top.histogrammer_v1_0.s00_axi_rdata[27] top.histogrammer_v1_0.s00_axi_rdata[26] top.histogrammer_v1_0.s00_axi_rdata[25] top.histogrammer_v1_0.s00_axi_rdata[24] top.histogrammer_v1_0.s00_axi_rdata[23] top.histogrammer_v1_0.s00_axi_rdata[22] top.histogrammer_v1_0.s00_axi_rdata[21] top.histogrammer_v1_0.s00_axi_rdata[20] top.histogrammer_v1_0.s00_axi_rdata[19] top.histogrammer_v1_0.s00_axi_rdata[18] top.histogrammer_v1_0.s00_axi_rdata[17] top.histogrammer_v1_0.s00_axi_rdata[16] top.histogrammer_v1_0.s00_axi_rdata[15] top.histogrammer_v1_0.s00_axi_rdata[14] top.histogrammer_v1_0.s00_axi_rdata[13] top.histogrammer_v1_0.s00_axi_rdata[12] top.histogrammer_v1_0.s00_axi_rdata[11] top.histogrammer_v1_0.s00_axi_rdata[10] top.histogrammer_v1_0.s00_axi_rdata[9] top.histogrammer_v1_0.s00_axi_rdata[8] top.histogrammer_v1_0.s00_axi_rdata[7] top.histogrammer_v1_0.s00_axi_rdata[6] top.histogrammer_v1_0.s00_axi_rdata[5] top.histogrammer_v1_0.s00_axi_rdata[4] top.histogrammer_v1_0.s00_axi_rdata[3] top.histogrammer_v1_0.s00_axi_rdata[2] top.histogrammer_v1_0.s00_axi_rdata[1] top.histogrammer_v1_0.s00_axi_rdata[0]
+@28
+#{top.histogrammer_v1_0.s00_axi_rresp[1:0]} top.histogrammer_v1_0.s00_axi_rresp[1] top.histogrammer_v1_0.s00_axi_rresp[0]
+top.histogrammer_v1_0.axilite_controller_inst.s00_axi_arvalid
+top.histogrammer_v1_0.axilite_controller_inst.s00_axi_arready
+top.histogrammer_v1_0.axilite_controller_inst.s00_axi_rvalid
+top.histogrammer_v1_0.axilite_controller_inst.s00_axi_rready
+@200
+-
+-M_AXIS
+@28
+top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tvalid
+top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tready
+@22
+#{top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[55:0]} top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[55] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[54] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[53] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[52] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[51] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[50] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[49] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[48] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[47] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[46] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[45] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[44] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[43] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[42] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[41] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[40] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[39] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[38] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[37] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[36] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[35] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[34] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[33] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[32] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[31] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[30] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[29] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[28] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[27] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[26] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[25] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[24] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[23] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[22] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[21] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[20] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[19] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[18] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[17] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[16] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[15] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[14] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[13] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[12] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[11] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[10] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[9] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[8] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[7] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[6] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[5] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[4] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[3] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[2] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[1] top.histogrammer_v1_0.m_axis_controller_inst.m00_axis_tdata[0]
+@200
+-
+-
+-HISTOGRAM_CONTROLLER
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.state[3:0]} top.histogrammer_v1_0.histogrammer_cu_inst.state[3] top.histogrammer_v1_0.histogrammer_cu_inst.state[2] top.histogrammer_v1_0.histogrammer_cu_inst.state[1] top.histogrammer_v1_0.histogrammer_cu_inst.state[0]
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.cmd_valid
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.cmd[3:0]} top.histogrammer_v1_0.histogrammer_cu_inst.cmd[3] top.histogrammer_v1_0.histogrammer_cu_inst.cmd[2] top.histogrammer_v1_0.histogrammer_cu_inst.cmd[1] top.histogrammer_v1_0.histogrammer_cu_inst.cmd[0]
+#{top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[7:0]} top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[7] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[6] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[5] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[4] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[3] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[2] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[1] top.histogrammer_v1_0.histogrammer_cu_inst.cmd_data[0]
+@200
+-
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_a_sel[3:0]} top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_a_sel[3] top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_a_sel[2] top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_a_sel[1] top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_a_sel[0]
+#{top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_b_sel[3:0]} top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_b_sel[3] top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_b_sel[2] top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_b_sel[1] top.histogrammer_v1_0.histogrammer_cu_inst.int_ch_b_sel[0]
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.is_integration_active
+top.histogrammer_v1_0.histogrammer_cu_inst.integ_selection
+top.histogrammer_v1_0.histogrammer_cu_inst.req_ack
+top.histogrammer_v1_0.histogrammer_cu_inst.req_autopush
+top.histogrammer_v1_0.histogrammer_cu_inst.order_reset
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integ_reset[1:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integ_reset[1] top.histogrammer_v1_0.histogrammer_cu_inst.integ_reset[0]
+top.histogrammer_v1_0.histogrammer_cu_inst.integ_selection
+top.histogrammer_v1_0.histogrammer_cu_inst.is_integration_active
+@200
+-
+-
+-INTEGRATOR_A
+@28
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.state[1:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.state[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.state[0]
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[7:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[0]
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.integrate
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[7:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.addr_counter[0]
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_write_en[0]
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[9:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[9] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[8] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_in[0]
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[9:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[9] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[8] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_data_out[0]
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.mem_almost_full
+@200
+-
+@28
+#{top.histogrammer_v1_0.histogrammer_cu_inst.read_request[1:0]} top.histogrammer_v1_0.histogrammer_cu_inst.read_request[1] top.histogrammer_v1_0.histogrammer_cu_inst.read_request[0]
+@200
+-
+-INTEGRATOR_B
+@28
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.state[1:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.state[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.state[0]
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[7:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.addr_counter[0]
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_write_en[0]
+@23
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[9:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[9] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[8] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_in[0]
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[9:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[9] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[8] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.fifo_read_data[0]
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[9:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[9] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[8] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_b.mem_data_out[0]
+@200
+-
+-BELT_BUS
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_tvalid
+top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_a_valid
+top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_b_valid
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tchannel[3:0]} top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tchannel[3] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tchannel[2] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tchannel[1] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tchannel[0]
+#{top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[23:0]} top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[23] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[22] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[21] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[20] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[19] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[18] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[17] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[16] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[15] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[14] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[13] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[12] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[11] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[10] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[9] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[8] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[7] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[6] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[5] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[4] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[3] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[2] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[1] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.belt_bus_in.tdata[0]
+@200
+-
+-SUBTRACTOR
+@28
+top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.is_buff_b_valid
+top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_valid
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[7:0]} top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[7] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[6] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[5] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[4] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[3] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[2] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[1] top.histogrammer_v1_0.histogrammer_cu_inst.single_positive_subtractor_inst.subtractor_inst.sub_out[0]
+@200
+-
+-FIFO_READ
+@22
+#{top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[9:0]} top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[9] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[8] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[7] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[6] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[5] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[4] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[3] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[2] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[1] top.histogrammer_v1_0.histogrammer_cu_inst.integrator_inst_a.fifo_read_data[0]
+[pattern_trace] 1
+[pattern_trace] 0

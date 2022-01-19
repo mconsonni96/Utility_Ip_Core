@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_simple_integration_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_simple_integration" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="168600000001fs"></ZoomEndTime>
+      <Cursor1Time time="40000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="194"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/tb_simple_integration/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/integrator_ready" type="logic">
+      <obj_property name="ElementShortName">integrator_ready</obj_property>
+      <obj_property name="ObjectShortName">integrator_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/integrator_reset" type="logic">
+      <obj_property name="ElementShortName">integrator_reset</obj_property>
+      <obj_property name="ObjectShortName">integrator_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/mem_almost_full" type="logic">
+      <obj_property name="ElementShortName">mem_almost_full</obj_property>
+      <obj_property name="ObjectShortName">mem_almost_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/read_request" type="logic">
+      <obj_property name="ElementShortName">read_request</obj_property>
+      <obj_property name="ObjectShortName">read_request</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/integrate" type="logic">
+      <obj_property name="ElementShortName">integrate</obj_property>
+      <obj_property name="ObjectShortName">integrate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/bin_addr" type="array">
+      <obj_property name="ElementShortName">bin_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bin_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/fifo_read_wen" type="logic">
+      <obj_property name="ElementShortName">fifo_read_wen</obj_property>
+      <obj_property name="ObjectShortName">fifo_read_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/fifo_read_data" type="array">
+      <obj_property name="ElementShortName">fifo_read_data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_read_data[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/fifo_read_ready" type="logic">
+      <obj_property name="ElementShortName">fifo_read_ready</obj_property>
+      <obj_property name="ObjectShortName">fifo_read_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/BIN_DATA_WIDTH" type="other">
+      <obj_property name="ElementShortName">BIN_DATA_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">BIN_DATA_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/BIN_ADDR_WIDTH" type="other">
+      <obj_property name="ElementShortName">BIN_ADDR_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">BIN_ADDR_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/READ_AND_RESET" type="logic">
+      <obj_property name="ElementShortName">READ_AND_RESET</obj_property>
+      <obj_property name="ObjectShortName">READ_AND_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/ALMOST_FULL_THRESHOLD" type="other">
+      <obj_property name="ElementShortName">ALMOST_FULL_THRESHOLD</obj_property>
+      <obj_property name="ObjectShortName">ALMOST_FULL_THRESHOLD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/wea" type="array">
+      <obj_property name="ElementShortName">wea[0:0]</obj_property>
+      <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/addra" type="array">
+      <obj_property name="ElementShortName">addra[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/dina" type="array">
+      <obj_property name="ElementShortName">dina[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dina[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/xpm_memory_base_inst/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:255][3:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:255][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/enb" type="logic">
+      <obj_property name="ElementShortName">enb</obj_property>
+      <obj_property name="ObjectShortName">enb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/addrb" type="array">
+      <obj_property name="ElementShortName">addrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_simple_integration/dut/xpm_memory_sdpram_inst/doutb" type="array">
+      <obj_property name="ElementShortName">doutb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">doutb[3:0]</obj_property>
+   </wvobject>
+</wave_config>

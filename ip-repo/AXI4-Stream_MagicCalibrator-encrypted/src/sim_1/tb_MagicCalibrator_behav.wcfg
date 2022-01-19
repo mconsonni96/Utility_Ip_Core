@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_MagicCalibrator_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="localpackage_mc" />
+            <top_module name="tb_MagicCalibrator" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1868112000fs"></ZoomStartTime>
+      <ZoomEndTime time="1993512001fs"></ZoomEndTime>
+      <Cursor1Time time="1090279000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="35" />
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/ValidIn_TDL_CNT">
+      <obj_property name="ElementShortName">ValidIn_TDL_CNT</obj_property>
+      <obj_property name="ObjectShortName">ValidIn_TDL_CNT</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/FidIn_BB">
+      <obj_property name="ElementShortName">FidIn_BB[0:0]</obj_property>
+      <obj_property name="ObjectShortName">FidIn_BB[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/Uncalibrated_TDL">
+      <obj_property name="ElementShortName">Uncalibrated_TDL[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Uncalibrated_TDL[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/Coarse_CNT">
+      <obj_property name="ElementShortName">Coarse_CNT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Coarse_CNT[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/ValidOut_TS">
+      <obj_property name="ElementShortName">ValidOut_TS</obj_property>
+      <obj_property name="ObjectShortName">ValidOut_TS</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/FidOut_BB">
+      <obj_property name="ElementShortName">FidOut_BB[0:0]</obj_property>
+      <obj_property name="ObjectShortName">FidOut_BB[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/Timestapm_TS">
+      <obj_property name="ElementShortName">Timestapm_TS[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Timestapm_TS[11:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/Timestapm_TS">
+      <obj_property name="ElementShortName">Timestapm_TS[11:0]</obj_property>
+      <obj_property name="ObjectShortName">Timestapm_TS[11:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Calibrated_TDL">
+      <obj_property name="ElementShortName">Calibrated_TDL[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Calibrated_TDL[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Calibrated_TDL">
+      <obj_property name="ElementShortName">Calibrated_TDL[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Calibrated_TDL[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve1SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="label">CharactCurve1SPRAM[0:7][2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve2SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="label">CharactCurve2SPRAM[0:7][2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CharactCurve2SPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="ElementShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Inst_CharacteristicCurveGenerator_MC/Inst_CalibrationTableGenerator_MC/Inst_CalibTableSDPRAM/xpm_memory_base_inst/mem">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mem[0:15][6:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:15][6:0]</obj_property>
+      <obj_property name="label">CalibTableSDPRAM[0:7][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/Restart_Calibration">
+      <obj_property name="ElementShortName">Restart_Calibration</obj_property>
+      <obj_property name="ObjectShortName">Restart_Calibration</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/Stop_Calibration">
+      <obj_property name="ElementShortName">Stop_Calibration</obj_property>
+      <obj_property name="ObjectShortName">Stop_Calibration</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/bitTrn_Uncal_addr">
+      <obj_property name="ElementShortName">bitTrn_Uncal_addr</obj_property>
+      <obj_property name="ObjectShortName">bitTrn_Uncal_addr</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/bitTrn_Cal_dout">
+      <obj_property name="ElementShortName">bitTrn_Cal_dout</obj_property>
+      <obj_property name="ObjectShortName">bitTrn_Cal_dout</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_MagicCalibrator/Calibrated">
+      <obj_property name="ElementShortName">Calibrated</obj_property>
+      <obj_property name="ObjectShortName">Calibrated</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/BIT_UNCALIBRATED">
+      <obj_property name="ElementShortName">BIT_UNCALIBRATED</obj_property>
+      <obj_property name="ObjectShortName">BIT_UNCALIBRATED</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/BIT_COARSE">
+      <obj_property name="ElementShortName">BIT_COARSE</obj_property>
+      <obj_property name="ObjectShortName">BIT_COARSE</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/SAVE_BIT">
+      <obj_property name="ElementShortName">SAVE_BIT</obj_property>
+      <obj_property name="ObjectShortName">SAVE_BIT</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/BIT_CALIBRATION">
+      <obj_property name="ElementShortName">BIT_CALIBRATION</obj_property>
+      <obj_property name="ObjectShortName">BIT_CALIBRATION</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/BIT_RESOLUTION">
+      <obj_property name="ElementShortName">BIT_RESOLUTION</obj_property>
+      <obj_property name="ObjectShortName">BIT_RESOLUTION</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/BIT_TRN_UNCAL_ADDR">
+      <obj_property name="ElementShortName">BIT_TRN_UNCAL_ADDR</obj_property>
+      <obj_property name="ObjectShortName">BIT_TRN_UNCAL_ADDR</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/BIT_TRN_CAL_DOUT">
+      <obj_property name="ElementShortName">BIT_TRN_CAL_DOUT</obj_property>
+      <obj_property name="ObjectShortName">BIT_TRN_CAL_DOUT</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/DATA_WIDTH">
+      <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/ADDR_WIDTH">
+      <obj_property name="ElementShortName">ADDR_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/CLK_PERIOD">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/WAIT_PERIOD">
+      <obj_property name="ElementShortName">WAIT_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">WAIT_PERIOD</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/RESET_WND">
+      <obj_property name="ElementShortName">RESET_WND</obj_property>
+      <obj_property name="ObjectShortName">RESET_WND</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_MagicCalibrator/CLEAR_CAL">
+      <obj_property name="ElementShortName">CLEAR_CAL</obj_property>
+      <obj_property name="ObjectShortName">CLEAR_CAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_MagicCalibrator/dut_MagicCalibrator/Carry_CNT">
+      <obj_property name="ElementShortName">Carry_CNT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Carry_CNT[1:0]</obj_property>
+   </wvobject>
+</wave_config>
