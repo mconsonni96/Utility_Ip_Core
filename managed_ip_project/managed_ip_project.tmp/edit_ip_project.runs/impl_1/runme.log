@@ -1,0 +1,915 @@
+
+*** Running vivado
+    with args -log AXI4Stream_OverflowCounter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source AXI4Stream_OverflowCounter.tcl -notrace
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source AXI4Stream_OverflowCounter.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/mconsonni/Utility_Ip_Core/ip-repo/PROVA_IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/mconsonni/Utility_Ip_Core/ip-repo/Prova_IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+Command: link_design -top AXI4Stream_OverflowCounter -part xc7k70tfbv676-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2426.242 ; gain = 0.000 ; free physical = 6333 ; free virtual = 12956
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/src/timing_ooc.xdc]
+Finished Parsing XDC File [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/src/timing_ooc.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2426.242 ; gain = 0.000 ; free physical = 6232 ; free virtual = 12855
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+10 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.75 . Memory (MB): peak = 2490.195 ; gain = 63.953 ; free physical = 6221 ; free virtual = 12844
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 137a3d91a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2753.203 ; gain = 263.008 ; free physical = 5845 ; free virtual = 12468
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 137a3d91a
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 137a3d91a
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 13de18f24
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 13de18f24
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 13de18f24
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 13de18f24
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+Ending Logic Optimization Task | Checksum: a75cbe67
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: a75cbe67
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: a75cbe67
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+Ending Netlist Obfuscation Task | Checksum: a75cbe67
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.172 ; gain = 0.000 ; free physical = 5675 ; free virtual = 12298
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2924.172 ; gain = 497.930 ; free physical = 5675 ; free virtual = 12298
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file AXI4Stream_OverflowCounter_drc_opted.rpt -pb AXI4Stream_OverflowCounter_drc_opted.pb -rpx AXI4Stream_OverflowCounter_drc_opted.rpx
+Command: report_drc -file AXI4Stream_OverflowCounter_drc_opted.rpt -pb AXI4Stream_OverflowCounter_drc_opted.pb -rpx AXI4Stream_OverflowCounter_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3127.199 ; gain = 0.000 ; free physical = 5604 ; free virtual = 12228
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 3b49b5b4
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3127.199 ; gain = 0.000 ; free physical = 5604 ; free virtual = 12228
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3127.199 ; gain = 0.000 ; free physical = 5604 ; free virtual = 12228
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 6ae97bd2
+
+Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.43 . Memory (MB): peak = 3151.211 ; gain = 24.012 ; free physical = 5630 ; free virtual = 12254
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: f569d420
+
+Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.49 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5646 ; free virtual = 12270
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: f569d420
+
+Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.49 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5646 ; free virtual = 12270
+Phase 1 Placer Initialization | Checksum: f569d420
+
+Time (s): cpu = 00:00:00.84 ; elapsed = 00:00:00.50 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5646 ; free virtual = 12270
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1415115f1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.52 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5638 ; free virtual = 12261
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 9e5e22a0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.53 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5638 ; free virtual = 12261
+
+Phase 2.3 Global Placement Core
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 2 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 1 existing cell and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5610 ; free virtual = 12233
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |              1  |                     1  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |              1  |                     1  |           0  |           8  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 171428b94
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5610 ; free virtual = 12233
+Phase 2.3 Global Placement Core | Checksum: f8c1fd5f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5610 ; free virtual = 12233
+Phase 2 Global Placement | Checksum: f8c1fd5f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5610 ; free virtual = 12233
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 13057af2f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5609 ; free virtual = 12232
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1779ca6c4
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5609 ; free virtual = 12233
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 90e9abb3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5609 ; free virtual = 12233
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 90e9abb3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5609 ; free virtual = 12233
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: b7034050
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5609 ; free virtual = 12232
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: bc264e38
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5605 ; free virtual = 12229
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 13c225d37
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5606 ; free virtual = 12229
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 13c225d37
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5606 ; free virtual = 12229
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1ee5e7b6c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5606 ; free virtual = 12229
+Phase 3 Detail Placement | Checksum: 1ee5e7b6c
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5606 ; free virtual = 12229
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 16b8e3769
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.766 | TNS=-72.222 |
+Phase 1 Physical Synthesis Initialization | Checksum: 122f8ade6
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5606 ; free virtual = 12229
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 173e2bcac
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5606 ; free virtual = 12229
+Phase 4.1.1.1 BUFG Insertion | Checksum: 16b8e3769
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5606 ; free virtual = 12229
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.307. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5613 ; free virtual = 12236
+Phase 4.1 Post Commit Optimization | Checksum: 10d13a534
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5612 ; free virtual = 12236
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 10d13a534
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5614 ; free virtual = 12237
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 10d13a534
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5614 ; free virtual = 12237
+Phase 4.3 Placer Reporting | Checksum: 10d13a534
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5614 ; free virtual = 12237
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5614 ; free virtual = 12237
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5614 ; free virtual = 12237
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: f5363925
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5614 ; free virtual = 12237
+Ending Placer Task | Checksum: 86ed3c9e
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3183.227 ; gain = 56.027 ; free physical = 5614 ; free virtual = 12237
+INFO: [Common 17-83] Releasing license: Implementation
+67 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3183.227 ; gain = 58.996 ; free physical = 5634 ; free virtual = 12258
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5632 ; free virtual = 12256
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file AXI4Stream_OverflowCounter_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5620 ; free virtual = 12243
+INFO: [runtcl-4] Executing : report_utilization -file AXI4Stream_OverflowCounter_utilization_placed.rpt -pb AXI4Stream_OverflowCounter_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file AXI4Stream_OverflowCounter_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5635 ; free virtual = 12259
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5604 ; free virtual = 12228
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.307 | TNS=-20.008 |
+Phase 1 Physical Synthesis Initialization | Checksum: 13dc47976
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5604 ; free virtual = 12228
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.307 | TNS=-20.008 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 13dc47976
+
+Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5603 ; free virtual = 12227
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.307 | TNS=-20.008 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[4].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[4]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.307 | TNS=-19.701 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[5].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[5]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.307 | TNS=-19.394 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[6].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[6]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.307 | TNS=-19.086 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[7].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[7]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.301 | TNS=-18.779 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[41].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[41]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[41]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.301 | TNS=-18.504 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[42].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[42]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[42]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.301 | TNS=-18.282 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[43].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[43]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[43]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.301 | TNS=-18.058 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[44].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[44]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[44]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.296 | TNS=-17.783 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[45].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[45]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[45]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.296 | TNS=-17.690 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[46].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[46]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[46]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.296 | TNS=-17.683 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[47].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[47]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[47]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.271 | TNS=-17.584 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[37].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[37]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.271 | TNS=-17.430 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[38].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[38]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[38]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.271 | TNS=-17.399 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[39].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[39]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[39]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.271 | TNS=-17.245 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[40].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[40]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[40]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.267 | TNS=-17.125 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[24].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[24]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[24]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.229 | TNS=-17.122 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[10].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[10]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.229 | TNS=-16.963 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[11].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[11]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.229 | TNS=-16.804 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[8].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[8]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.229 | TNS=-16.645 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[9].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[9]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.227 | TNS=-16.486 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[0].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[0]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.227 | TNS=-16.354 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[1].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[1]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.227 | TNS=-16.309 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[2].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[2]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.227 | TNS=-16.164 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[3].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[3]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.200 | TNS=-16.019 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[44].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[44]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[44]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.200 | TNS=-15.893 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[45].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[45]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[45]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.200 | TNS=-15.819 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[46].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[46]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[46]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.200 | TNS=-15.693 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[47].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[47]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[47]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.194 | TNS=-15.587 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[12].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[12]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.194 | TNS=-15.475 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[13].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[13]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.194 | TNS=-15.363 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[14].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[14]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[14]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.194 | TNS=-15.255 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[15].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[15]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.188 | TNS=-15.147 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[40].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[40]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[40]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.188 | TNS=-15.045 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[41].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[41]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[41]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.188 | TNS=-14.945 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.188 | TNS=-14.945 |
+Phase 3 Critical Path Optimization | Checksum: 13dc47976
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5601 ; free virtual = 12225
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.188 | TNS=-14.945 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[42].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[42]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[42]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.188 | TNS=-14.943 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[43].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[43]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[43]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.186 | TNS=-14.966 |
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[25].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[25]
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[1].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in_reg[1]
+INFO: [Physopt 32-81] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[1]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.184 | TNS=-14.074 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[24].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[24]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[24]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.184 | TNS=-14.067 |
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[29].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[29]
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[41].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in_reg[41]
+INFO: [Physopt 32-572] Net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[41] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[41]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_4_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_4
+INFO: [Physopt 32-710] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata[47]_i_1_n_0. Critical path length was reduced through logic transformation on cell Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata[47]_i_1_comp.
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.177 | TNS=-12.771 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[24].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[24]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[24]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.177 | TNS=-12.778 |
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[38].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in_reg[38]
+INFO: [Physopt 32-572] Net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[38] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[38]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6
+INFO: [Physopt 32-572] Net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_13_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_13
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata[48]_i_1
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.173 | TNS=-11.896 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[16].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[16]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[16]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.173 | TNS=-11.809 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[17].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[17]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[17]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.173 | TNS=-11.780 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[18].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[18]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[18]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.173 | TNS=-11.751 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[19].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[19]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[19]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.173 | TNS=-11.722 |
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[1].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[1]
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out_reg[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[38].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in_reg[38]
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[38]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_13_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_13
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out[0]_i_1
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_out. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.166 | TNS=-10.362 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[46].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[46]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[46]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.159 | TNS=-10.237 |
+INFO: [Physopt 32-663] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[25].  Re-placed instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[25]
+INFO: [Physopt 32-735] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[25]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.159 | TNS=-10.244 |
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[26].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata_reg[26]
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/m00_axis_beltbus_tdata_OBUF[26]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[41].  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in_reg[41]
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[41]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_4_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_4
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_7_n_0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_7
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/CoarseOverflow_cnt_in[47]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata0.  Did not re-place instance Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata[48]_i_1
+INFO: [Physopt 32-702] Processed net Inst_AXI4Stream_OverflowCounterWrapper/Inst_OverflowCounter/beltbus_tdata0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.159 | TNS=-10.244 |
+Phase 4 Critical Path Optimization | Checksum: 13dc47976
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5596 ; free virtual = 12220
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5597 ; free virtual = 12221
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.159 | TNS=-10.244 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.148  |          9.764  |            1  |              0  |                    48  |           0  |           2  |  00:00:02  |
+|  Total          |          0.148  |          9.764  |            1  |              0  |                    48  |           0  |           3  |  00:00:02  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5597 ; free virtual = 12221
+Ending Physical Synthesis Task | Checksum: 1017b48d6
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5597 ; free virtual = 12221
+INFO: [Common 17-83] Releasing license: Implementation
+266 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3183.227 ; gain = 0.000 ; free physical = 5596 ; free virtual = 12221
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 62338d6e ConstDB: 0 ShapeSum: 8e870c3f RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 17d0d7b4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3197.102 ; gain = 0.000 ; free physical = 5463 ; free virtual = 12087
+Post Restoration Checksum: NetGraph: ba8645b2 NumContArr: c2873598 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 17d0d7b4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3197.102 ; gain = 0.000 ; free physical = 5463 ; free virtual = 12087
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 17d0d7b4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3208.762 ; gain = 11.660 ; free physical = 5429 ; free virtual = 12053
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 17d0d7b4a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3208.762 ; gain = 11.660 ; free physical = 5429 ; free virtual = 12053
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1c225d188
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3228.387 ; gain = 31.285 ; free physical = 5419 ; free virtual = 12043
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.210 | TNS=-6.059 | WHS=-0.068 | THS=-0.148 |
+
+Phase 2 Router Initialization | Checksum: 1ef24abea
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3228.387 ; gain = 31.285 ; free physical = 5419 ; free virtual = 12043
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 341
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 341
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 1ef24abea
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5416 ; free virtual = 12041
+Phase 3 Initial Routing | Checksum: 12ea1b6d1
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5420 ; free virtual = 12045
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 54
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.460 | TNS=-39.817| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 130d87631
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.334 | TNS=-28.866| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 124f6bfc5
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.327 | TNS=-27.018| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 11e88da27
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+Phase 4 Rip-up And Reroute | Checksum: 11e88da27
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1cf44edcb
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.243 | TNS=-15.219| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1a91f53b8
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1a91f53b8
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+Phase 5 Delay and Skew Optimization | Checksum: 1a91f53b8
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 19af889b1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.239 | TNS=-14.541| WHS=0.199  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 19af889b1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+Phase 6 Post Hold Fix | Checksum: 19af889b1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.160193 %
+  Global Horizontal Routing Utilization  = 0.0785937 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 46.8468%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 26.1261%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 25%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 25%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1cb1b70c7
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5421 ; free virtual = 12045
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1cb1b70c7
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3229.387 ; gain = 32.285 ; free physical = 5419 ; free virtual = 12044
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 15604190d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3261.402 ; gain = 64.301 ; free physical = 5419 ; free virtual = 12044
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.239 | TNS=-14.541| WHS=0.199  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 15604190d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3261.402 ; gain = 64.301 ; free physical = 5419 ; free virtual = 12044
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3261.402 ; gain = 64.301 ; free physical = 5456 ; free virtual = 12080
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+285 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3261.402 ; gain = 78.176 ; free physical = 5456 ; free virtual = 12080
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3261.402 ; gain = 0.000 ; free physical = 5453 ; free virtual = 12078
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file AXI4Stream_OverflowCounter_drc_routed.rpt -pb AXI4Stream_OverflowCounter_drc_routed.pb -rpx AXI4Stream_OverflowCounter_drc_routed.rpx
+Command: report_drc -file AXI4Stream_OverflowCounter_drc_routed.rpt -pb AXI4Stream_OverflowCounter_drc_routed.pb -rpx AXI4Stream_OverflowCounter_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file AXI4Stream_OverflowCounter_methodology_drc_routed.rpt -pb AXI4Stream_OverflowCounter_methodology_drc_routed.pb -rpx AXI4Stream_OverflowCounter_methodology_drc_routed.rpx
+Command: report_methodology -file AXI4Stream_OverflowCounter_methodology_drc_routed.rpt -pb AXI4Stream_OverflowCounter_methodology_drc_routed.pb -rpx AXI4Stream_OverflowCounter_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file AXI4Stream_OverflowCounter_power_routed.rpt -pb AXI4Stream_OverflowCounter_power_summary_routed.pb -rpx AXI4Stream_OverflowCounter_power_routed.rpx
+Command: report_power -file AXI4Stream_OverflowCounter_power_routed.rpt -pb AXI4Stream_OverflowCounter_power_summary_routed.pb -rpx AXI4Stream_OverflowCounter_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+297 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file AXI4Stream_OverflowCounter_route_status.rpt -pb AXI4Stream_OverflowCounter_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file AXI4Stream_OverflowCounter_timing_summary_routed.rpt -pb AXI4Stream_OverflowCounter_timing_summary_routed.pb -rpx AXI4Stream_OverflowCounter_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file AXI4Stream_OverflowCounter_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file AXI4Stream_OverflowCounter_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file AXI4Stream_OverflowCounter_bus_skew_routed.rpt -pb AXI4Stream_OverflowCounter_bus_skew_routed.pb -rpx AXI4Stream_OverflowCounter_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  1 10:28:12 2022...

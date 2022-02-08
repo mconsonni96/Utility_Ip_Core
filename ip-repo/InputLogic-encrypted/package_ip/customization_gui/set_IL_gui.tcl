@@ -15,6 +15,23 @@ proc update_MODELPARAM_VALUE.INPUT_BUFFER_TYPE { MODELPARAM_VALUE.INPUT_BUFFER_T
 # ------------------------------------------------------------------------------
 
 
+# ------------------------- INVERT_BUFFER_POLARITY -----------------------------
+proc update_PARAM_VALUE.INVERT_BUFFER_POLARITY { PARAM_VALUE.INVERT_BUFFER_POLARITY } {
+	# Procedure called to update INVERT_BUFFER_POLARITY when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.INVERT_BUFFER_POLARITY { PARAM_VALUE.INVERT_BUFFER_POLARITY } {
+	# Procedure called to validate INVERT_BUFFER_POLARITY
+	return true
+}
+
+proc update_MODELPARAM_VALUE.INVERT_BUFFER_POLARITY { MODELPARAM_VALUE.INVERT_BUFFER_POLARITY PARAM_VALUE.INVERT_BUFFER_POLARITY } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.INVERT_BUFFER_POLARITY}] ${MODELPARAM_VALUE.INVERT_BUFFER_POLARITY}
+}
+# ------------------------------------------------------------------------------
+
+
 # --------------------------- EDGE_TRIGGER_INIT --------------------------------
 proc update_PARAM_VALUE.EDGE_TRIGGER_INIT { PARAM_VALUE.EDGE_TRIGGER_INIT PARAM_VALUE.TUNING_MODE } {
 	# Procedure called to update EDGE_TRIGGER_INIT when any of the dependent parameters in the arguments change

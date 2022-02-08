@@ -3,7 +3,7 @@
   <spirit:vendor>DigiLAB</spirit:vendor>
   <spirit:library>ip</spirit:library>
   <spirit:name>AXI4_TDC_Wrapper</spirit:name>
-  <spirit:version>5.0</spirit:version>
+  <spirit:version>5.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>S00_AXIS_DebugCT</spirit:name>
@@ -476,7 +476,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6361574d</spirit:value>
+            <spirit:value>d1c8e821</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -492,7 +492,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fc35f1aa</spirit:value>
+            <spirit:value>aefb91a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1261,7 +1261,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CH_WPORT_WIDTH&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CHANNEL_N&apos;))) - 1)">56</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CH_WPORT_WIDTH&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CHANNEL_N&apos;))) - 1)">59</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1278,7 +1278,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CH_RPORT_WIDTH&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CHANNEL_N&apos;))) - 1)">2</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CH_RPORT_WIDTH&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.TDC_CHANNEL_N&apos;))) - 1)">194</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1414,12 +1414,12 @@
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>TDC_CH_RPORT_WIDTH</spirit:name>
         <spirit:displayName>Tdc Ch Rport Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TDC_CH_RPORT_WIDTH">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TDC_CH_RPORT_WIDTH">65</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>TDC_CH_WPORT_WIDTH</spirit:name>
         <spirit:displayName>Tdc Ch Wport Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TDC_CH_WPORT_WIDTH">19</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TDC_CH_WPORT_WIDTH">20</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>TDC_CHANNEL_N</spirit:name>
@@ -1569,7 +1569,7 @@
       <spirit:file>
         <spirit:name>hdl/AXI4_MagicCalibratorDebugger.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_82737ce7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_79323aa0</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1612,7 +1612,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/AXI4_TDC_Wrapper_v5_0.tcl</spirit:name>
+        <spirit:name>xgui/AXI4_TDC_Wrapper_v5_1.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_35ba2e99</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -1730,12 +1730,12 @@
     <spirit:parameter>
       <spirit:name>TDC_CH_RPORT_WIDTH</spirit:name>
       <spirit:displayName>Tdc Ch Rport Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TDC_CH_RPORT_WIDTH">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TDC_CH_RPORT_WIDTH">65</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TDC_CH_WPORT_WIDTH</spirit:name>
       <spirit:displayName>Tdc Ch Wport Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TDC_CH_WPORT_WIDTH">19</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TDC_CH_WPORT_WIDTH">20</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TDC_CHANNEL_N</spirit:name>
@@ -1850,7 +1850,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>9</xilinx:coreRevision>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:Debugger_Wrapper:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DigiLAB:user:MagicDebugger:1.0</xilinx:canUpgradeFrom>
@@ -1863,8 +1863,9 @@
         <xilinx:canUpgradeFrom>DigiLAB:user:AXI4_TDC_Wrapper:4.1</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DigiLAB:user:AXI4_TDC_Wrapper:4.2</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DigiLAB:ip:AXI4_TDC_Wrapper:4.2</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>DigiLAB:ip:AXI4_TDC_Wrapper:5.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2021-07-20T14:23:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2021-12-02T11:46:39Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="xilinx.com:user:Debugger_Wrapper:1.0_ARCHIVE_LOCATION">c:/Users/Andrea/Desktop/Vivado/Utility_IP_Core/ip_repo/magic_debugger</xilinx:tag>
@@ -2671,16 +2672,66 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@393b08b7_ARCHIVE_LOCATION">/home/enrico/Vivado2020_files/TDC_Felix_v62_PBI633_4TDL/TDC_Felix_v62_PBI633_4TDL.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/axi4_magiccalibrator_debugger</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@19cfdb23_ARCHIVE_LOCATION">/home/enrico/Vivado2020_files/TDC_Felix_v62_PBI633_4TDL/TDC_Felix_v62_PBI633_4TDL.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/axi4_magiccalibrator_debugger</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@31068d05_ARCHIVE_LOCATION">/home/enrico/Vivado2020_files/TDC_Felix_v62_PBI633_4TDL/TDC_Felix_v62_PBI633_4TDL.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/axi4_magiccalibrator_debugger</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b5c6e0_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f4b944_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4090cac5_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1770339b_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@452fce07_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f1de09d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a3c6ce_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d3c5f56_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5755ff05_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53e27a44_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55d1a086_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb3cb06_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@120d75d6_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c5d9ed7_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dde130b_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c67d51d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7abd7f6b_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b09dfc4_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53a94bf6_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@436438cd_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60986ab5_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ca55a57_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73c54549_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@321e396_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d9515c3_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cff2869_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff71706_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79028891_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78280461_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ce65b22_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4625edfb_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae4e400_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eabdd11_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd66c2d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a423822_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@774e1f24_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d7be04b_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e69bb_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a9440b5_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65d77c5c_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@653c10bd_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63212ab7_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d4d88e7_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b8809ee_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78c9c638_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@971672b_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e6f94e9_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16df456c_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc1df39_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c434da_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/AXI4_TDC_Wrapper</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c4ca2597"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="3f926757"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5dcf88e8"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="193eb160"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f240f104"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="343eb874"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8181d733"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="eb584038"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="eafc661a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="60eb8b79"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

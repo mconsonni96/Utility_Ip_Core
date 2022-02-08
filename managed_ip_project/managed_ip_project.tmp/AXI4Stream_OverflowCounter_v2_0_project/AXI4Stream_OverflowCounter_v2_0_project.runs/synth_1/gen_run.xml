@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1643717351">
+  <File Type="VDS-TIMING-PB" Name="AXI4Stream_OverflowCounter_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="AXI4Stream_OverflowCounter_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="AXI4Stream_OverflowCounter.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="AXI4Stream_OverflowCounter_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="AXI4Stream_OverflowCounter_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="AXI4Stream_OverflowCounter_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="AXI4Stream_OverflowCounter.vds"/>
+  <File Type="REPORTS-TCL" Name="AXI4Stream_OverflowCounter_reports.tcl"/>
+  <File Type="PA-TCL" Name="AXI4Stream_OverflowCounter.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounterWrapper.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../ip-repo/AXI4-Stream_OverflowCounter/hdl/OverflowCounter.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounter.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../ip-repo/AXI4-Stream_OverflowCounter/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="AXI4Stream_OverflowCounter"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/../../../ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounter.vhd"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../ip-repo/AXI4-Stream_OverflowCounter/src/timing_ooc.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="out_of_context"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design">
+      <Option Id="MoreOptsStr"><![CDATA[-mode out_of_context]]></Option>
+    </Step>
+  </Strategy>
+</GenRun>

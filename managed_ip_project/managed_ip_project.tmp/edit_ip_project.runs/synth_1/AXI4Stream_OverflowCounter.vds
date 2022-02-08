@@ -1,0 +1,251 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  1 10:26:56 2022
+# Process ID: 20491
+# Current directory: /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/synth_1
+# Command line: vivado -log AXI4Stream_OverflowCounter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI4Stream_OverflowCounter.tcl
+# Log file: /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/synth_1/AXI4Stream_OverflowCounter.vds
+# Journal file: /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source AXI4Stream_OverflowCounter.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/mconsonni/Utility_Ip_Core/ip-repo/PROVA_IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/mconsonni/Utility_Ip_Core/ip-repo/Prova_IP'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top AXI4Stream_OverflowCounter -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20521
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2426.215 ; gain = 0.000 ; free physical = 5271 ; free virtual = 11894
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_OverflowCounter' [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounter.vhd:130]
+	Parameter BIT_FID bound to: 1 - type: integer 
+	Parameter BIT_COARSE_CEC bound to: 8 - type: integer 
+	Parameter BIT_COARSE bound to: 32 - type: integer 
+	Parameter BIT_RESOLUTION bound to: 16 - type: integer 
+	Parameter BIT_FID bound to: 1 - type: integer 
+	Parameter BIT_COARSE_CEC bound to: 8 - type: integer 
+	Parameter BIT_COARSE bound to: 32 - type: integer 
+	Parameter BIT_RESOLUTION bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'AXI4Stream_OverflowCounterWrapper' declared at '/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounterWrapper.vhd:74' bound to instance 'Inst_AXI4Stream_OverflowCounterWrapper' of component 'AXI4Stream_OverflowCounterWrapper' [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounter.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_OverflowCounterWrapper' [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounterWrapper.vhd:120]
+	Parameter BIT_FID bound to: 1 - type: integer 
+	Parameter BIT_COARSE_CEC bound to: 8 - type: integer 
+	Parameter BIT_COARSE bound to: 32 - type: integer 
+	Parameter BIT_RESOLUTION bound to: 16 - type: integer 
+	Parameter BIT_FID bound to: 1 - type: integer 
+	Parameter BIT_COARSE_IN bound to: 8 - type: integer 
+	Parameter BIT_COARSE_OUT bound to: 32 - type: integer 
+	Parameter BIT_RESOLUTION bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'OverflowCounter' declared at '/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/OverflowCounter.vhd:72' bound to instance 'Inst_OverflowCounter' of component 'OverflowCounter' [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounterWrapper.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'OverflowCounter' [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/OverflowCounter.vhd:125]
+	Parameter BIT_FID bound to: 1 - type: integer 
+	Parameter BIT_COARSE_IN bound to: 8 - type: integer 
+	Parameter BIT_COARSE_OUT bound to: 32 - type: integer 
+	Parameter BIT_RESOLUTION bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'OverflowCounter' (1#1) [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/OverflowCounter.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_OverflowCounterWrapper' (2#1) [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounterWrapper.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_OverflowCounter' (3#1) [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/hdl/AXI4Stream_OverflowCounter.vhd:130]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2426.215 ; gain = 0.000 ; free physical = 5999 ; free virtual = 12622
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2426.215 ; gain = 0.000 ; free physical = 5996 ; free virtual = 12619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2426.215 ; gain = 0.000 ; free physical = 5996 ; free virtual = 12619
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2426.215 ; gain = 0.000 ; free physical = 6040 ; free virtual = 12664
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/src/timing_ooc.xdc]
+Finished Parsing XDC File [/home/mconsonni/Utility_Ip_Core/ip-repo/AXI4-Stream_OverflowCounter/src/timing_ooc.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2543.980 ; gain = 0.000 ; free physical = 5960 ; free virtual = 12584
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2543.980 ; gain = 0.000 ; free physical = 5960 ; free virtual = 12584
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 6026 ; free virtual = 12650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 6026 ; free virtual = 12649
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 6029 ; free virtual = 12652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 6020 ; free virtual = 12644
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   48 Bit       Adders := 2     
++---Registers : 
+	               49 Bit    Registers := 1     
+	               48 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   49 Bit        Muxes := 1     
+	   2 Input   48 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 6002 ; free virtual = 12629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5886 ; free virtual = 12513
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5876 ; free virtual = 12504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    36|
+|3     |LUT1   |     2|
+|4     |LUT2   |     2|
+|5     |LUT3   |     1|
+|6     |LUT4   |    82|
+|7     |LUT5   |     1|
+|8     |LUT6   |     6|
+|9     |FDCE   |    97|
+|10    |FDRE   |    49|
+|11    |IBUF   |    29|
+|12    |OBUF   |    57|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5875 ; free virtual = 12502
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2543.980 ; gain = 0.000 ; free physical = 5927 ; free virtual = 12555
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2543.980 ; gain = 117.766 ; free physical = 5927 ; free virtual = 12555
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2543.980 ; gain = 0.000 ; free physical = 6011 ; free virtual = 12639
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2543.980 ; gain = 0.000 ; free physical = 5959 ; free virtual = 12586
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2543.980 ; gain = 118.012 ; free physical = 6103 ; free virtual = 12730
+INFO: [Common 17-1381] The checkpoint '/home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/synth_1/AXI4Stream_OverflowCounter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AXI4Stream_OverflowCounter_utilization_synth.rpt -pb AXI4Stream_OverflowCounter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  1 10:27:21 2022...

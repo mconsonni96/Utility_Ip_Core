@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  1 10:27:32 2022
+# Process ID: 20674
+# Current directory: /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1
+# Command line: vivado -log AXI4Stream_OverflowCounter.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source AXI4Stream_OverflowCounter.tcl -notrace
+# Log file: /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/AXI4Stream_OverflowCounter.vdi
+# Journal file: /home/mconsonni/Utility_Ip_Core/managed_ip_project/managed_ip_project.tmp/edit_ip_project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source AXI4Stream_OverflowCounter.tcl -notrace

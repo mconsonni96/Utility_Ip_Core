@@ -1,4 +1,0 @@
-v 4
-file / "/home/nicola/Documents/Vivado/Utility_Ip_Core/ip_repo/TDC_Basic/AXI4Stream_CoarseExtensionCore/hdl/FIFO_Synchronizer.vhd" "83a668870d5bbedd62a490e75e21f114143ca696" "20201001150501.370":
-  entity fifo_synchronizer at 27( 2228) + 0 on 19;
-  architecture behavioral of fifo_synchronizer at 113( 6090) + 0 on 20;

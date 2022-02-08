@@ -11,13 +11,13 @@ set_property library $library [ipx::current_core]
 set name "InputLogic"
 set_property name $name [ipx::current_core]
 
-set version "3.2"
+set version "4.0"
 set_property version $version [ipx::current_core]
 
 set display_name "Input Logic"
 set_property display_name $display_name [ipx::current_core]
 
-set description "Input Logic of the TDC"
+set description "Input Logic of the TDC with Time-Over-Threshold modality"
 set_property description $description [ipx::current_core]
 
 set vendor_display_name "DigiLAB"

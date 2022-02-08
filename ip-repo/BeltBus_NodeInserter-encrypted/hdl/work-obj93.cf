@@ -1,7 +1,0 @@
-v 4
-file / "/home/nicola/Documents/Vivado/Utility_Ip_Core/ip_repo/TDC_Basic/BeltBus_NodeInserter/hdl/BeltBus_NodeInserterWrapper_BB.vhd" "0b16dd63c5a35316f3e56fdaa4095205a50ae1fc" "20200918082359.582":
-  entity beltbus_nodeinserterwrapper_bb at 37( 3056) + 0 on 19;
-  architecture behavioral of beltbus_nodeinserterwrapper_bb at 138( 8578) + 0 on 20;
-file / "/home/nicola/Documents/Vivado/Utility_Ip_Core/ip_repo/TDC_Basic/BeltBus_NodeInserter/hdl/BeltBus_NodeInserter.vhd" "200f9af99078aa3db97b9dfd6dae07b2ba07a23a" "20200918082334.899":
-  entity beltbus_nodeinserter at 36( 3469) + 0 on 13;
-  architecture behavioral of beltbus_nodeinserter at 135( 8960) + 0 on 14;

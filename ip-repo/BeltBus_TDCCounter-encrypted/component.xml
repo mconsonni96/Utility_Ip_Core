@@ -3,7 +3,7 @@
   <spirit:vendor>DigiLAB</spirit:vendor>
   <spirit:library>ip</spirit:library>
   <spirit:name>BeltBus_TDCCounter</spirit:name>
-  <spirit:version>2.0</spirit:version>
+  <spirit:version>3.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>s00_bb_aresetn</spirit:name>
@@ -347,7 +347,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4b5d23e4</spirit:value>
+            <spirit:value>e047bff6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -363,7 +363,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4219f8c9</spirit:value>
+            <spirit:value>fb31c7d0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -890,7 +890,7 @@
       <spirit:file>
         <spirit:name>hdl/tdccounter_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5dc89a2c</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_55b1c85a</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -911,7 +911,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/BeltBus_TDCCounter_v2_0.tcl</spirit:name>
+        <spirit:name>xgui/BeltBus_TDCCounter_v3_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_7e9c9b00</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -1049,8 +1049,9 @@
         <xilinx:canUpgradeFrom>DigiLAB:user:AXI4Lite_TDCCounter:1.2</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DigiLAB:ip:BeltBus_Counter:1.2</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DigiLAB:ip:BeltBus_TDCCounter:1.2</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>DigiLAB:ip:BeltBus_TDCCounter:2.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2021-04-21T12:15:03Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2021-12-15T09:39:48Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="user.org::TDCCounter:1.0_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP/ip_repo/TDCCounter_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="user.org:user:TDCCounter:1.0_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP/ip_repo/TDCCounter_1.0</xilinx:tag>
@@ -1134,13 +1135,91 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3cdfc366_ARCHIVE_LOCATION">/home/enrico/Downloads/TDC_Felix_v23_MM3/TDC_Felix_v23.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/AXI_Peripheral/TDC_Module/beltbus_tdccounter</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@54772b18_ARCHIVE_LOCATION">/home/enrico/Downloads/TDC_Felix_v23_MM3/TDC_Felix_v23.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/AXI_Peripheral/TDC_Module/beltbus_tdccounter</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1885aeb6_ARCHIVE_LOCATION">/home/enrico/Downloads/TDC_Felix_v23_MM3/TDC_Felix_v23.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/AXI_Peripheral/TDC_Module/beltbus_tdccounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c48ad69_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c15954_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c049d11_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21a851ab_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24fe6a69_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73dd50c0_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@382a6247_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e72b130_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58d747fe_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c2f086b_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b09713_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bfc9419_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c0442b7_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4267b0d7_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69312c4_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d90be4d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e83981c_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c13dc61_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6776c3ee_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66e51945_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10da013e_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bb3213d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e245401_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b5effe4_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed344d6_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44eade88_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a73f6df_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10bccf36_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6622a140_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f9fce06_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42be05a2_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66591c14_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16323cfa_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19931efa_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4bcfc_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48654875_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c0ea9c9_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6754e63_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b360e74_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d2eca4c_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@721f2567_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d113848_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c913818_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b86642e_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2cb45d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f8524fb_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62db74b4_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e62b57e_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78caf3e6_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59d41a3d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84ac70_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a882653_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@356ac30d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a091e31_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@508c8393_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc0cd48_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70aa70b4_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d9f4b20_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fbb99f9_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d1c56d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf57c1d_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14f0ed9c_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4baa5716_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c74e01_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bab3c4c_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78e66d87_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5efecc33_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@230dcd75_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50f227c8_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ef230a1_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@198a3990_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cd57aab_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce68152_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b594403_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b9b64c9_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27290ab9_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d42c489_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30ce075f_ARCHIVE_LOCATION">/home/enrico/Tesi/Hardware/IP_2020/ip_repo/BeltBus_TDCCounter</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f53b1119"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="70ec94a5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f9ef5583"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9270779e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="ae30e733"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="7dd57d09"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="2b9a9da9"/>

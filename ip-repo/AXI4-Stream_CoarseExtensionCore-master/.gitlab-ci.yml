@@ -1,0 +1,54 @@
+# Fully implement (with an out-of-context build) an IP-Core and encrypt it,
+# storing the resulting encrypted IP-Core as artifact
+#
+# Remember that any job which uses the DigiLab's Vivado instance must specify
+# the XILINXD_LICENSE_FILE: 2100@xilinx-license-server, so that Vivado is able
+# to contact the DigiLab's license server (xilinx-license-server is
+# automatically resolved to the correct license server IP).
+
+.vivado:
+  image: git.digilab.deib.polimi.it:5050/digilabbers/infrastructure/vivado-docker:2020.2
+  tags:
+    - linux
+  variables:
+    XILINXD_LICENSE_FILE: 2100@xilinx-license-server
+  before_script:
+    - VIVADO_UTILITIES=$(mktemp -d)
+    - git clone --recurse-submodules https://gitlab-ci-token:${CI_JOB_TOKEN}@git.digilab.deib.polimi.it/digilabbers/infrastructure/vivado-utility-scripts.git "$VIVADO_UTILITIES"
+
+synthesize:
+  extends: .vivado
+  stage: test
+  script:
+    - "\"$VIVADO_UTILITIES/synthesize-ip.sh\" component.xml"
+
+encrypt:
+  extends: .vivado
+  stage: deploy
+  script:
+    - "\"$VIVADO_UTILITIES/encrypt-ip.sh\" \"$VIVADO_UTILITIES/IPCore-encrypter/key_xilinxt_2020_08.vhd\" . ${CI_PROJECT_NAME}-encrypted"
+    - "echo -e \"Commit: ${CI_COMMIT_SHA}\nCommit date: ${CI_COMMIT_TIMESTAMP}\nEncrypted on: $(date)\" > ${CI_PROJECT_NAME}-encrypted/version"
+  artifacts:
+    paths:
+      - ${CI_PROJECT_NAME}-encrypted/
+      
+
+cocotb-test:
+  stage: test
+  image: git.digilab.deib.polimi.it:5050/digilabbers/infrastructure/cocotb-docker:1.5
+  tags: 
+    - linux
+  allow_failure: true
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:
+    paths:
+      - .cache/pip
+  script:
+    - pip3 install cobs cocotb_bus numpy
+    - make -C cocotb
+  artifacts:
+    reports:
+      junit: cocotb/results.xml
+
+

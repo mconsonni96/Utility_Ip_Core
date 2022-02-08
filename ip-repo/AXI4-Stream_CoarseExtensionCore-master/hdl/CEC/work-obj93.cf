@@ -1,0 +1,7 @@
+v 4
+file / "/home/nicola/Documents/Vivado/Projects/2020.2/TDC_Felix/ToT/TDC_Felix_ToT_v71.xpr/TDC_Felix_ToT_v71/TDC_Felix_ToT_v71.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/AXI4Stream_CoarseExtensionCore/hdl/CEC/CoarseCounter_CEC.vhd" "0d720d7b2eae5c53161a1522ba8c9f2f6a2c977f" "20211117134914.722":
+  entity coarsecounter_cec at 28( 2245) + 0 on 15;
+  architecture behavioral of coarsecounter_cec at 109( 5063) + 0 on 16;
+file / "/home/nicola/Documents/Vivado/Projects/2020.2/TDC_Felix/Torino/TDC_Felix_v71.xpr/TDC_Felix_v71/TDC_Felix_v71.ipdefs/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/AXI4Stream_CoarseExtensionCore/hdl/CEC/LocalPackage_CEC.vhd" "28c8c7ba649a1ad8ec08e5e488ed65e513d1a6da" "20211104102018.250":
+  package localpackage_cec at 28( 2230) + 0 on 13 body;
+  package body localpackage_cec at 105( 4811) + 0 on 14;

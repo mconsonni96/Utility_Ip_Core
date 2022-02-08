@@ -1,0 +1,10 @@
+pylibtdc.cpython-38-x86_64-linux-gnu.so,sha256=0gW8iJ_8p10JoIpjr34R-cqNwVWuKXmzkItk5pQqAgI,711888
+pylibtdc.libs/libusb-1-12fd50df.0.so.0.3.0,sha256=MFvEIpxLCY_wObQ7D7GgVJtE4TkX2k2StkXRFGUNuig,528280
+pylibtdc.libs/libudev-20d87ef6.so.0.5.1,sha256=jkjXh_Cp2GVPsnaMSbyU1xRCnXVCMIsS2Nd55murzS4,60512
+pylibtdc.libs/libcia-b6bf43ae.so.1.2.1,sha256=nVNFZZMfLPmIZ8iiaklhfdlcpHp52QOqQ7wCoB1ZiXw,956288
+pylibtdc.libs/libTDC-2fc4c642.so.1.6.2,sha256=nxDVA8UPr13ATVwB55467lc3Q-x8gYTnHUXmHZiI7lY,935160
+pylibtdc.libs/libftdi1-e63837bd.so.2.5.0,sha256=EH8iT-4mCm1xqu6cwQALVW4b0Wg6C9LskoNSiYZ1Fgw,64008
+pylibtdc-1.2.3.post27.dist-info/WHEEL,sha256=VC8YzyxoGiXrzl8xKL9ftgvyZU-Uz6pGPrSATb2mDHw,148
+pylibtdc-1.2.3.post27.dist-info/METADATA,sha256=-7K7M_KmcJjdkN1Vpezaxen-PTBuplOWIbMW9Yz_RuY,210
+pylibtdc-1.2.3.post27.dist-info/top_level.txt,sha256=SV-mrruP-izKkde_qaYyyeilIZILEaRteJEPCaWyRVk,9
+pylibtdc-1.2.3.post27.dist-info/RECORD,,

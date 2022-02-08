@@ -690,19 +690,19 @@ proc update_MODELPARAM_VALUE.BIT_BUBBLE { MODELPARAM_VALUE.BIT_BUBBLE PARAM_VALU
 }
 #===============================================================================
 
-#================================== BIT_COARSE =================================
-proc update_PARAM_VALUE.BIT_COARSE { PARAM_VALUE.BIT_COARSE } {
-	# Procedure called to update BIT_COARSE when any of the dependent parameters in the arguments change
+#================================ BIT_PIPE_COARSE ==============================
+proc update_PARAM_VALUE.BIT_PIPE_COARSE { PARAM_VALUE.BIT_PIPE_COARSE } {
+	# Procedure called to update BIT_PIPE_COARSE when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.BIT_COARSE { PARAM_VALUE.BIT_COARSE } {
-	# Procedure called to validate BIT_COARSE
+proc validate_PARAM_VALUE.BIT_PIPE_COARSE { PARAM_VALUE.BIT_PIPE_COARSE } {
+	# Procedure called to validate BIT_PIPE_COARSE
 	return true
 }
 
-proc update_MODELPARAM_VALUE.BIT_COARSE { MODELPARAM_VALUE.BIT_COARSE PARAM_VALUE.BIT_COARSE } {
+proc update_MODELPARAM_VALUE.BIT_PIPE_COARSE { MODELPARAM_VALUE.BIT_PIPE_COARSE PARAM_VALUE.BIT_PIPE_COARSE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.BIT_COARSE}] ${MODELPARAM_VALUE.BIT_COARSE}
+	set_property value [get_property value ${PARAM_VALUE.BIT_PIPE_COARSE}] ${MODELPARAM_VALUE.BIT_PIPE_COARSE}
 }
 #===============================================================================
 

@@ -20,7 +20,7 @@ set_property library $library [ipx::current_core]
 set name "BeltBus_NodeInserter"
 set_property name $name [ipx::current_core]
 
-set version "2.3"
+set version "2.4"
 set_property version $version [ipx::current_core]
 
 set display_name "BeltBus Node Inserter"

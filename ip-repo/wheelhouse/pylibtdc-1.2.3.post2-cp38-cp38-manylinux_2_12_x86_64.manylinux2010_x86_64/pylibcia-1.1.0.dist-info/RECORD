@@ -1,9 +1,0 @@
-pylibcia.cpython-38-x86_64-linux-gnu.so,sha256=-zIAwUhaHz-uOc6nErNUIuRdVbjjsT-zrPf9Lh-XQ9M,358112
-pylibcia.libs/libudev-20d87ef6.so.0.5.1,sha256=jkjXh_Cp2GVPsnaMSbyU1xRCnXVCMIsS2Nd55murzS4,60512
-pylibcia.libs/libusb-1-fa7c0e8b.0.so.0.3.0,sha256=T5_bJfWU4i3xlOpXf_fPu_3ACOFKz3UT7ltQxy-tFdQ,528280
-pylibcia.libs/libcia-2a4d3183.so.1.1.0,sha256=FKoNyeX9k4ND-T8XCrPCLz8IkyI6d1oLlyKrOio27J8,956304
-pylibcia.libs/libftdi1-d05711e6.so.2.5.0,sha256=YyxTuCjsYxjSlBOTssvEvlXZ2dCfOY8o6D15r8F-4Yc,64008
-pylibcia-1.1.0.dist-info/RECORD,,
-pylibcia-1.1.0.dist-info/METADATA,sha256=2hDxlDLuSn4ium6gWEW597GiLB95ndb7W3H693z2gck,243
-pylibcia-1.1.0.dist-info/top_level.txt,sha256=ApG6WRMhPHC_ulb3iKJyPdbZBs223DFmNl9hRZ6jquQ,9
-pylibcia-1.1.0.dist-info/WHEEL,sha256=9ouD5vtHKeI5Fp5dT4ciqv9oZDHXBBpbctyak-WqTkY,148

@@ -18,8 +18,8 @@ proc init_DECODER_gui { IPINST Page} {
   set_property tooltip {Number of TDL sub-Interpolated in each TDC channel} ${NUMBER_OF_TDL}
   set BIT_TDL [ipgui::add_param $IPINST -name "BIT_TDL" -parent ${Dimensions}]
   set_property tooltip {Number of Taps in each TDL} ${BIT_TDL}
-  set BIT_COARSE [ipgui::add_param $IPINST -name "BIT_COARSE" -parent ${Dimensions}]
-  set_property tooltip {Bit Coarse Counter dimension} ${BIT_COARSE}
+  set BIT_PIPE_COARSE [ipgui::add_param $IPINST -name "BIT_PIPE_COARSE" -parent ${Dimensions}]
+  set_property tooltip {Bit Pipeline used for Coarse Counter and/or Polarity} ${BIT_PIPE_COARSE}
   set BIT_BUBBLE [ipgui::add_param $IPINST -name "BIT_BUBBLE" -parent ${Dimensions}]
   set_property tooltip {Maximum estention of a bubble error over the TDL} ${BIT_BUBBLE}
   set BIT_SUB_INT [ipgui::add_param $IPINST -name "BIT_SUB_INT" -parent ${Dimensions}]

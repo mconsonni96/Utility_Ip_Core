@@ -1,7 +1,0 @@
-v 4
-file / "/home/nicola/Documents/Vivado/Repositories/Utility_Ip_Core/ip_repo/TDC_Basic/InputLogic/src/tb_Stretcher_IL.vhd" "61bda99a4198be331032033de187cbbd29d9622a" "20201109175059.743":
-  entity tb_stretcher_il at 27( 2270) + 0 on 169;
-  architecture behavioral of tb_stretcher_il at 72( 3413) + 0 on 170;
-file / "/home/nicola/Documents/Vivado/Repositories/2020.2/Utility_Ip_Core/ip_user_files/ip_repo/TDC_Basic/InputLogic/src/tb_InputLogic.vhd" "8a7c68f3e3cf0f8373dab8e0dbd73d2fb9b4605a" "20210304102626.211":
-  entity tb_inputlogic at 28( 2310) + 0 on 179;
-  architecture behavioral of tb_inputlogic at 73( 3449) + 0 on 180;

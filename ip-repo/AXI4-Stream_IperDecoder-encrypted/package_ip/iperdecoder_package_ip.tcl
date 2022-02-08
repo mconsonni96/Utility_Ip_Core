@@ -14,7 +14,7 @@ set_property library $library [ipx::current_core]
 set name "AXI4Stream_IperDecoder"
 set_property name $name [ipx::current_core]
 
-set version "1.2"
+set version "1.3"
 set_property version $version [ipx::current_core]
 
 set display_name "AXI4-Stream Iper Decoder"
